@@ -6772,8 +6772,15 @@ window.addEventListener("productcardVariants", function (evt) {
 							productImage.removeAttribute('srcset');
 							productImage.removeAttribute('sizes');
 						}
-						if (variant_data.price && productFormSection.querySelector('.price')) {
-							productFormSection.querySelector('.price').innerHTML = '<span class="old-price"></span>' + (variant_data.price_old ? '&nbsp;' : '') + variant_data.price;
+						const cardPrice = productFormSection.querySelector('.price');
+						if (variant_data.price && cardPrice) {
+							cardPrice.innerHTML = '<span class="old-price"></span>' + (variant_data.price_old ? '&nbsp;' : '') + variant_data.price;
+							cardPrice.classList.toggle('drv-black-friday-price', selected_option.dataset.blackFridaySale === 'true');
+						}
+						const saleBadge = productFormSection.querySelector('[data-product-sale-badge]');
+						if (saleBadge && selected_option.hasAttribute('data-sale-badge')) {
+							saleBadge.textContent = selected_option.dataset.saleBadge;
+							saleBadge.classList.toggle('hidden', !selected_option.dataset.saleBadge);
 						}
 						const oldPrice = productFormSection.querySelector('.old-price');
 						if (oldPrice) {
@@ -7058,6 +7065,10 @@ window.addEventListener("productVariants", function (evt) {
 								if (resultsMarkupForm.querySelector('.f8pr-codes') != null) {
 									productFormSection.querySelector('.f8pr-codes').parentNode.replaceChild(resultsMarkupForm.querySelector('.f8pr-codes'), productFormSection.querySelector('.f8pr-codes'));
 								}
+								const newSaleBadges = resultsMarkupForm.querySelectorAll('[data-product-sale-badge]');
+								productFormSection.querySelectorAll('[data-product-sale-badge]').forEach(function (badge, index) {
+									if (newSaleBadges[index]) badge.replaceWith(newSaleBadges[index]);
+								});
 								if (resultsMarkupForm.querySelector('.f8pr-price') != null) {
 									productFormSection.querySelector('.f8pr-price').parentNode.replaceChild(resultsMarkupForm.querySelector('.f8pr-price'), productFormSection.querySelector('.f8pr-price'));
 								}

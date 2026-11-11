@@ -180,6 +180,46 @@ section.drv-hero[data-section-id],
   align-items: center;
 }
 
+.drv-hero__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(8px, 1vw, 10px);
+  max-width: 100%;
+}
+
+.drv-hero__promotion-label,
+.drv-hero__promotion-caption {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+.drv-hero__promotion-label {
+  box-sizing: border-box;
+  padding: 0.32em 0.75em;
+  background: #f9f2e8;
+  color: #424345;
+  font-family: var(--font-body-light, sans-serif);
+  font-weight: var(--text-body-light-weight, 300);
+  font-size: clamp(1.4rem, 2vw, 2.2rem);
+  line-height: 1.2;
+  letter-spacing: 0.24em;
+}
+
+.drv-hero__promotion-caption {
+  color: var(--drv-hero-text-color, #fff);
+  font-family: var(--font-body-light, sans-serif);
+  font-size: clamp(1.1rem, 1.3vw, 1.4rem);
+  line-height: 1.3;
+}
+
+.drv-hero__title > .drv-hero__promotion-caption + .drv-hero__heading {
+  margin-block-start: clamp(2px, 0.5vw, 6px);
+  /* Override the homepage's compressed heading line-height for this stack. */
+  line-height: 1.05 !important;
+}
+
 .drv-hero__heading {
   font-family: var(--main_ff_h, serif);
   font-weight: var(--main_fw_h, 400);

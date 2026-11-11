@@ -1,0 +1,196 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "introduction": {
+      "type": "dreamer-rv-bf-intro",
+      "custom_css": [
+        ".drv-bf .drv-bf__label {color: #fff;}",
+        ".drv-bf__copy {max-width: 700px;}"
+      ],
+      "settings": {
+        "promotion_label": "20% OFF",
+        "promotion_caption": "STOREWIDE | ON ALL INDIVIDUAL ITEMS",
+        "heading": "Black Friday Sale",
+        "introduction": "<p>Our Black Friday sale is here! Save on your favourite caravan comforts. Spend $350 or more and receive a free Dreamer RV Cooler Bag. Spend $490 or more and receive a free Dreamer RV Cooler Bag plus a Sand-Free Beach Towel, simply choose your preferred colour in your cart.</p>",
+        "show_page_content": true,
+        "availability": "Gifts available while stocks last.",
+        "terms_page": "black-friday-sale-terms",
+        "terms_label": "T&Cs apply.",
+        "gift_image_alt": "Dreamer RV turquoise Cooler Bag and pink Sand-Free Beach Towel",
+        "first_threshold": "Orders $350 or more",
+        "first_gift": "FREE Cooler Bag",
+        "first_value": "Worth $29",
+        "second_threshold": "Orders $490 or more",
+        "second_gift": "+ FREE Sand-Free Towel",
+        "second_value": "Worth $69"
+      }
+    },
+    "shopping": {
+      "type": "dreamer-rv-bf-shopping",
+      "blocks": {
+        "toppers": {
+          "type": "collection",
+          "settings": {
+            "collection": "wanderluxe-caravan-mattress-toppers",
+            "image_alt": "",
+            "label": "Shop Mattress Toppers",
+            "link": "",
+            "badge": "20% OFF"
+          }
+        },
+        "bundles": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundles-1",
+            "image_alt": "",
+            "label": "Shop Caravan Bundles",
+            "link": "",
+            "badge": ""
+          }
+        },
+        "protectors": {
+          "type": "collection",
+          "settings": {
+            "collection": "caravan-mattress-protectors",
+            "image_alt": "",
+            "label": "Shop Mattress Protectors",
+            "link": "",
+            "badge": "20% OFF"
+          }
+        }
+      },
+      "block_order": [
+        "toppers",
+        "bundles",
+        "protectors"
+      ],
+      "custom_css": [
+        ".drv-bf__card-media {position: relative;}",
+        ".drv-bf__card-media .drv-bf__card-image {position: absolute; inset: 0; width: 100%; height: 100% !important; object-fit: cover;}",
+        ".drv-bf__card-badge {color: #fff;}"
+      ],
+      "settings": {
+        "heading": "Shop the Black Friday Sale"
+      }
+    },
+    "section_faq_WtknnM": {
+      "type": "section-faq",
+      "blocks": {
+        "text_jfD8nT": {
+          "type": "text",
+          "settings": {
+            "faq_question": "When does the Black Friday Sale start and end?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Our Black Friday Sale starts on Thursday, 19 November and ends at 11:59pm AEST on Tuesday, 1 December 2026. Complete checkout before the sale ends to secure your savings!</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_zApkgB": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What’s on sale?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Enjoy 20% off the regular price of all individual items, including mattress toppers, mattress protectors and sheets.</p><p>During the sale, our usual bundle discount does not apply. Instead, the 20% sale discount is applied to the regular price of each item in the bundle.</p><p>Gift cards are excluded.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_p4zLaN": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How can I get a free gift with my order?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Spend $350 or more and a free Dreamer RV Cooler Bag will be automatically added to your cart. Spend $490 or more to also receive a free Sand-Free Beach Towel, simply choose your preferred colour in your cart.</p><p>Limit one cooler bag and, where eligible, one towel per order. Gifts and towel colours are subject to availability, while stocks last. T&Cs apply.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_fn4Jar": {
+          "type": "text",
+          "settings": {
+            "faq_question": "When will my order ship?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Our warehouse team will be working hard to get orders on their way, but please allow 3–4 business days for dispatch during the sale. All orders are delivered by Australia Post.</p><p>If you’re on a tight timeline, choose Express Post and contact our customer care team after ordering so we can flag your order for priority dispatch. Visit our shipping page for more details.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_M6XJUm": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I pre-order or reserve sold-out items?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Sale discounts apply to in-stock items only. Sold-out items and products on our waitlist aren’t eligible for sale pricing. We can’t reserve stock or guarantee every size will remain available throughout the sale, so we recommend shopping early.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        }
+      },
+      "block_order": [
+        "text_jfD8nT",
+        "text_zApkgB",
+        "text_p4zLaN",
+        "text_fn4Jar",
+        "text_M6XJUm"
+      ],
+      "custom_css": [
+        "@media (max-width: 749px) {.accordion-a details > div {margin-left: 0 !important; }}",
+        ".drv-faq__button-wrap--two {gap: 100px;}",
+        "@media (max-width: 479px) {.drv-faq__button-wrap--two {gap: 20px; }}"
+      ],
+      "name": "Black Friday FAQs",
+      "settings": {
+        "alignment": "left",
+        "compact": true,
+        "eyebrow": "",
+        "title": "<h2>Black Friday FAQs</h2>",
+        "body_text": "",
+        "title_underline_style": "none",
+        "show_button": true,
+        "button_label": "Read more",
+        "button_link": "/pages/frequently-asked-questions",
+        "second_button_label": "Contact us",
+        "second_button_link": "/pages/contact",
+        "button_bg": "#2f8f86",
+        "button_text_color": "#ffffff",
+        "spacing_desktop": 80,
+        "spacing_mobile": 60,
+        "fix_zindex": 0
+      }
+    }
+  },
+  "order": [
+    "introduction",
+    "shopping",
+    "section_faq_WtknnM"
+  ]
+}

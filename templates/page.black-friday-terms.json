@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "dreamer-rv-policy-page",
+      "settings": {
+        "content_width": 800
+      }
+    }
+  },
+  "order": ["main"]
+}

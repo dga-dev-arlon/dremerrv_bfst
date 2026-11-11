@@ -1,0 +1,87 @@
+{{ 'dreamer-rv-black-friday.css' | asset_url | stylesheet_tag }}
+
+<section class="drv-bf drv-bf-intro" aria-labelledby="drv-bf-title-{{ section.id }}">
+  <div class="drv-bf__intro-inner">
+    {%- if section.settings.promotion_label != blank -%}
+      <p class="drv-bf__label">{{ section.settings.promotion_label | escape }}</p>
+    {%- endif -%}
+    {%- if section.settings.promotion_caption != blank -%}
+      <p class="drv-bf__caption">{{ section.settings.promotion_caption | escape }}</p>
+    {%- endif -%}
+    <h1 id="drv-bf-title-{{ section.id }}" class="drv-bf__title">{{ section.settings.heading | default: page.title | escape }}</h1>
+    {%- if section.settings.introduction != blank -%}
+      <div class="drv-bf__copy">{{ section.settings.introduction }}</div>
+    {%- endif -%}
+    {%- if section.settings.show_page_content and page.content != blank -%}
+      <div class="drv-bf__copy drv-bf__page-content">{{ page.content }}</div>
+    {%- endif -%}
+    <div class="drv-bf__fine-print">
+      {%- if section.settings.availability != blank -%}
+        <span>{{ section.settings.availability | escape }}</span>
+      {%- endif -%}
+      {%- if section.settings.terms_page != blank -%}
+        <a href="{{ section.settings.terms_page.url }}">{{ section.settings.terms_label | escape }}</a>
+      {%- elsif section.settings.terms_label != blank -%}
+        <span>{{ section.settings.terms_label | escape }}</span>
+      {%- endif -%}
+    </div>
+    {%- if request.design_mode and section.settings.terms_page == blank -%}
+      <p class="drv-bf__editor-note">Choose the Black Friday T&amp;Cs page in this section's settings to activate the terms link.</p>
+    {%- endif -%}
+    <div class="drv-bf__gifts">
+      {%- if section.settings.gift_image != blank -%}
+        {{ section.settings.gift_image | image_url: width: 1400 | image_tag: class: 'drv-bf__gift-image', widths: '360, 540, 720, 1080, 1400', sizes: '(min-width: 750px) 620px, calc(100vw - 40px)', alt: section.settings.gift_image_alt, loading: 'eager' }}
+      {%- else -%}
+        {% comment %}Crop only the supplied artwork's baked-in wording; the accessible gift terms below are editable and inclusive of each threshold.{% endcomment %}
+        <div class="drv-bf__gift-artwork">
+          <img src="{{ 'dreamer-rv-bf-gifts.png' | asset_url }}" width="1800" height="1400" alt="{{ section.settings.gift_image_alt | escape }}" loading="eager" class="drv-bf__gift-original">
+        </div>
+      {%- endif -%}
+      <ul class="drv-bf__gift-tiers" role="list" aria-label="Black Friday gift tiers">
+        <li>
+          <h2 class="drv-bf__tier-title">{{ section.settings.first_threshold | escape }}</h2>
+          <p class="drv-bf__gift-name">{{ section.settings.first_gift | escape }}</p>
+          {%- if section.settings.first_value != blank -%}<p class="drv-bf__gift-value">{{ section.settings.first_value | escape }}</p>{%- endif -%}
+        </li>
+        <li>
+          <h2 class="drv-bf__tier-title">{{ section.settings.second_threshold | escape }}</h2>
+          <p class="drv-bf__gift-name">{{ section.settings.first_gift | escape }}</p>
+          {%- if section.settings.first_value != blank -%}<p class="drv-bf__gift-value">{{ section.settings.first_value | escape }}</p>{%- endif -%}
+          <p class="drv-bf__gift-name drv-bf__extra-gift">{{ section.settings.second_gift | escape }}</p>
+          {%- if section.settings.second_value != blank -%}<p class="drv-bf__gift-value">{{ section.settings.second_value | escape }}</p>{%- endif -%}
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Black Friday introduction",
+  "tag": "div",
+  "class": "section",
+  "enabled_on": { "templates": ["page"] },
+  "settings": [
+    { "type": "paragraph", "content": "Landing-page introduction and gift tiers from mock-up 1.png. Dreamer RV can update the campaign copy here. This section supplies the page's main heading." },
+    { "type": "text", "id": "promotion_label", "label": "Promotion label", "default": "20% OFF" },
+    { "type": "text", "id": "promotion_caption", "label": "Promotion caption", "default": "STOREWIDE | ON ALL INDIVIDUAL ITEMS" },
+    { "type": "text", "id": "heading", "label": "Page heading", "default": "Black Friday Sale" },
+    { "type": "richtext", "id": "introduction", "label": "Introduction", "default": "<p>Our Black Friday sale is here! Save on your favourite caravan comforts. Spend $350 or more and receive a free Dreamer RV Cooler Bag. Spend $490 or more and receive a free Dreamer RV Cooler Bag plus a Sand-Free Beach Towel, simply choose your preferred colour in your cart.</p>" },
+    { "type": "checkbox", "id": "show_page_content", "label": "Show content from the Shopify page", "default": true, "info": "Displays the page editor's body below the introduction. Clear the introduction above if the page body already contains that copy." },
+    { "type": "text", "id": "availability", "label": "Availability note", "default": "Gifts available while stocks last." },
+    { "type": "page", "id": "terms_page", "label": "Black Friday T&Cs page" },
+    { "type": "text", "id": "terms_label", "label": "Terms link text", "default": "T&Cs apply." },
+    { "type": "header", "content": "Gift artwork" },
+    { "type": "image_picker", "id": "gift_image", "label": "Replacement gift image", "info": "Optional. Use artwork without threshold text; the supplied image is used automatically when blank." },
+    { "type": "text", "id": "gift_image_alt", "label": "Gift image description", "default": "Dreamer RV turquoise Cooler Bag and pink Sand-Free Beach Towel" },
+    { "type": "header", "content": "Gift tier wording" },
+    { "type": "text", "id": "first_threshold", "label": "First minimum spend", "default": "Orders $350 or more" },
+    { "type": "text", "id": "first_gift", "label": "First gift", "default": "FREE Cooler Bag" },
+    { "type": "text", "id": "first_value", "label": "Cooler bag value", "default": "Worth $29" },
+    { "type": "text", "id": "second_threshold", "label": "Second minimum spend", "default": "Orders $490 or more" },
+    { "type": "text", "id": "second_gift", "label": "Additional second-tier gift", "default": "+ FREE Sand-Free Towel" },
+    { "type": "text", "id": "second_value", "label": "Towel value", "default": "Worth $69" }
+  ],
+  "presets": [{ "name": "Black Friday introduction" }]
+}
+{% endschema %}

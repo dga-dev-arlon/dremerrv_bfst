@@ -14,6 +14,7 @@
       "blocks": {
         "badge_KQTLCE": {
           "type": "badge",
+          "disabled": true,
           "settings": {
             "icon": "shopify://shop_images/98977f357408c15bc91dc8645bbaeb41e68ff9e7_8d4183ca-22d5-4eeb-932d-38a21e55d098.png",
             "title": "",
@@ -36,6 +37,8 @@
         "image": "shopify://shop_images/dc66f446d63bb7fe50f8d63778359e6a928616d0.jpg",
         "video": "shopify://files/videos/DreamerRV_OptionB_16x9_WithoutMusic_V3.mp4",
         "icon": "shopify://shop_images/Dreamer_RV_icon_7b82a39d-af29-47e5-b764-c631dbb4f554.svg",
+        "promotion_label": "20% OFF STOREWIDE",
+        "promotion_caption": "ON ALL INDIVIDUAL ITEMS",
         "heading": "Black Friday Sale",
         "subheading": "Mattress toppers, protectors and sheets, made to fit your bed, ready for any Aussie adventure.",
         "height": 900,
@@ -45,8 +48,8 @@
         "text_color": "#ffffff",
         "primary_button_label": "Shop the sale",
         "primary_button_url": "shopify://collections/all",
-        "primary_button_color": "#F4A48B",
-        "primary_button_text_color": "#1c1c1c",
+        "primary_button_color": "#f4a48b",
+        "primary_button_text_color": "#FFFFFF",
         "secondary_button_label": "Find your size",
         "secondary_button_url": "shopify://pages/find-your-fit",
         "secondary_button_color": "#bde9d8",
@@ -932,7 +935,7 @@
             "style": "image",
             "background_color": "#cfe8de",
             "text_color": "",
-            "heading": "Corners cut for the perfect fit",
+            "heading": "Corners cut for theperfect fit",
             "text": "<p>Rounded corners cut to the exact profile of your caravan mattress, sitting into the edges, no pesky overhang.</p>"
           }
         },

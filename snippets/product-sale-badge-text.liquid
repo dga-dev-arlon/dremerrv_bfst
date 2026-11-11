@@ -1,0 +1,21 @@
+{%- if black_friday_sale == 'true' -%}
+  20% OFF
+{%- elsif variant.compare_at_price > variant.price -%}
+  {{- 'product.sale_tag' | t -}}
+  {%- if settings.sale_label_price == 'percentage' -%}
+    {%- liquid
+      assign discount = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price
+      if discount > 1
+        assign discount = discount | round
+      else
+        assign discount = discount | round: 1
+      endif
+      if discount == 100 and product.price != 0
+        assign discount = discount | minus: 0.1
+      endif
+    -%}
+    {{ ' -' }}{{ discount }}%
+  {%- elsif settings.sale_label_price == 'amount' -%}
+    {{ ' -' }}{{ variant.compare_at_price | minus: variant.price | money }}
+  {%- endif -%}
+{%- endif -%}

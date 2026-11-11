@@ -1885,6 +1885,8 @@ p.text-overflow, .text-overflow.l4cl h1, .text-overflow.l4cl h2, .text-overflow.
 #root .price-varies { color: var(--price_color); text-decoration: none; }
 #root .old-price { font-weight: var(--main_fw); text-decoration: line-through; }
 	#root .old-price:not([class*="overlay-"]) { color: var(--price_color_old); }
+#root .drv-black-friday-price { color: #a83d57; }
+#root .drv-black-friday-price .old-price:not([class*="overlay-"]) { color: #666; }
 
 .s1tt:not(.ready), .s1tt > * { display: none; }
 .s1tt { display: inline; position: relative; z-index: 2; margin: 0; }

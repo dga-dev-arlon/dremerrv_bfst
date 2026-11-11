@@ -264,6 +264,10 @@
                 <option
                   value="{{ variant.id }}"
                   data-standard-product-select-variant="{% render 'standard-product-select-data', type: 'variant', product: product, variant: variant %}"
+                  {%- capture option_black_friday_sale -%}{%- render 'black-friday-sale', product: product, variant: variant -%}{%- endcapture %}
+                  {%- capture option_sale_badge -%}{%- render 'product-sale-badge-text', product: product, variant: variant, black_friday_sale: option_black_friday_sale -%}{%- endcapture %}
+                  data-black-friday-sale="{{ option_black_friday_sale }}"
+                  data-sale-badge="{{ option_sale_badge | strip_html | escape }}"
                   data-variantinfo='{ {% if product_image %}"image":"{%- if fill_images -%}{{ product_image | image_url: width: image_width_2, height: image_height_2, crop: 'center' }}{%- else -%}{{ product_image | image_url: width: image_width_2, height: image_height_2 }}{%- endif -%}",{% endif %}"price_old":"{%- if variant.compare_at_price > variant.price -%}{{ variant.compare_at_price | money }}{%- endif -%}","price":"{{ variant.price | money }}"}'
                   {% unless variant.available %}disabled data-class="disabled"{% endunless %}
                   {% if variant == current_variant %}selected{% endif %}
@@ -329,6 +333,10 @@
                         <option
                           value="{{ variant.id }}"
                           data-standard-product-select-variant="{% render 'standard-product-select-data', type: 'variant', product: product, variant: variant %}"
+                          {%- capture option_black_friday_sale -%}{%- render 'black-friday-sale', product: product, variant: variant -%}{%- endcapture %}
+                          {%- capture option_sale_badge -%}{%- render 'product-sale-badge-text', product: product, variant: variant, black_friday_sale: option_black_friday_sale -%}{%- endcapture %}
+                          data-black-friday-sale="{{ option_black_friday_sale }}"
+                          data-sale-badge="{{ option_sale_badge | strip_html | escape }}"
                           data-variantinfo='{ {% if product_image %}"image":"{%- if fill_images -%}{{ product_image | image_url: width: image_width_2, height: image_height_2, crop: 'center' }}{%- else -%}{{ product_image | image_url: width: image_width_2, height: image_height_2 }}{%- endif -%}",{% endif %}"price_old":"{%- if variant.compare_at_price > variant.price -%}{{ variant.compare_at_price | money }}{%- endif -%}","price":"{{ variant.price | money }}"}'
                           {% unless variant.available %}disabled data-class="disabled"{% endunless %}
                           {% if variant == current_variant %}selected{% endif %}
@@ -399,6 +407,10 @@
                     <option
                       value="{{ variant.id }}"
                       data-standard-product-select-variant="{% render 'standard-product-select-data', type: 'variant', product: product, variant: variant %}"
+                      {%- capture option_black_friday_sale -%}{%- render 'black-friday-sale', product: product, variant: variant -%}{%- endcapture %}
+                      {%- capture option_sale_badge -%}{%- render 'product-sale-badge-text', product: product, variant: variant, black_friday_sale: option_black_friday_sale -%}{%- endcapture %}
+                      data-black-friday-sale="{{ option_black_friday_sale }}"
+                      data-sale-badge="{{ option_sale_badge | strip_html | escape }}"
                       data-variantinfo='{ {% if product_image %}"image":"{%- if fill_images -%}{{ product_image | image_url: width: image_width_2, height: image_height_2, crop: 'center' }}{%- else -%}{{ product_image | image_url: width: image_width_2, height: image_height_2, pad_color: 'fff' }}{%- endif -%}",{% endif %}"price_old":"{%- if variant.compare_at_price > variant.price -%}{{ variant.compare_at_price | money }}{%- endif -%}","price":"{{ variant.price | money }}"}' data-options='{"id":{{ variant.id }},"options":{{ variant.options | json | escape }}}'
                           {% unless variant.available %}disabled data-class="disabled"{% endunless %}
                       data-slide-to="{{ featured_media_position | minus: 1 }}"
@@ -914,6 +926,10 @@
           <option
             value="{{ variant.id }}"
             data-standard-product-select-variant="{% render 'standard-product-select-data', type: 'variant', product: product, variant: variant %}"
+            {%- capture option_black_friday_sale -%}{%- render 'black-friday-sale', product: product, variant: variant -%}{%- endcapture %}
+            {%- capture option_sale_badge -%}{%- render 'product-sale-badge-text', product: product, variant: variant, black_friday_sale: option_black_friday_sale -%}{%- endcapture %}
+            data-black-friday-sale="{{ option_black_friday_sale }}"
+            data-sale-badge="{{ option_sale_badge | strip_html | escape }}"
             data-variantinfo='{"id":{{ variant.id }}, "variant":"{{ variant.title }}", "options":{{ variant.options | json | escape }},{% if product_image %}"image":"{%- if settings.fill_product_images -%}{{ product_image | image_url: width: image_width_2, height: image_height_2, crop: 'center' }}{%- else -%}{{ product_image | image_url: width: image_width_2 }}{%- endif -%}",{% endif %}"price_old":"{%- if variant.compare_at_price > variant.price -%}{{ variant.compare_at_price | money }}{%- endif -%}","price":"{{ variant.price | money }}"}'
             {% unless variant.available %}
               disabled data-class="disabled"
@@ -951,8 +967,11 @@
     -%}
   {%- endif -%}
   {%- if show_price and upsell == false -%}
-    <p class="price s1pr">
-      {%- if product.price_varies and settings.show_price_varies and layout != 'list-compact' -%}
+    {%- capture black_friday_sale -%}{%- render 'black-friday-sale', product: product, variant: current_variant -%}{%- endcapture -%}
+    <p class="price s1pr{% if black_friday_sale == 'true' %} drv-black-friday-price{% endif %}">
+      {%- if black_friday_sale == 'true' -%}
+        <span class="old-price">{{ current_variant.compare_at_price | money }}</span>&nbsp;{{ current_variant.price | money }}
+      {%- elsif product.price_varies and settings.show_price_varies and layout != 'list-compact' -%}
         {%- liquid
           assign price_min = product.price_min | money
           assign price_max = product.price_max | money

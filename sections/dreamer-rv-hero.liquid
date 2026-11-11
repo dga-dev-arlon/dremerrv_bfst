@@ -72,9 +72,20 @@
 
   <div class="drv-hero__inner">
     <div class="drv-hero__content">
-      
-      {%- if section.settings.heading != blank -%}
-        <h1 class="drv-hero__heading">{{ section.settings.heading | newline_to_br }}</h1>
+      {%- assign promotion_label = section.settings.promotion_label | strip -%}
+      {%- assign promotion_caption = section.settings.promotion_caption | strip -%}
+      {%- if promotion_label != blank or promotion_caption != blank or section.settings.heading != blank -%}
+        <div class="drv-hero__title">
+          {%- if promotion_label != blank -%}
+            <span class="drv-hero__promotion-label">{{ promotion_label | escape }}</span>
+          {%- endif -%}
+          {%- if promotion_caption != blank -%}
+            <span class="drv-hero__promotion-caption">{{ promotion_caption | escape }}</span>
+          {%- endif -%}
+          {%- if section.settings.heading != blank -%}
+            <h1 class="drv-hero__heading">{{ section.settings.heading | newline_to_br }}</h1>
+          {%- endif -%}
+        </div>
       {%- endif -%}
       <div class="drv-hero__icon-slot{% if section.settings.icon == blank %} drv-hero__icon-slot--empty{% endif %}">
         {%- if section.settings.icon != blank -%}
@@ -169,6 +180,8 @@
     { "type": "image_picker", "id": "image", "label": "Background image", "info": "Recommended: 2400 x 1300px or larger, landscape. Also used as the video's fallback/poster frame." },
     { "type": "video", "id": "video", "label": "Background video", "info": "Used when media type above is set to Video. Plays muted, looped, with no sound controls. Falls back to the background image if none is selected." },
     { "type": "image_picker", "id": "icon", "label": "Decorative icon", "info": "e.g. the palm tree mark, shown above the heading" },
+    { "type": "text", "id": "promotion_label", "label": "Promotion label" },
+    { "type": "text", "id": "promotion_caption", "label": "Promotion caption" },
     { "type": "textarea", "id": "heading", "label": "Heading", "info": "Press enter for a manual line break", "default": "Dream(ier) sleep,\nwherever you are" },
     { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Mattress toppers, protectors and sheets, made to fit your bed, ready for any Aussie adventure." },
     {

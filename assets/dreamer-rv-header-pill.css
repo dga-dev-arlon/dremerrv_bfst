@@ -1416,3 +1416,72 @@ html:has([id$="__section_contact_form_Vdwxf6"]) { scroll-behavior: smooth; }
 .shopify-policy__body li + li { margin-top: 4px; }
 .shopify-policy__body ul,
 .shopify-policy__body ol { padding-left: 1.25em; }
+
+@media screen and (min-width: 1001px) {
+  #root .shopify-section-header:not(.ready) #nav-outer {
+    opacity: 1 !important;
+  }
+
+  html #root #header-outer #header #header-inner #search.compact {
+    position: absolute !important;
+    margin: 0 !important;
+  }
+
+  html.search-compact-active #root #header-outer #header #header-inner #search.compact {
+    left: 50% !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    margin-left: -160px !important;
+  }
+
+  #root #header-outer #header-inner #nav-user {
+    margin-left: auto !important;
+  }
+}
+
+@media screen and (min-width: 1151px) and (max-width: 1300px) {
+  #header-outer #nav-outer {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    order: 2 !important;
+    flex: 1 1 auto !important;
+    justify-content: center !important;
+    min-width: 0 !important;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1150px) {
+  #header-outer #nav-outer {
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+  }
+
+  #header-outer #nav-bar ul[data-type="horizontal-nav"] > li {
+    margin: 0 8px !important;
+  }
+
+  #header-outer #nav a,
+  #header-outer #nav-bar a {
+    font-size: 15px !important;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  #root #header-outer #search.compact #livesearch {
+    min-width: 0 !important;
+    max-width: calc(100vw - 32px) !important;
+  }
+
+  #root #header-outer #search.compact #livesearch ul.l4ca {
+    margin-left: 0 !important;
+  }
+
+  #root #header-outer #search.compact #livesearch ul.l4ca > li {
+    width: 100% !important;
+    max-width: none !important;
+  }
+}

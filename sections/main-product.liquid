@@ -1422,8 +1422,9 @@
               {%- endif -%}
             </div>
           {%- when 'price' -%}
+            {%- capture black_friday_sale -%}{%- render 'black-friday-sale', product: product, variant: current_variant -%}{%- endcapture -%}
             <p
-  class="f8pr-price s1pr{% if current_variant.unit_price_measurement %} m0{% endif %}"
+  class="f8pr-price s1pr{% if current_variant.unit_price_measurement %} m0{% endif %}{% if black_friday_sale == 'true' %} drv-black-friday-price{% endif %}"
   {{ block.shopify_attributes }}
 >
   {%- if current_variant.compare_at_price > current_variant.price -%}

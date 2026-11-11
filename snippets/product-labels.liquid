@@ -16,22 +16,11 @@
     assign total_stock = current_variant.inventory_quantity
   endif
 
-  if current_variant.compare_at_price > current_variant.price and settings.show_sale_label
-    assign show_sale_label = true
-    if settings.sale_label_price == 'percentage'
-      assign discount = current_variant.compare_at_price | minus: current_variant.price | times: 100.0 | divided_by: current_variant.compare_at_price
-      if discount > 1
-        assign discount = discount | round
-      else
-        assign discount = discount | round: 1
-      endif
-      if discount == 100 and product.price != 0
-        assign discount = discount | minus: 0.1
-      endif
-    elsif settings.sale_label_price == 'amount'
-      assign discount = current_variant.compare_at_price | minus: current_variant.price | money
-    endif
+  assign is_bundle = false
+  if product.type == 'Mattress Topper Bundles' or product.tags contains 'easy-bundle'
+    assign is_bundle = true
   endif
+
   if settings.show_new_label
     assign new_label_seconds = settings.new_label_max_days | times: 86400
     assign now_seconds = 'now' | date: '%s' | plus: 0
@@ -44,26 +33,12 @@
 -%}
 
 <span class="s1lb label plain">
-  {%- if show_sale_label -%}
-        <span class="overlay-sale">
-      {%- if product.type == 'Mattress Topper Bundles' -%}
-        {%- comment -%} DRV: bundles say SAVE 15% instead of SALE -15% {%- endcomment -%}
-        SAVE
-        {%- if settings.sale_label_price == 'percentage' -%}
-          &nbsp;{{ discount }}%
-        {%- elsif settings.sale_label_price == 'amount' -%}
-          &nbsp;{{ discount -}}
-        {%- endif -%}
-      {%- else -%}
-        {{- 'product.sale_tag' | t -}}
-        {%- if settings.sale_label_price == 'percentage' -%}
-          &nbsp;-{{ discount }}%
-        {%- elsif settings.sale_label_price == 'amount' -%}
-          &nbsp;-{{ discount -}}
-        {%- endif -%}
-      {%- endif -%}
-    </span>
-    
+  {%- if settings.show_sale_label and is_bundle == false -%}
+    {%- capture black_friday_sale -%}{%- render 'black-friday-sale', product: product, variant: current_variant -%}{%- endcapture -%}
+    {%- capture sale_badge_text -%}{%- render 'product-sale-badge-text', product: product, variant: current_variant, black_friday_sale: black_friday_sale -%}{%- endcapture -%}
+    {%- if sale_badge_text != blank or product.variants.size > 1 -%}
+      <span class="overlay-sale{% if sale_badge_text == blank %} hidden{% endif %}" data-product-sale-badge>{{ sale_badge_text }}</span>
+    {%- endif -%}
   {%- endif -%}
   {%- if settings.show_stock_label and total_stock > 0 and total_stock <= settings.stock_label_qty -%}
     <span>{{ 'product.stock_tag' | t }}</span>

@@ -175,14 +175,26 @@
       </details>
     {%- endfor -%}
   </div>
+  {%- assign show_second_button = false -%}
+  {%- if section.settings.second_button_label != blank and section.settings.second_button_link != blank -%}
+    {%- assign show_second_button = true -%}
+  {%- endif -%}
   {%- if section.settings.show_button and section.settings.button_label != blank -%}
-    <div class="drv-faq__button-wrap">
+    <div class="drv-faq__button-wrap{% if show_second_button %} drv-faq__button-wrap--two{% endif %}">
       <a
         href="{{ section.settings.button_link | default: '#' }}"
         class="drv-faq__button"
       >
         {{ section.settings.button_label }}
       </a>
+      {%- if show_second_button -%}
+        <a
+          href="{{ section.settings.second_button_link | escape }}"
+          class="drv-faq__button"
+        >
+          {{ section.settings.second_button_label | escape }}
+        </a>
+      {%- endif -%}
     </div>
   {%- endif -%}
 </article>
@@ -276,6 +288,24 @@
     display: flex;
     justify-content: center;
     margin-top: 24px;
+  }
+  #shopify-section-{{ section.id }} .drv-faq__button-wrap--two {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  #shopify-section-{{ section.id }} .drv-faq__button-wrap--two .drv-faq__button {
+    box-sizing: border-box;
+    width: 200px;
+    max-width: 100%;
+    min-height: 48px;
+    white-space: normal;
+    text-align: center;
+  }
+  @media (max-width: 479px) {
+    #shopify-section-{{ section.id }} .drv-faq__button-wrap--two {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   #shopify-section-{{ section.id }} .drv-faq__button {
     display: inline-flex;
@@ -410,6 +440,17 @@
       "id": "button_link",
       "type": "url",
       "label": "Button link"
+    },
+    {
+      "id": "second_button_label",
+      "type": "text",
+      "label": "Second button label",
+      "info": "Optional. Fill in both the label and link to show a second button."
+    },
+    {
+      "id": "second_button_link",
+      "type": "url",
+      "label": "Second button link"
     },
     {
       "id": "button_bg",
