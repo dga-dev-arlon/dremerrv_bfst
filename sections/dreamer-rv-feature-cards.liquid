@@ -1,0 +1,186 @@
+{%- comment -%}
+  Dreamer RV - Feature cards carousel (e.g. "Sized for your setup")
+  Up to 6 cards, each independently set to either a photo or a plain
+  colour card, fully editable (heading, text, image, colour) per block.
+  Circular Sunburn-coloured arrow buttons scroll the row.
+{%- endcomment -%}
+
+<section
+  class="drv-feature-cards"
+  id="drv-feature-cards-{{ section.id }}"
+  style="
+    --drv-fc-bg: {{ section.settings.background_color }};
+    --drv-fc-text: {{ section.settings.text_color }};
+    --drv-fc-pt: {{ section.settings.padding_top }}px;
+    --drv-fc-pb: {{ section.settings.padding_bottom }}px;
+    --drv-fc-arrow-bg: {{ section.settings.arrow_color }};
+  "
+>
+  <div class="drv-feature-cards__inner">
+    {%- if section.settings.heading != blank or section.settings.subheading != blank -%}
+      <div class="drv-feature-cards__header">
+        {%- if section.settings.heading != blank -%}
+          <h2 class="drv-feature-cards__heading">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.subheading != blank -%}
+          <p class="drv-feature-cards__subheading">{{ section.settings.subheading }}</p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="drv-feature-cards__row" data-drv-fc-row>
+        {%- for block in section.blocks -%}
+          {%- assign is_image_card = false -%}
+          {%- if block.settings.style == 'image' and block.settings.image != blank -%}
+            {%- assign is_image_card = true -%}
+          {%- endif -%}
+
+          <div
+            class="drv-feature-cards__card {% if is_image_card %}drv-feature-cards__card--image{% else %}drv-feature-cards__card--colour{% endif %}"
+            style="
+              {%- unless is_image_card -%}
+                background-color: {{ block.settings.background_color }};
+              {%- endunless -%}
+              {%- if block.settings.text_color != blank -%}
+                --drv-fc-card-text: {{ block.settings.text_color }};
+              {%- endif -%}
+            "
+            {{ block.shopify_attributes }}
+          >
+            {%- if is_image_card -%}
+              <img
+                class="drv-feature-cards__card-image"
+                src="{{ block.settings.image | image_url: width: 900 }}"
+                srcset="
+                  {{ block.settings.image | image_url: width: 450 }} 450w,
+                  {{ block.settings.image | image_url: width: 700 }} 700w,
+                  {{ block.settings.image | image_url: width: 900 }} 900w
+                "
+                sizes="(min-width: 990px) 320px, 80vw"
+                width="900"
+                height="{{ 900 | divided_by: block.settings.image.aspect_ratio | default: 900 }}"
+                alt="{{ block.settings.image.alt | default: block.settings.heading | escape }}"
+                loading="lazy"
+              >
+              <div class="drv-feature-cards__card-scrim"></div>
+            {%- endif -%}
+
+            <div class="drv-feature-cards__card-content">
+              {%- if block.settings.heading != blank -%}
+                <p class="drv-feature-cards__card-heading">{{ block.settings.heading }}</p>
+              {%- endif -%}
+              {%- if block.settings.text != blank -%}
+                <div class="drv-feature-cards__card-text">{{ block.settings.text }}</div>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+
+      <div class="drv-feature-cards__nav">
+        <div class="drv-feature-cards__progress" aria-hidden="true">
+          <div class="drv-feature-cards__progress-bar" data-drv-fc-progress></div>
+        </div>
+
+        <div class="drv-feature-cards__arrows">
+          <button
+            type="button"
+            class="drv-feature-cards__arrow drv-feature-cards__arrow--prev"
+            data-drv-fc-prev
+            aria-label="Scroll to previous cards"
+            style="--secondary_bg_btn: {{ section.settings.arrow_color }}; --btn_br: 50px; background: {{ section.settings.arrow_color }} !important; background-color: {{ section.settings.arrow_color }} !important; border-radius: 50px !important;"
+          >
+            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true">
+              <path d="M17 7H1M1 7L7 1M1 7l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="drv-feature-cards__arrow drv-feature-cards__arrow--next"
+            data-drv-fc-next
+            aria-label="Scroll to next cards"
+            style="--secondary_bg_btn: {{ section.settings.arrow_color }}; --btn_br: 50px; background: {{ section.settings.arrow_color }} !important; background-color: {{ section.settings.arrow_color }} !important; border-radius: 50px !important;"
+          >
+            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true">
+              <path d="M1 7h16M11 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{{ 'dreamer-rv-feature-cards.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'dreamer-rv-feature-cards.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "Dreamer RV Feature Cards",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 6,
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Sized for your setup" },
+    { "type": "text", "id": "subheading", "label": "Subheading" },
+    { "type": "color", "id": "background_color", "label": "Section background", "default": "#FBF6EC" },
+    { "type": "color", "id": "text_color", "label": "Section text colour", "default": "#2B2621" },
+    { "type": "color", "id": "arrow_color", "label": "Arrow button colour", "default": "#F4A48B" },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "default": 80
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "select",
+          "id": "style",
+          "label": "Card style",
+          "options": [
+            { "value": "image", "label": "Photo" },
+            { "value": "colour", "label": "Plain colour" }
+          ],
+          "default": "image"
+        },
+        { "type": "image_picker", "id": "image", "label": "Image (used when style is Photo)" },
+        { "type": "color", "id": "background_color", "label": "Background colour (used when style is Plain colour)", "default": "#CFE8DE" },
+        { "type": "color", "id": "text_color", "label": "Text colour override", "info": "Leave blank to use the default for this card style" },
+        { "type": "text", "id": "heading", "label": "Card heading" },
+        { "type": "richtext", "id": "text", "label": "Card text" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dreamer RV Feature Cards",
+      "blocks": [
+        { "type": "card" },
+        { "type": "card" },
+        { "type": "card" },
+        { "type": "card" }
+      ]
+    }
+  ]
+}
+{% endschema %}

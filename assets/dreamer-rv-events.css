@@ -1,0 +1,294 @@
+/* Dreamer RV - Events section */
+
+.drv-events {
+  background-color: var(--drv-events-bg, #FBF6EC);
+  color: var(--drv-events-text, #2B2621);
+  padding-top: var(--drv-events-pt, 80px);
+  padding-bottom: var(--drv-events-pb, 80px);
+  border-radius:8px;
+}
+
+.drv-events__inner {
+  width: 100%;
+  max-width: 1216px;
+  margin: 0 auto;
+  padding: 0 42px;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 749px) {
+  .drv-events__inner {
+    padding: 0 24px;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Header: eyebrow, heading, description
+   ------------------------------------------------------------------ */
+.drv-events__header {
+  margin-bottom: 40px;
+  max-width: 640px;
+}
+
+.drv-events__eyebrow {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.drv-events__heading {
+  margin: 0 0 16px;
+  font-family: var(--font-heading, Georgia, 'Times New Roman', serif);
+  font-size: 56px;
+  line-height: 1.05;
+  color: inherit;
+}
+
+@media only screen and (max-width: 749px) {
+  .drv-events__heading {
+    font-size: 36px;
+  }
+}
+
+.drv-events__description {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: inherit;
+  opacity: 0.85;
+}
+
+/* ------------------------------------------------------------------
+   Tabs
+   ------------------------------------------------------------------ */
+.drv-events__tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 40px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.drv-events__tabs::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mobile: single scrollable row (carousel), matching the Figma - not
+   wrapping onto multiple lines. flex-wrap: nowrap + overflow-x: auto
+   above already does this; this just tightens the gap so more of the
+   row is visible before swiping. */
+@media only screen and (max-width: 749px) {
+  .drv-events__tabs {
+    gap: 20px;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* !important overrides: the theme paints its own pill-button styling
+   on every <button> globally with higher specificity than a plain
+   class selector - and confirmed via screenshot that overriding
+   background alone doesn't remove it, meaning the pill fill is coming
+   from a ::before/::after pseudo-element layered under the text
+   rather than the button's own background. Killing the pseudo-elements
+   outright (below) is what actually removes it. */
+.drv-events__tab {
+  position: relative;
+  flex: 0 0 auto;
+  margin: 0 !important;
+  padding: 4px 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  font-size: 15px;
+  line-height: 1.2;
+  color: inherit !important;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+  opacity: 0.65;
+}
+
+.drv-events__tab::before,
+.drv-events__tab::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+}
+
+.drv-events__tab:hover {
+  opacity: 1;
+}
+
+.drv-events__tab.is-active {
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------------
+   Event list + cards
+   ------------------------------------------------------------------ */
+.drv-events__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.drv-events__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 32px 0;
+  border-top: 1px solid var(--drv-events-border, #2B2621);
+}
+
+.drv-events__list .drv-events__item:last-child {
+  border-bottom: 1px solid var(--drv-events-border, #2B2621);
+}
+
+.drv-events__item[hidden] {
+  display: none;
+}
+
+.drv-events__date {
+  flex: 0 0 auto;
+  width: 100px;
+  text-align: center;
+}
+
+.drv-events__weekday {
+  margin: 0;
+  font-size: 14px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.drv-events__day {
+  margin: 4px 0;
+  font-family: var(--font-heading, Georgia, 'Times New Roman', serif);
+  font-size: 40px;
+  line-height: 1;
+  color: inherit;
+}
+
+.drv-events__month {
+  margin: 0;
+  font-size: 14px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.drv-events__divider {
+  flex: 0 0 auto;
+  align-self: stretch;
+  width: 1px;
+  background: var(--drv-events-border, #2B2621);
+  opacity: 0.3;
+}
+
+.drv-events__content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.drv-events__title {
+  margin: 0 0 6px;
+  font-family: var(--font-heading, Georgia, 'Times New Roman', serif);
+  font-size: 24px;
+  line-height: 1.3;
+  color: inherit;
+}
+
+.drv-events__location {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.drv-events__text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.drv-events__button {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  background: var(--drv-events-btn-bg, #BFE3DB);
+  color: var(--drv-events-btn-text, #2B2621);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  align-self: center;
+}
+
+.drv-events__empty {
+  padding: 40px 0;
+  text-align: center;
+  font-size: 15px;
+  opacity: 0.75;
+}
+
+.drv-events__empty:not([hidden]) {
+  display: block;
+}
+
+/* ------------------------------------------------------------------
+   Mobile: stack date above content, button goes full width below
+   ------------------------------------------------------------------ */
+@media only screen and (max-width: 749px) {
+  .drv-events__item {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 24px 0;
+  }
+
+  .drv-events__date {
+    width: auto;
+    text-align: left;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .drv-events__day {
+    margin: 0;
+    font-size: 28px;
+  }
+
+  .drv-events__divider {
+    display: none;
+  }
+
+  .drv-events__content {
+    flex: 1 1 100%;
+    order: 1;
+  }
+
+  .drv-events__date {
+    order: 0;
+    flex: 1 1 100%;
+  }
+
+  .drv-events__button {
+    order: 2;
+    flex: 1 1 100%;
+    width: 100%;
+  }
+}

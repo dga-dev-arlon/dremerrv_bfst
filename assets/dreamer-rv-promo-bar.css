@@ -1,0 +1,103 @@
+.drv-promo-bar {
+  background: var(--drv-promo-bg, #fbf6ec);
+  color: var(--drv-promo-text, #2b2621);
+}
+
+.drv-promo-bar__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 42px;
+  max-width: 1440px;
+  margin: 0 auto;
+  /* Top/bottom padding come from the section's customiser settings
+     (padding_top / padding_bottom); left/right stay fixed at 40px. */
+  padding: var(--drv-promo-pt, 42px) 40px var(--drv-promo-pb, 80px);
+}
+
+.drv-promo-bar__heading {
+  /* Figma "Heading/H6" style - Secondary font (Luxora Grotesk), not the
+     Primary font. Only larger display headings (H1-H4) use Bethany
+     Elingston; this H6-level heading matches the label text below it. */
+  margin: 0;
+  text-align: center;
+  font-family: var(--main_ff);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4; /* 140% â‰ˆ 28px */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.drv-promo-bar__track {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 64px;
+  width: 100%;
+}
+
+.drv-promo-bar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 150px;
+  padding: 12px 0;
+}
+
+.drv-promo-bar .drv-promo-bar__item img.drv-promo-bar__icon {
+  /* !important + specificity, same pattern as the logo wall - this theme's
+     global img rule otherwise overrides size/fit. Matches the icon assets'
+     native 38x38 size (e.g. Dreamer_RV_Icons_Screen_Australian). */
+  width: 38px !important;
+  height: 38px !important;
+  max-width: none !important;
+  border-radius: 0 !important;
+  object-fit: contain;
+  display: block;
+}
+
+.drv-promo-bar__label {
+  /* Figma "Text/Regular/Normal" style - Secondary font (Luxora Grotesk,
+     already the theme's body font, so no font-family override needed). */
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5; /* 150% = 24px */
+  white-space: nowrap;
+}
+
+/* Mobile: horizontal scroll, same pattern as the logo wall carousel */
+@media screen and (max-width: 749px) {
+  .drv-promo-bar__inner {
+    gap: 24px;
+    padding: 32px 0 48px;
+  }
+
+  .drv-promo-bar__heading {
+    padding: 0 20px;
+  }
+
+  .drv-promo-bar__track {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 32px;
+    padding: 4px 32px 12px;
+    scrollbar-width: none;
+  }
+
+  .drv-promo-bar__track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .drv-promo-bar__item {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+}

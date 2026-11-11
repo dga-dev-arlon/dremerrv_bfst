@@ -1,0 +1,208 @@
+/* Dreamer RV - Best sellers grid (homepage only) */
+
+.drv-bestsellers {
+  background-color: var(--drv-bs-bg, #FBF6EC);
+  color: var(--drv-bs-text, #2B2621);
+  padding-top: var(--drv-bs-pt, 60px);
+  padding-bottom: var(--drv-bs-pb, 60px);
+  border-radius:8px;
+}
+
+.drv-bestsellers__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.drv-bestsellers__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.drv-bestsellers__heading {
+  margin: 0 0 24px;
+  font-size: 32px;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.drv-bestsellers__subheading {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: inherit;
+  opacity: 0.8;
+}
+
+/* Grid: 3 columns on desktop for both 1-row and 2-row modes */
+.drv-bestsellers__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 24px;
+}
+
+.drv-bestsellers__card {
+  display: flex;
+  flex-direction: column;
+}
+
+.drv-bestsellers__media {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.drv-bestsellers__media-link {
+  display: block;
+}
+
+.drv-bestsellers__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.drv-bestsellers__image--placeholder {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* Judge.me star rating badge, overlaid bottom-left of the image */
+.drv-bestsellers__rating {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  line-height: 1.4;
+  pointer-events: none;
+}
+
+.drv-bestsellers__rating .jdgm-prev-badge {
+  pointer-events: auto;
+}
+
+/* Quick-add cart icon button, overlaid bottom-right of the image */
+.drv-bestsellers__quick-add-form {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  margin: 0;
+}
+
+.drv-bestsellers__quick-add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--drv-bs-text, #2B2621);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.drv-bestsellers__quick-add:hover {
+  background: var(--drv-bs-text, #2B2621);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.drv-bestsellers__info {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.drv-bestsellers__title-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.drv-bestsellers__title {
+  margin: 0 0 6px;
+  font-size: 16px;
+  line-height: 1.4;
+  color: inherit;
+}
+
+.drv-bestsellers__price {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.drv-bestsellers__price--sale {
+  color: #C0392B;
+  margin-right: 8px;
+}
+
+.drv-bestsellers__price--compare {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Only show the first row of 3 when row_count = 1 */
+.drv-bestsellers__grid[data-row-count="1"] .drv-bestsellers__card:nth-child(n+4) {
+  display: none;
+}
+
+/* Tablet: 2 columns, both rows shown, no card hidden by nth-child rule below */
+@media only screen and (max-width: 989px) and (min-width: 750px) {
+  .drv-bestsellers__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .drv-bestsellers__grid[data-row-count="1"] .drv-bestsellers__card:nth-child(n+4) {
+    display: none;
+  }
+}
+
+/* Mobile: swipeable horizontal scroll, one card at a time */
+@media only screen and (max-width: 749px) {
+  .drv-bestsellers__header {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .drv-bestsellers__heading {
+    font-size: 24px;
+  }
+
+  .drv-bestsellers__grid {
+    display: flex;
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    margin: 0 -24px;
+    padding: 0 24px 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .drv-bestsellers__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .drv-bestsellers__card {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+  }
+
+  /* On mobile, show all fetched products (up to 6) in the scroll strip
+     regardless of row_count, since rows collapse into one scrollable line */
+  .drv-bestsellers__grid[data-row-count="1"] .drv-bestsellers__card:nth-child(n+4) {
+    display: block;
+  }
+}

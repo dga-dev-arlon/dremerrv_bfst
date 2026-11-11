@@ -1,0 +1,225 @@
+{%- comment -%}
+  Dreamer RV - Image/text split "compare" variant
+{%- endcomment -%}
+
+<section
+  class="drv-split-compare"
+  style="
+    --drv-sc-bg: {{ section.settings.background_color }};
+    --drv-sc-text: {{ section.settings.text_color }};
+    --drv-sc-pt: {{ section.settings.padding_top }}px;
+    --drv-sc-pb: {{ section.settings.padding_bottom }}px;
+    --drv-sc-frame-pt: {{ section.settings.frame_padding_top }}px;
+    --drv-sc-frame-pb: {{ section.settings.frame_padding_bottom }}px;
+    --drv-sc-frame-px: {{ section.settings.frame_padding_sides }}px;
+    --drv-sc-primary-bg: {{ section.settings.primary_button_bg }};
+    --drv-sc-primary-text: {{ section.settings.primary_button_text }};
+    --drv-sc-secondary-bg: {{ section.settings.secondary_button_bg }};
+    --drv-sc-secondary-text: {{ section.settings.secondary_button_text }};
+  "
+>
+  <div class="drv-split-compare__frame drv-split-compare__frame--image-{{ section.settings.image_position }}">
+    <div class="drv-split-compare__media">
+      {%- if section.settings.image != blank -%}
+        <img
+          src="{{ section.settings.image | image_url: width: 1400 }}"
+          srcset="
+            {{ section.settings.image | image_url: width: 700 }} 700w,
+            {{ section.settings.image | image_url: width: 1000 }} 1000w,
+            {{ section.settings.image | image_url: width: 1400 }} 1400w
+          "
+          sizes="(min-width: 750px) 50vw, 100vw"
+          width="1400"
+          height="{{ 1400 | divided_by: section.settings.image.aspect_ratio | default: 1400 }}"
+          alt="{{ section.settings.image.alt | default: section.settings.heading | escape }}"
+          loading="lazy"
+        >
+      {%- else -%}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'drv-split-compare__image drv-split-compare__image--placeholder' }}
+      {%- endif -%}
+    </div>
+
+    <div class="drv-split-compare__content">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="drv-split-compare__heading">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+
+      {%- if section.settings.text != blank -%}
+        <div class="drv-split-compare__text">{{ section.settings.text }}</div>
+      {%- endif -%}
+
+      {%- if section.blocks.size > 0 -%}
+        <div class="drv-split-compare__features">
+          {%- for block in section.blocks -%}
+            <div class="drv-split-compare__feature" {{ block.shopify_attributes }}>
+              {%- if block.settings.icon != blank -%}
+                <img
+                  class="drv-split-compare__feature-icon"
+                  src="{{ block.settings.icon | image_url: width: 60 }}"
+                  width="30"
+                  height="30"
+                  alt=""
+                  loading="lazy"
+                >
+              {%- endif -%}
+              {%- if block.settings.heading != blank -%}
+                <p class="drv-split-compare__feature-heading">{{ block.settings.heading }}</p>
+              {%- endif -%}
+              {%- if block.settings.text != blank -%}
+                <p class="drv-split-compare__feature-text">{{ block.settings.text }}</p>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.show_primary_button or section.settings.show_secondary_button -%}
+        <div class="drv-split-compare__buttons">
+          {%- if section.settings.show_primary_button and section.settings.primary_button_label != blank -%}
+            <a
+              href="{{ section.settings.primary_button_link | default: '#' }}"
+              class="drv-split-compare__button drv-split-compare__button--primary"
+            >
+              {{ section.settings.primary_button_label }}
+            </a>
+          {%- endif -%}
+          {%- if section.settings.show_secondary_button and section.settings.secondary_button_label != blank -%}
+            
+             <a
+              href="{{ section.settings.secondary_button_link | default: '#' }}"
+              class="drv-split-compare__button drv-split-compare__button--secondary"
+            >
+              {{ section.settings.secondary_button_label }}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{{ 'dreamer-rv-split-compare.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "Split section - compare",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 6,
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "How our toppers compare" },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Body text",
+      "default": "<p>Creating a new standard in caravan sleep quality, our Wanderluxe\u2122 range is built to a spec most toppers on the market don't measure up to.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Buttons"
+    },
+    { "type": "checkbox", "id": "show_primary_button", "label": "Show primary button", "default": true },
+    { "type": "text", "id": "primary_button_label", "label": "Primary button label", "default": "Find your size" },
+    { "type": "url", "id": "primary_button_link", "label": "Primary button link" },
+    { "type": "color", "id": "primary_button_bg", "label": "Primary button background", "default": "#2F8F86" },
+    { "type": "color", "id": "primary_button_text", "label": "Primary button text colour", "default": "#FFFFFF" },
+    { "type": "checkbox", "id": "show_secondary_button", "label": "Show secondary button", "default": false },
+    { "type": "text", "id": "secondary_button_label", "label": "Secondary button label", "default": "Learn more" },
+    { "type": "url", "id": "secondary_button_link", "label": "Secondary button link" },
+    { "type": "color", "id": "secondary_button_bg", "label": "Secondary button background", "default": "#BFE3DB" },
+    { "type": "color", "id": "secondary_button_text", "label": "Secondary button text colour", "default": "#2B2621" },
+    {
+      "type": "header",
+      "content": "Section styling"
+    },
+    { "type": "color", "id": "background_color", "label": "Section background", "default": "#F9F2E8" },
+    { "type": "color", "id": "text_color", "label": "Section text colour", "default": "#2B2621" },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Section padding top",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Section padding bottom",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "Image + content frame spacing"
+    },
+    {
+      "type": "range",
+      "id": "frame_padding_top",
+      "label": "Space above image",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "frame_padding_bottom",
+      "label": "Space below image",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "frame_padding_sides",
+      "label": "Side padding",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "default": 42
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        { "type": "image_picker", "id": "icon", "label": "Icon" },
+        { "type": "text", "id": "heading", "label": "Small heading", "default": "Materials" },
+        { "type": "textarea", "id": "text", "label": "Body text", "default": "Feature description goes here." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Split section - compare",
+      "blocks": [
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" }
+      ]
+    }
+  ]
+}
+{% endschema %}

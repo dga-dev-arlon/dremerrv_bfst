@@ -1,0 +1,187 @@
+.drv-trust {
+  position: relative;
+  width: calc(100vw - 40px);
+  margin-left: calc(50% - 50vw + 20px);
+  margin-right: calc(50% - 50vw + 20px);
+  background-color: var(--drv-trust-bg, #F9F2E8);
+  color: var(--drv-trust-text, #424345);
+  padding-top: var(--drv-trust-pt, 80px);
+  padding-bottom: var(--drv-trust-pb, 80px);
+  box-sizing: border-box;
+}
+
+.drv-trust__frame {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: var(--drv-trust-px, 64px);
+  padding-right: var(--drv-trust-px, 64px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.drv-trust__eyebrow {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.drv-trust__heading {
+  margin: 0 0 16px;
+  font-family: 'Bethany Elingston', serif;
+  font-size: var(--Text-Sizes-Heading-4, 32px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 41.6px */
+  color: inherit;
+}
+
+.drv-trust__subheading {
+  max-width: 640px;
+  margin: 0 auto 40px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: inherit;
+  opacity: 0.85;
+}
+
+.drv-trust__subheading p {
+  margin: 0;
+}
+
+.drv-trust__cards {
+  display: grid;
+  grid-template-columns: repeat(var(--drv-trust-columns, 3), 1fr);
+  gap: var(--drv-trust-card-gap, 0px);
+  text-align: left;
+}
+
+.drv-trust__card {
+  position: relative !important;
+  display: flex;
+  align-items: flex-end;
+  min-height: 420px;
+  border-radius: var(--drv-trust-card-radius, 0px);
+  overflow: hidden !important;
+  isolation: isolate;
+}
+
+.drv-trust .drv-trust__card .drv-trust__card-image,
+.drv-trust__card-image.drv-trust__card-image {
+  display: block !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: cover !important;
+  object-position: center;
+  margin: 0;
+  z-index: 0;
+}
+
+.drv-trust__card-overlay {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(
+    0deg,
+    var(--drv-trust-overlay, #000000) 0%,
+    transparent 70%
+  );
+  opacity: var(--drv-trust-overlay-opacity, 0.4);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.drv-trust__card-content {
+  position: relative !important;
+  z-index: 2;
+  padding: var(--drv-trust-card-padding, 32px);
+  color: var(--drv-trust-card-text, #FFFFFF);
+}
+
+.drv-trust__card--solid {
+  background-color: var(--drv-trust-card-solid-bg, #FFFBF5);
+}
+
+.drv-trust__card--solid .drv-trust__card-content {
+  color: var(--drv-trust-card-solid-text, #424345);
+}
+
+.drv-trust__card-heading {
+  margin: 0 0 8px;
+  font-family: 'Bethany Elingston', serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: inherit;
+}
+
+.drv-trust__card-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.drv-trust__button-wrap {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.drv-trust__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  background: var(--drv-trust-button-bg, #2F8F86);
+  color: var(--drv-trust-button-text, #FFFFFF);
+}
+
+@media screen and (max-width: 749px) {
+  .drv-trust__frame {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .drv-trust__heading {
+    font-size: 26px;
+  }
+
+  .drv-trust__cards {
+    display: flex;
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin: 0 -20px;
+    padding: 0 20px;
+  }
+
+  .drv-trust__cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .drv-trust__card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+  }
+}

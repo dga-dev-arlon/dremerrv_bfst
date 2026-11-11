@@ -1,0 +1,132 @@
+{%- comment -%}
+  Dreamer RV - Footer links (Shop / Explore / Help & Info / Wholesale / Legal)
+  Custom section: up to 5 columns, added as blocks, each with its own
+  heading and up to 6 label/URL links - fully custom, not tied to a
+  native Shopify menu.
+{%- endcomment -%}
+
+{%- comment -%} DRV: footer now lives in the Footer group. Copies left in templates render nothing. {%- endcomment -%}
+{%- unless section.location == 'template' -%}
+<section
+  class="drv-footer-links"
+  style="
+    --drv-fl-bg: {{ section.settings.background_color }};
+    --drv-fl-text: {{ section.settings.text_color }};
+    --drv-fl-pt: {{ section.settings.padding_top }}px;
+    --drv-fl-pb: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="drv-footer-links__inner">
+    {%- if section.blocks.size > 0 -%}
+      <div class="drv-footer-links__columns">
+        {%- for block in section.blocks -%}
+          <div class="drv-footer-links__column" {{ block.shopify_attributes }}>
+            {%- if block.settings.heading != blank -%}
+              {%- comment -%}
+                A real <button> here was picking up the theme's own
+                generic button/disclosure styling (the teal pill chrome,
+                and something in the theme's CSS/JS keying off a
+                button+list or aria-expanded pattern was hiding the list
+                entirely) - a plain div with role="button" avoids both,
+                since it's not a native form control the theme's own
+                styles or scripts have any reason to touch.
+              {%- endcomment -%}
+              <div class="drv-footer-links__heading" role="button" tabindex="0" aria-expanded="false">
+                <span>{{ block.settings.heading }}</span>
+                <svg class="drv-footer-links__chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+                  <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            {%- endif -%}
+            <div class="drv-footer-links__list-wrap">
+              <ul class="drv-footer-links__list">
+                {%- for i in (1..6) -%}
+                  {%- assign link_label = 'link_' | append: i | append: '_label' -%}
+                  {%- assign link_url = 'link_' | append: i | append: '_url' -%}
+                  {%- if block.settings[link_label] != blank -%}
+                    <li>
+                      <a href="{{ block.settings[link_url] | default: '#' }}" class="drv-footer-links__link">
+                        {{ block.settings[link_label] }}
+                      </a>
+                    </li>
+                  {%- endif -%}
+                {%- endfor -%}
+              </ul>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{{ 'dreamer-rv-footer-links.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'dreamer-rv-footer-links.js' | asset_url }}" defer="defer"></script>
+
+{%- endunless -%}
+
+{% schema %}
+{
+  "name": "Footer links",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 5,
+  "settings": [
+    { "type": "color", "id": "background_color", "label": "Section background", "default": "#F9F2E8" },
+    { "type": "color", "id": "text_color", "label": "Section text colour", "default": "#2B2621" },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Link column",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Column heading", "default": "Shop" },
+        { "type": "text", "id": "link_1_label", "label": "Link 1 label" },
+        { "type": "url", "id": "link_1_url", "label": "Link 1 URL" },
+        { "type": "text", "id": "link_2_label", "label": "Link 2 label" },
+        { "type": "url", "id": "link_2_url", "label": "Link 2 URL" },
+        { "type": "text", "id": "link_3_label", "label": "Link 3 label" },
+        { "type": "url", "id": "link_3_url", "label": "Link 3 URL" },
+        { "type": "text", "id": "link_4_label", "label": "Link 4 label" },
+        { "type": "url", "id": "link_4_url", "label": "Link 4 URL" },
+        { "type": "text", "id": "link_5_label", "label": "Link 5 label" },
+        { "type": "url", "id": "link_5_url", "label": "Link 5 URL" },
+        { "type": "text", "id": "link_6_label", "label": "Link 6 label" },
+        { "type": "url", "id": "link_6_url", "label": "Link 6 URL" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer links",
+      "blocks": [
+        { "type": "column" },
+        { "type": "column" },
+        { "type": "column" },
+        { "type": "column" },
+        { "type": "column" }
+      ]
+    }
+  ]
+}
+{% endschema %}

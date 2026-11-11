@@ -1,0 +1,210 @@
+.drv-size-finder__heading {
+  color: var(--drv-text) !important;
+}
+
+.drv-size-finder__eyebrow,
+.drv-size-finder__subheading {
+  color: #424345 !important;
+}
+
+.drv-size-finder__empty {
+  color: var(--drv-muted) !important;
+}
+
+.drv-size-finder__field {
+  color: var(--drv-text) !important;
+}
+
+
+.drv-size-finder {
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--drv-bg);
+  color: var(--drv-text);
+  font-family: Georgia, 'Iowan Old Style', serif;
+}
+
+.drv-size-finder__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 42px;
+  box-sizing: border-box;
+}
+
+.drv-size-finder__eyebrow {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--drv-muted);
+  margin: 0 0 10px;
+}
+
+.drv-size-finder__heading {
+  font-size: 28px;
+  margin: 0 0 6px;
+  font-weight: 400;
+}
+
+.drv-size-finder__subheading {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: var(--drv-muted);
+  margin: 0 0 24px;
+}
+
+.drv-size-finder__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: stretch;
+}
+
+@media (max-width: 700px) {
+  .drv-size-finder__inner {
+    padding: 48px 20px;
+  }
+
+  .drv-size-finder__layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.drv-size-finder__left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Visual panel - as of 14 Oct 2026 this always shows a merchant-uploaded
+   lifestyle photo (section.settings.lifestyle_image), filling the whole
+   panel, with NO text overlaid on it (confirmed with the client: the
+   matched size name is no longer shown to the customer here at all). */
+.drv-size-finder__visual {
+  position: relative;
+  background: var(--drv-panel);
+  border-radius: 12px;
+  min-height: 440px;
+  border: 1px solid var(--drv-border);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* !important throughout - the theme's own base styles (img sizing rules
+   in screen.css) use !important themselves and were winning over a plain
+   object-fit: cover, leaving the photo at its natural size instead of
+   filling the panel. */
+/* Scoped as .drv-size-finder__visual .drv-size-finder__photo (two
+   classes) rather than just .drv-size-finder__photo - the theme's own
+   base rule in screen.css (body>div:first-child img, body>div[id] img,
+   etc.) chains three tag selectors together, which beats a single class
+   selector even with !important on both sides. Two classes together
+   outrank that regardless of how many tag selectors it has. */
+.drv-size-finder__visual .drv-size-finder__photo {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  margin: 0 !important;
+  display: block !important;
+}
+
+/* The <svg> element is still in the markup because the JS targets it on
+   every render, but it's never drawn into any more - hide it outright so
+   it can't interfere with the photo underneath. */
+.drv-size-finder__visual svg {
+  display: none;
+}
+
+/* 14 Oct 2026: removed per client decision - the visual panel no longer
+   tells the customer which size matched, it's just the photo at all
+   times. Both elements stay in the markup (the JS still targets them
+   harmlessly) but are hidden outright rather than shown as a caption. */
+.drv-size-finder__empty,
+.drv-size-finder__label {
+  display: none !important;
+}
+
+.drv-size-finder__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.drv-size-finder__field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 400 !important;
+}
+
+.drv-size-finder__field input,
+.drv-size-finder__field select {
+  padding: 9px 10px;
+  border: 1px solid var(--drv-border);
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+}
+
+.drv-size-finder__find-btn,
+.drv-size-finder__help-btn {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 400 !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.drv-size-finder__find-btn {
+  margin-top: 6px;
+  border: 1px solid var(--drv-find-btn);
+  background: var(--drv-find-btn);
+  color: var(--drv-find-btn-text);
+}
+
+.drv-size-finder__find-btn[data-mode="shop"] {
+  border-color: var(--drv-shop-btn);
+  background: var(--drv-shop-btn);
+  color: var(--drv-find-btn-shop-text);
+}
+
+.drv-size-finder__help-btn {
+  border: 1px solid var(--drv-shop-btn);
+  background: var(--drv-shop-btn);
+  color: var(--drv-shop-btn-text);
+}
+
+.drv-size-finder__no-match {
+  font-size: 13px !important;
+  color: var(--drv-muted);
+  line-height: 1.5;
+}
+
+.drv-size-finder__no-match p {
+  font-size: 13px !important;
+  margin: 0 0 10px;
+}
+
+.drv-size-finder__no-match p:last-child {
+  margin-bottom: 0;
+}
+
+.drv-size-finder__no-match a {
+  color: var(--drv-text);
+  text-decoration: underline;
+}

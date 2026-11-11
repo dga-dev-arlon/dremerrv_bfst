@@ -1,0 +1,212 @@
+{%- comment -%}
+  Dreamer RV — Mattress Topper Size Finder
+  ------------------------------------------
+  Customer enters width x length (cm) + corner type -> matched against
+  merchant-editable "size" blocks (also stored in cm, as of 14 Oct 2026 -
+  previously mm, converted from the client's mm-based sizing spreadsheet
+  by dividing each value by 10 when setting up blocks) -> shows a "Shop
+  related products" link built from the matched size's handle. No product
+  dependency - pure dimension matching.
+
+  MATCHING LOGIC: each size matches on an explicit width RANGE and length
+  RANGE (min/max, in cm), not a single value plus a shared/global
+  tolerance - different products genuinely need different matching
+  windows. A customer's measurement only matches a size if it falls
+  within THAT size's own width range AND length range AND the corner
+  type matches exactly.
+
+  Collections/tagging: nothing needs to change there — the link already
+  builds itself as /collections/{slug} from whatever size matches. Just
+  make sure each block's Label matches the live collection title exactly
+  (see slugify() in the JS).
+{%- endcomment -%}
+
+<section
+  class="drv-size-finder"
+  data-drv-size-finder
+  data-section-id="{{ section.id }}"
+  style="
+    --drv-bg: {{ section.settings.bg_color }};
+    --drv-panel: {{ section.settings.panel_color }};
+    --drv-text: {{ section.settings.text_color }};
+    --drv-muted: {{ section.settings.muted_color }};
+    --drv-border: {{ section.settings.border_color }};
+    --drv-shape: {{ section.settings.shape_color }};
+    --drv-find-btn: {{ section.settings.find_button_color }};
+    --drv-find-btn-text: {{ section.settings.find_button_text_color }};
+    --drv-shop-btn: {{ section.settings.shop_button_color }};
+    --drv-shop-btn-text: {{ section.settings.shop_button_text_color }};
+    --drv-find-btn-shop-text: {{ section.settings.find_btn_shop_mode_text_color }};
+  "
+>
+  <div class="drv-size-finder__inner">
+    <div class="drv-size-finder__layout">
+      <div class="drv-size-finder__left">
+        <div class="drv-size-finder__intro">
+          {%- if section.settings.eyebrow != blank -%}
+            <p class="drv-size-finder__eyebrow">{{ section.settings.eyebrow }}</p>
+          {%- endif -%}
+          {%- if section.settings.heading != blank -%}
+            <h2 class="drv-size-finder__heading">{{ section.settings.heading }}</h2>
+          {%- endif -%}
+          {%- if section.settings.subheading != blank -%}
+            <p class="drv-size-finder__subheading">{{ section.settings.subheading }}</p>
+          {%- endif -%}
+        </div>
+
+        <form class="drv-size-finder__form" data-drv-form>
+          <label class="drv-size-finder__field">
+            Width of mattress (cm)
+            <input type="number" inputmode="numeric" min="0" data-drv-width required>
+          </label>
+          <label class="drv-size-finder__field">
+            Length of mattress (cm). Including the head-end bolster, if applicable.
+            <input type="number" inputmode="numeric" min="0" data-drv-length required>
+          </label>
+          <label class="drv-size-finder__field">
+            Corner profile at the foot end of your mattress?
+            <select data-drv-corner required>
+              <option value="" disabled selected>Select corner type</option>
+              <option value="rounded">Rounded</option>
+              <option value="square">Square</option>
+              <option value="left-cut">Left Cut</option>
+            </select>
+          </label>
+          <div class="drv-size-finder__actions">
+            <button type="submit" class="drv-size-finder__find-btn" data-drv-find-btn data-mode="find" data-shop-href="">
+              {{ section.settings.find_button_label | default: 'Find my size' }}
+            </button>
+            <a href="{{ section.settings.no_match_link | default: '/pages/contact-us' }}" class="drv-size-finder__help-btn">
+              {{ section.settings.help_button_label | default: 'Need help? Contact us' }}
+            </a>
+          </div>
+          <div class="drv-size-finder__no-match" data-drv-no-match hidden>
+            <p>We couldn&rsquo;t find a clear match based on your mattress measurements, but we may still have a Wanderluxe&trade; option that could work for your setup.</p>
+            <p>Some mattresses need a little more consideration, and there may be more than one suitable option.</p>
+            <p>Please complete our <a href="{{ section.settings.no_match_link | default: '/pages/contact-us' }}">Contact Us form</a> with the requested measurements, and our Customer Care team will help you explore the best options for your setup.</p>
+          </div>
+        </form>
+      </div>
+
+      <div class="drv-size-finder__visual">
+        {%- if section.settings.lifestyle_image != blank -%}
+          {{
+            section.settings.lifestyle_image
+            | image_url: width: 1400
+            | image_tag:
+              class: 'drv-size-finder__photo',
+              loading: 'lazy',
+              widths: '400, 700, 1000, 1400',
+              sizes: '(min-width: 700px) 50vw, 100vw',
+              alt: section.settings.lifestyle_image.alt
+          }}
+        {%- endif -%}
+        <svg data-drv-svg width="0" height="0" viewBox="0 0 0 0"></svg>
+        <div class="drv-size-finder__empty" data-drv-empty>Enter your measurements to see your size</div>
+        <div class="drv-size-finder__label" data-drv-label></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/json" data-drv-config>
+    {
+      "findLabel": {{ section.settings.find_button_label | default: 'Find my size' | json }},
+      "sizes": [
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'size' -%}
+            {
+              "name": {{ block.settings.label | json }},
+              "wMin": {{ block.settings.width_min_cm | default: 0 }},
+              "wMax": {{ block.settings.width_max_cm | default: 0 }},
+              "lMin": {{ block.settings.length_min_cm | default: 0 }},
+              "lMax": {{ block.settings.length_max_cm | default: 0 }},
+              "corner": {{ block.settings.corner_type | json }}
+            }{%- unless forloop.last -%},{%- endunless -%}
+          {%- endif -%}
+        {%- endfor -%}
+      ]
+    }
+  </script>
+</section>
+
+<script src="{{ 'dreamer-rv-size-chart.js' | asset_url }}" defer="defer"></script>
+{{ 'dreamer-rv-size-chart.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "RV Size Finder",
+  "max_blocks": 50,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow label", "default": "Find your size" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Find your mattress topper size" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Enter your measurements and we'll show you the right fit, drawn to scale." },
+    { "type": "image_picker", "id": "lifestyle_image", "label": "Visual panel lifestyle image", "info": "Shown at all times in the right-hand panel — doesn't change when a size is matched." },
+    { "type": "text", "id": "find_button_label", "label": "Find button label", "default": "Find my size" },
+    { "type": "text", "id": "help_button_label", "label": "Help button label", "default": "Need help? Contact us" },
+    { "type": "url", "id": "no_match_link", "label": "\"Need help\" link" },
+    { "type": "header", "content": "Colours" },
+    { "type": "color", "id": "bg_color", "label": "Background", "default": "#FAF6EF" },
+    { "type": "color", "id": "panel_color", "label": "Visual panel background", "default": "#F1EAD9" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#2B2621" },
+    { "type": "color", "id": "muted_color", "label": "Muted text", "default": "#8A7F6E" },
+    { "type": "color", "id": "border_color", "label": "Borders", "default": "#DCD0BC" },
+    { "type": "color", "id": "shape_color", "label": "Bed shape", "default": "#5EB2B0" },
+    { "type": "color", "id": "find_button_color", "label": "Find button background", "default": "#36B2AF" },
+    { "type": "color", "id": "find_button_text_color", "label": "Find button text", "default": "#FFFFFF" },
+    { "type": "color", "id": "shop_button_color", "label": "Shop button background", "default": "#BDE9D8" },
+    { "type": "color", "id": "shop_button_text_color", "label": "Shop button text", "default": "#2B2621" },
+    { "type": "color", "id": "find_btn_shop_mode_text_color", "label": "Find button text (after it morphs into the shop link)", "default": "#FFFFFF", "info": "Kept separate from \"Shop button text\" above, since that colour is shared with the permanent Need help button." }
+  ],
+  "blocks": [
+    {
+      "type": "size",
+      "name": "Size",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Queen Long", "info": "Must exactly match the live Shopify collection title for this size — the Shop button link is built from this label." },
+        { "type": "header", "content": "Width range (cm), from the sizing spreadsheet" },
+        { "type": "number", "id": "width_min_cm", "label": "Minimum width (cm)" },
+        { "type": "number", "id": "width_max_cm", "label": "Maximum width (cm)" },
+        { "type": "header", "content": "Length range (cm), from the sizing spreadsheet" },
+        { "type": "number", "id": "length_min_cm", "label": "Minimum length (cm)" },
+        { "type": "number", "id": "length_max_cm", "label": "Maximum length (cm)" },
+        {
+          "type": "select",
+          "id": "corner_type",
+          "label": "Corner type",
+          "options": [
+            { "value": "rounded", "label": "Rounded" },
+            { "value": "square", "label": "Square" },
+            { "value": "left-cut", "label": "Left-cut" }
+          ],
+          "default": "rounded"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RV Size Finder",
+      "blocks": [
+        { "type": "size", "settings": { "label": "Caravan Queen", "width_min_cm": 150, "width_max_cm": 150, "length_min_cm": 189, "length_max_cm": 189, "corner_type": "rounded" } },
+        { "type": "size", "settings": { "label": "Queen Long", "width_min_cm": 150, "width_max_cm": 150, "length_min_cm": 200, "length_max_cm": 200, "corner_type": "rounded" } },
+        { "type": "size", "settings": { "label": "Queen Short", "width_min_cm": 150, "width_max_cm": 150, "length_min_cm": 180, "length_max_cm": 180, "corner_type": "rounded" } },
+        { "type": "size", "settings": { "label": "Caravan Queen Square", "width_min_cm": 150, "width_max_cm": 150, "length_min_cm": 190, "length_max_cm": 190, "corner_type": "square" } },
+        { "type": "size", "settings": { "label": "Double", "width_min_cm": 138, "width_max_cm": 138, "length_min_cm": 182, "length_max_cm": 182, "corner_type": "rounded" } },
+        { "type": "size", "settings": { "label": "Double V2", "width_min_cm": 145, "width_max_cm": 145, "length_min_cm": 198, "length_max_cm": 198, "corner_type": "rounded" } },
+        { "type": "size", "settings": { "label": "Camper Double", "width_min_cm": 138, "width_max_cm": 138, "length_min_cm": 188, "length_max_cm": 188, "corner_type": "square" } },
+        { "type": "size", "settings": { "label": "Camper Single", "width_min_cm": 120, "width_max_cm": 120, "length_min_cm": 200, "length_max_cm": 200, "corner_type": "square" } },
+        { "type": "size", "settings": { "label": "Camper Single 2", "width_min_cm": 80, "width_max_cm": 80, "length_min_cm": 190, "length_max_cm": 190, "corner_type": "square" } },
+        { "type": "size", "settings": { "label": "Bunk 1", "width_min_cm": 66, "width_max_cm": 66, "length_min_cm": 177, "length_max_cm": 177, "corner_type": "square" } },
+        { "type": "size", "settings": { "label": "Bunk 2 / Single", "width_min_cm": 72, "width_max_cm": 72, "length_min_cm": 190, "length_max_cm": 190, "corner_type": "square" } },
+        { "type": "size", "settings": { "label": "Bunk 3", "width_min_cm": 68, "width_max_cm": 68, "length_min_cm": 215, "length_max_cm": 215, "corner_type": "square" } },
+        { "type": "size", "settings": { "label": "Super King", "width_min_cm": 187, "width_max_cm": 187, "length_min_cm": 200, "length_max_cm": 200, "corner_type": "square" } },
+        { "type": "size", "settings": { "label": "King 2", "width_min_cm": 175, "width_max_cm": 175, "length_min_cm": 200, "length_max_cm": 200, "corner_type": "square" } },
+        { "type": "size", "settings": { "label": "King Left-Cut Corner", "width_min_cm": 190, "width_max_cm": 190, "length_min_cm": 190, "length_max_cm": 190, "corner_type": "left-cut" } },
+        { "type": "size", "settings": { "label": "King Rounded", "width_min_cm": 185, "width_max_cm": 185, "length_min_cm": 200, "length_max_cm": 200, "corner_type": "rounded" } },
+        { "type": "size", "settings": { "label": "East-West 1", "width_min_cm": 132, "width_max_cm": 132, "length_min_cm": 200, "length_max_cm": 200, "corner_type": "square" } },
+        { "type": "size", "settings": { "label": "East-West 2", "width_min_cm": 150, "width_max_cm": 150, "length_min_cm": 200, "length_max_cm": 200, "corner_type": "square" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

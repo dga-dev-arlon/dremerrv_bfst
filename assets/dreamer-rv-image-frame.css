@@ -1,0 +1,182 @@
+/* Dreamer RV - Image/text split with a coloured background frame behind the image */
+
+.drv-frame {
+  /* Full-bleed breakout - edge-to-edge, no inset, no rounded corners on
+     the section itself. Only the actual photo keeps rounded corners
+     (see .drv-frame__image below) - the coloured frame around it and
+     this outer section box are both square. */
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  align-items: stretch;
+  background-color: var(--drv-frame-bg, #F9F2E8);
+  color: var(--drv-frame-text, #2B2621);
+  border-radius: 0 !important;
+  overflow: hidden;
+}
+
+/* Doubled selector = higher specificity, to beat any sitewide rule that
+   might otherwise round every section's corners (same trick used on the
+   hero and promo bar sections). */
+section.drv-frame,
+.drv-frame.drv-frame {
+  border-radius: 0 !important;
+}
+
+/* Image on the right instead of left */
+.drv-frame--image-right {
+  flex-direction: row-reverse !important;
+}
+
+.drv-frame__media {
+  flex: 1 1 50% !important;
+  min-width: 320px;
+  align-self: stretch;
+  min-height: var(--drv-frame-min-height, 756px) !important;
+  display: flex;
+  border-radius: 0 !important;
+  overflow: hidden;
+}
+
+/* The coloured frame sits edge-to-edge in the column, with its own
+   padding around the image and no rounding of its own - only the
+   image inside it gets rounded corners. */
+.drv-frame__media-frame {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background: var(--drv-frame-colour, #BDE9D8);
+  border-radius: 0 !important;
+}
+
+.drv-frame__image {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: none !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  object-fit: cover !important;
+  object-position: center;
+}
+
+.drv-frame__content {
+  flex: 1 1 50%;
+  min-width: 320px;
+  min-height: var(--drv-frame-min-height, 756px) !important;
+  display: flex;
+  align-items: center;
+  padding-top: var(--drv-frame-pt, 80px);
+  padding-bottom: var(--drv-frame-pb, 80px);
+}
+
+.drv-frame__content-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+  max-width: none;
+  padding: 0 42px;
+}
+
+.drv-frame--image-right .drv-frame__content-inner {
+  margin-left: auto;
+}
+
+.drv-frame__heading {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.drv-frame__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.drv-frame__text p {
+  margin: 0 0 12px;
+}
+
+.drv-frame__text p:last-child {
+  margin-bottom: 0;
+}
+
+.drv-frame__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.drv-frame__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 15px;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+  background: var(--drv-frame-button-bg, #2F8F86) !important;
+  color: var(--drv-frame-button-text, #FFFFFF) !important;
+}
+
+.drv-frame__button--secondary {
+  background: var(--drv-frame-button-2-bg, #FFFFFF) !important;
+  color: var(--drv-frame-button-2-text, #2F8F86) !important;
+}
+
+.drv-frame__button:hover {
+  opacity: 0.85;
+}
+
+@media only screen and (max-width: 749px) {
+  .drv-frame,
+  .drv-frame--image-right {
+    flex-direction: column;
+  }
+
+  .drv-frame__media {
+    min-width: 0;
+    min-height: 0 !important;
+    aspect-ratio: 4 / 3;
+  }
+
+  .drv-frame__media-frame {
+    padding: 12px;
+  }
+
+  .drv-frame__content {
+    min-height: 0 !important;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .drv-frame__content-inner {
+    max-width: none;
+    padding: 0 24px;
+  }
+
+  .drv-frame--image-right .drv-frame__content-inner {
+    margin-left: 0;
+  }
+
+  .drv-frame__heading {
+    font-size: 32px;
+  }
+}

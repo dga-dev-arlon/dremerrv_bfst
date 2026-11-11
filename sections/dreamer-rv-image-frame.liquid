@@ -1,0 +1,171 @@
+{%- comment -%}
+  Dreamer RV - Image/text split with a coloured background frame behind
+  the image (e.g. "Sleeping on the go, but make it comfy").
+  Custom section: the theme's built-in Image with text section can't add
+  a coloured frame with its own padding behind the image, so this is a
+  simplified variant of the "Split section home page" section with a
+  single button and the image frame styling.
+{%- endcomment -%}
+
+<section
+  class="drv-frame drv-frame--image-{{ section.settings.image_position }}"
+  style="
+    --drv-frame-bg: {{ section.settings.background_color }};
+    --drv-frame-text: {{ section.settings.text_color }};
+    --drv-frame-colour: {{ section.settings.frame_color }};
+    --drv-frame-pt: {{ section.settings.padding_top }}px;
+    --drv-frame-pb: {{ section.settings.padding_bottom }}px;
+    --drv-frame-min-height: {{ section.settings.min_height }}px;
+    --drv-frame-button-bg: {{ section.settings.button_bg }};
+    --drv-frame-button-text: {{ section.settings.button_text_color }};
+    --drv-frame-button-2-bg: {{ section.settings.button_2_bg }};
+    --drv-frame-button-2-text: {{ section.settings.button_2_text_color }};
+  "
+>
+  <div class="drv-frame__media">
+    <div class="drv-frame__media-frame">
+      {%- if section.settings.image != blank -%}
+        <img
+          src="{{ section.settings.image | image_url: width: 1400 }}"
+          srcset="
+            {{ section.settings.image | image_url: width: 700 }} 700w,
+            {{ section.settings.image | image_url: width: 1000 }} 1000w,
+            {{ section.settings.image | image_url: width: 1400 }} 1400w
+          "
+          sizes="(min-width: 750px) 50vw, 100vw"
+          width="1400"
+          height="{{ 1400 | divided_by: section.settings.image.aspect_ratio | default: 1400 }}"
+          alt="{{ section.settings.image.alt | default: section.settings.heading | escape }}"
+          class="drv-frame__image"
+          loading="lazy"
+        >
+      {%- else -%}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'drv-frame__image drv-frame__image--placeholder' }}
+      {%- endif -%}
+    </div>
+  </div>
+
+  <div class="drv-frame__content">
+    <div class="drv-frame__content-inner">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="drv-frame__heading">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+
+      {%- if section.settings.text != blank -%}
+        <div class="drv-frame__text">{{ section.settings.text }}</div>
+      {%- endif -%}
+
+      {%- if section.settings.show_button or section.settings.show_button_2 -%}
+        <div class="drv-frame__buttons">
+          {%- if section.settings.show_button and section.settings.button_label != blank -%}
+            <a
+              href="{{ section.settings.button_link | default: '#' }}"
+              class="drv-frame__button"
+            >
+              {{ section.settings.button_label }}
+            </a>
+          {%- endif -%}
+
+          {%- if section.settings.show_button_2 and section.settings.button_2_label != blank -%}
+            <a
+              href="{{ section.settings.button_2_link | default: '#' }}"
+              class="drv-frame__button drv-frame__button--secondary"
+            >
+              {{ section.settings.button_2_label }}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{{ 'dreamer-rv-image-frame.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "Image with colour frame",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "right"
+    },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Sleeping on the go, but make it comfy" },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Body text",
+      "default": "<p>Thousands of Aussies have found the perfect size for their van (and their home too). Now it's your turn.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Button 1"
+    },
+    { "type": "checkbox", "id": "show_button", "label": "Show button", "default": true },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop all" },
+    { "type": "url", "id": "button_link", "label": "Button link" },
+    { "type": "color", "id": "button_bg", "label": "Button background", "default": "#2F8F86" },
+    { "type": "color", "id": "button_text_color", "label": "Button text colour", "default": "#FFFFFF" },
+    {
+      "type": "header",
+      "content": "Button 2"
+    },
+    { "type": "checkbox", "id": "show_button_2", "label": "Show second button", "default": false },
+    { "type": "text", "id": "button_2_label", "label": "Button label", "default": "Learn more" },
+    { "type": "url", "id": "button_2_link", "label": "Button link" },
+    { "type": "color", "id": "button_2_bg", "label": "Button background", "default": "#FFFFFF" },
+    { "type": "color", "id": "button_2_text_color", "label": "Button text colour", "default": "#2F8F86" },
+    {
+      "type": "header",
+      "content": "Section styling"
+    },
+    { "type": "color", "id": "background_color", "label": "Section background", "default": "#F9F2E8" },
+    { "type": "color", "id": "text_color", "label": "Section text colour", "default": "#2B2621" },
+    { "type": "color", "id": "frame_color", "label": "Image frame colour", "default": "#BDE9D8" },
+    {
+      "type": "range",
+      "id": "min_height",
+      "label": "Minimum height (desktop)",
+      "min": 300,
+      "max": 900,
+      "step": 6,
+      "unit": "px",
+      "default": 756
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "default": 80
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with colour frame"
+    }
+  ]
+}
+{% endschema %}

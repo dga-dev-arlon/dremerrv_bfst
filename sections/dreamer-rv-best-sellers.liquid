@@ -1,0 +1,159 @@
+{%- comment -%}
+  Dreamer RV - Best sellers grid (homepage only)
+  Standalone section, separate from the theme's shared Featured Products /
+  recommended-products slider so those keep working everywhere else untouched.
+  Pulls products from a chosen collection, toggle between 1 row (3 products)
+  or 2 rows (6 products), 3 columns per row on desktop, swipeable on mobile.
+{%- endcomment -%}
+
+{%- liquid
+  if section.settings.row_count == '1'
+    assign product_limit = 3
+  else
+    assign product_limit = 6
+  endif
+  assign products = section.settings.collection.products | limit: product_limit
+-%}
+
+<section
+  class="drv-bestsellers"
+  data-section-id="{{ section.id }}"
+  style="
+    --drv-bs-bg: {{ section.settings.background_color }};
+    --drv-bs-text: {{ section.settings.text_color }};
+    --drv-bs-pt: {{ section.settings.padding_top }}px;
+    --drv-bs-pb: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="drv-bestsellers__inner">
+    {%- if section.settings.heading != blank or section.settings.subheading != blank -%}
+      <div class="drv-bestsellers__header">
+        {%- if section.settings.heading != blank -%}
+          <h2 class="drv-bestsellers__heading">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.subheading != blank -%}
+          <p class="drv-bestsellers__subheading">{{ section.settings.subheading }}</p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if products.size > 0 -%}
+      <div class="drv-bestsellers__grid" data-row-count="{{ section.settings.row_count }}">
+        {%- for product in products -%}
+          {%- assign current_variant = product.selected_or_first_available_variant -%}
+          <div class="drv-bestsellers__card">
+            <div class="drv-bestsellers__media">
+              <a href="{{ product.url }}" class="drv-bestsellers__media-link" aria-label="{{ product.title | escape }}">
+                {%- if product.featured_image != blank -%}
+                  <img
+                    class="drv-bestsellers__image"
+                    src="{{ product.featured_image | image_url: width: 800 }}"
+                    srcset="{% render 'image-srcset', image: product.featured_image %}"
+                    sizes="(min-width: 990px) 33vw, 80vw"
+                    width="800"
+                    height="800"
+                    alt="{{ product.featured_image.alt | default: product.title | escape }}"
+                    loading="lazy"
+                  >
+                {%- else -%}
+                  {{ 'product-1' | placeholder_svg_tag: 'drv-bestsellers__image drv-bestsellers__image--placeholder' }}
+                {%- endif -%}
+              </a>
+
+              {%- if section.settings.show_ratings -%}
+                <div class="drv-bestsellers__rating">
+                  <div class="jdgm-widget jdgm-preview-badge" data-id="{{ product.id }}" data-product-title="{{ product.title | escape }}"></div>
+                </div>
+              {%- endif -%}
+
+              {%- if current_variant.available -%}
+                {%- form 'product', product, class: 'drv-bestsellers__quick-add-form' -%}
+                  <input type="hidden" name="id" value="{{ current_variant.id }}">
+                  <button
+                    type="submit"
+                    name="add"
+                    class="drv-bestsellers__quick-add"
+                    aria-label="Add {{ product.title | escape }} to cart"
+                  >
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                      <path d="M1 1h2l1.6 8.6a1.6 1.6 0 0 0 1.6 1.4h6.6a1.6 1.6 0 0 0 1.6-1.3L16 4.5H4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                      <circle cx="6.5" cy="15.5" r="1.1" fill="currentColor"/>
+                      <circle cx="12.5" cy="15.5" r="1.1" fill="currentColor"/>
+                    </svg>
+                  </button>
+                {%- endform -%}
+              {%- endif -%}
+            </div>
+
+            <div class="drv-bestsellers__info">
+              <a href="{{ product.url }}" class="drv-bestsellers__title-link">
+                <p class="drv-bestsellers__title">{{ product.title }}</p>
+              </a>
+              <p class="drv-bestsellers__price">
+                {%- if current_variant.compare_at_price > current_variant.price -%}
+                  <span class="drv-bestsellers__price--sale">{{ current_variant.price | money }}</span>
+                  <span class="drv-bestsellers__price--compare">{{ current_variant.compare_at_price | money }}</span>
+                {%- else -%}
+                  {{ current_variant.price | money }}
+                {%- endif -%}
+              </p>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{{ 'dreamer-rv-best-sellers.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "Dreamer RV Best Sellers",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Best sellers" },
+    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Top customer picks to take with you on the open road." },
+    { "type": "collection", "id": "collection", "label": "Collection" },
+    {
+      "type": "select",
+      "id": "row_count",
+      "label": "Rows",
+      "options": [
+        { "value": "1", "label": "1 row (3 products)" },
+        { "value": "2", "label": "2 rows (6 products)" }
+      ],
+      "default": "2"
+    },
+    { "type": "checkbox", "id": "show_ratings", "label": "Show Judge.me star ratings", "default": true },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#FBF6EC" },
+    { "type": "color", "id": "text_color", "label": "Text colour", "default": "#2B2621" },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dreamer RV Best Sellers"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,147 @@
+/* Dreamer RV - Footer links (5-column link grid) */
+
+.drv-footer-links {
+  /* Full-bleed breakout to the theme's 20px frame */
+  position: relative;
+  width: calc(100vw - 40px);
+  margin-left: calc(50% - 50vw + 20px);
+  margin-right: calc(50% - 50vw + 20px);
+  background-color: var(--drv-fl-bg, #F9F2E8);
+  color: var(--drv-fl-text, #2B2621);
+  padding-top: var(--drv-fl-pt, 60px);
+  padding-bottom: var(--drv-fl-pb, 40px);
+}
+
+.drv-footer-links__inner {
+  width: 100%;
+  padding: 0 42px;
+}
+
+.drv-footer-links__columns {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+}
+
+.drv-footer-links__heading {
+  margin: 0 0 16px;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: inherit !important;
+  /* This is a div with role="button", not a real <button> (a real one
+     was picking up the theme's own pill-shaped button chrome and
+     something in the theme keying off it was hiding the list too) - it
+     shouldn't need resetting against any button styles any more, but
+     !important here keeps it that way regardless of what else on the
+     page targets a generic "button, [role=button]" selector. */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  gap: 8px;
+  background: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  font-family: inherit;
+  text-align: left;
+  cursor: default;
+}
+
+.drv-footer-links__chevron {
+  display: none;
+  flex: 0 0 auto;
+  transition: transform 0.2s ease;
+}
+
+.drv-footer-links__list {
+  list-style: none;
+  margin: 0;
+  font-family: var(--font-body-light);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.drv-footer-links__link {
+  color: inherit;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.85;
+  transition: opacity 0.15s ease;
+}
+
+.drv-footer-links__link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 989px) {
+  .drv-footer-links__inner {
+    padding: 0 24px;
+  }
+
+  .drv-footer-links__columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+  }
+}
+
+@media only screen and (max-width: 749px) {
+  .drv-footer-links__columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  /* Accordion: each column's heading becomes a toggle, collapsing its
+     list by default. Uses a grid-rows 0fr/1fr transition on the
+     wrapper rather than JS height measurement - the wrapper is the one
+     that clips/animates, the list itself keeps its normal flex layout
+     inside it. dreamer-rv-footer-links.js just toggles the "is-open"
+     class and the button's aria-expanded on click. */
+  .drv-footer-links__column {
+    border-bottom: 1px solid rgba(43, 38, 33, 0.15);
+  }
+
+  .drv-footer-links__column:first-child {
+    border-top: 1px solid rgba(43, 38, 33, 0.15);
+  }
+
+  .drv-footer-links__heading {
+    cursor: pointer !important;
+    padding: 16px 0 !important;
+    margin: 0 !important;
+  }
+
+  .drv-footer-links__chevron {
+    display: block !important;
+  }
+
+  .drv-footer-links__column.is-open .drv-footer-links__chevron {
+    transform: rotate(180deg);
+  }
+
+  /* The grid-template-rows 0fr/1fr collapse trick left a sliver of the
+     first link visible on every closed column instead of fully hiding
+     it - rather than keep fighting that, dreamer-rv-footer-links.js
+     measures the list's real height and animates max-height directly,
+     which can't leave anything peeking through. max-height: 0 here is
+     the guaranteed-closed default before JS ever runs. */
+  .drv-footer-links__list-wrap {
+    /* No !important here - dreamer-rv-footer-links.js sets this inline
+       via .style.maxHeight when a column opens, and an !important rule
+       in the stylesheet would always beat that inline value. */
+    max-height: 0;
+    overflow: hidden !important;
+    transition: max-height 0.25s ease;
+  }
+
+  .drv-footer-links__list-wrap > .drv-footer-links__list {
+    padding-bottom: 16px;
+  }
+}

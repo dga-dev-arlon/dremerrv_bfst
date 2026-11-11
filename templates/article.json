@@ -1,0 +1,258 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "disabled": true,
+      "settings": {
+        "hide_desktop": false,
+        "hide_mobile": false,
+        "enable_share_button": false
+      }
+    },
+    "main-article": {
+      "type": "main-article",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "h1",
+            "show_banner": false,
+            "overlay_opacity": 25,
+            "color_palette": "scheme-4",
+            "show_date": false,
+            "show_author": false,
+            "show_article_reading_time": false
+          }
+        },
+        "featured_image": {
+          "type": "featured_image",
+          "disabled": true,
+          "settings": {}
+        },
+        "excerpt": {
+          "type": "excerpt",
+          "settings": {}
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        },
+        "tags": {
+          "type": "tags",
+          "settings": {}
+        },
+        "comments": {
+          "type": "comments",
+          "settings": {}
+        },
+        "db5d637d-f346-4923-afc2-d959a7a5a8a6": {
+          "type": "spacer",
+          "settings": {
+            "height": 20
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "featured_image",
+        "excerpt",
+        "content",
+        "tags",
+        "comments",
+        "db5d637d-f346-4923-afc2-d959a7a5a8a6"
+      ],
+      "settings": {
+        "big_fontsize": true,
+        "compact": false
+      }
+    },
+    "blogs_row": {
+      "type": "section-blog-posts",
+      "settings": {
+        "blog": "news",
+        "number_of_items": 3,
+        "big_first_item": false,
+        "text_alignment": "start",
+        "title": "<h3>More on the journal</h3>",
+        "title_underline_style": "none",
+        "show_link": true,
+        "link_text": "View all",
+        "link_url": "shopify://blogs/news",
+        "button_style": "primary plain",
+        "blog_title_size": "h5",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_excerpt": true,
+        "button_style_post": "secondary plain",
+        "spacing_desktop": 50,
+        "spacing_mobile": 30,
+        "fix_zindex": 0
+      }
+    },
+    "dreamer_rv_footer_links_Ng33JV": {
+      "type": "dreamer-rv-footer-links",
+      "blocks": {
+        "column_FzDrTT": {
+          "type": "column",
+          "settings": {
+            "heading": "Shop",
+            "link_1_label": "Mattress Toppers",
+            "link_1_url": "",
+            "link_2_label": "Mattress Protectors",
+            "link_2_url": "",
+            "link_3_label": "Sheets",
+            "link_3_url": "",
+            "link_4_label": "Home Comfort Range",
+            "link_4_url": "shopify://collections/home-comfort-range",
+            "link_5_label": "Accessories",
+            "link_5_url": "shopify://collections/accessories",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        },
+        "column_6KbDDc": {
+          "type": "column",
+          "settings": {
+            "heading": "Expore",
+            "link_1_label": "Our Story",
+            "link_1_url": "shopify://pages/our-story",
+            "link_2_label": "Blog",
+            "link_2_url": "shopify://blogs/news",
+            "link_3_label": "Exhibitions & Shows",
+            "link_3_url": "shopify://pages/exhibitions-shows",
+            "link_4_label": "Wholesale",
+            "link_4_url": "shopify://pages/wholesale",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        },
+        "column_PXjTgq": {
+          "type": "column",
+          "settings": {
+            "heading": "Help & Info",
+            "link_1_label": "Find Your Size",
+            "link_1_url": "shopify://pages/find-your-fit",
+            "link_2_label": "FAQs",
+            "link_2_url": "shopify://pages/frequently-asked-questions",
+            "link_3_label": "Shipping Information",
+            "link_3_url": "shopify://policies/shipping-policy",
+            "link_4_label": "Refund Policy",
+            "link_4_url": "",
+            "link_5_label": "Warranty",
+            "link_5_url": "",
+            "link_6_label": "Wash & Care Guide",
+            "link_6_url": "shopify://pages/wash-care-guide"
+          }
+        },
+        "column_tJBqLf": {
+          "type": "column",
+          "settings": {
+            "heading": "Wholesale",
+            "link_1_label": "About Wholesale",
+            "link_1_url": "shopify://pages/wholesale",
+            "link_2_label": "",
+            "link_2_url": "",
+            "link_3_label": "",
+            "link_3_url": "",
+            "link_4_label": "",
+            "link_4_url": "",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        },
+        "column_3hWRTg": {
+          "type": "column",
+          "settings": {
+            "heading": "Legal",
+            "link_1_label": "Privacy Policy",
+            "link_1_url": "",
+            "link_2_label": "Terms of Use",
+            "link_2_url": "",
+            "link_3_label": "",
+            "link_3_url": "",
+            "link_4_label": "",
+            "link_4_url": "",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_FzDrTT",
+        "column_6KbDDc",
+        "column_PXjTgq",
+        "column_tJBqLf",
+        "column_3hWRTg"
+      ],
+      "name": "Footer links",
+      "settings": {
+        "background_color": "#f9f2e8",
+        "text_color": "#2b2621",
+        "padding_top": 60,
+        "padding_bottom": 40
+      }
+    },
+    "dreamer_rv_footer_panel_JkfTNF": {
+      "type": "dreamer-rv-footer-panel",
+      "name": "Footer panel",
+      "settings": {
+        "icon": "shopify://shop_images/CROPPED_Dreamer_RV_Logo_Screen_Horizontal_Tagline_Night_Sky_RGB.svg",
+        "acknowledgement": "<p>In the spirit of reconciliation, Dreamer RV acknowledges the Traditional Custodians of Country throughout Australia and their connections to land, sea and community. We pay our respects to Elders past, present and emerging and extend that respect to all Aboriginal and Torres Strait Islander people today.</p>",
+        "show_newsletter": true,
+        "newsletter_heading": "Subscribe",
+        "newsletter_text": "Join our newsletter for new product drops and travel inspiration from the road.",
+        "newsletter_button_label": "Subscribe",
+        "newsletter_consent": "By subscribing you agree to our privacy policy and consent to receive updates from Dreamer RV.",
+        "background_color": "#f9f2e8",
+        "text_color": "#2b2621",
+        "panel_background_color": "#fffbf5",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "dreamer_rv_footer_bar_CGqi6E": {
+      "type": "dreamer-rv-footer-bar",
+      "name": "Footer bar",
+      "settings": {
+        "copyright_text": "© 2026 Dreamer RV. All rights reserved.",
+        "credit_text": "Website by Sparo Studios",
+        "credit_link": "",
+        "background_color": "#bde9d8",
+        "text_color": "#2b2621"
+      }
+    },
+    "section_spacer_TMzMiR": {
+      "type": "section-spacer",
+      "name": "t:sections.spacer.presets.name",
+      "settings": {
+        "height": 20,
+        "height_mobile": 20
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main-article",
+    "blogs_row",
+    "dreamer_rv_footer_links_Ng33JV",
+    "dreamer_rv_footer_panel_JkfTNF",
+    "dreamer_rv_footer_bar_CGqi6E",
+    "section_spacer_TMzMiR"
+  ]
+}

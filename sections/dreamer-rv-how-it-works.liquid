@@ -1,0 +1,185 @@
+{%- comment -%}
+  Dreamer RV - "How it works" section
+  Image on one side, a numbered list of steps (heading + text + optional
+  button per step) on the other. On mobile the image moves below the
+  steps rather than above them.
+{%- endcomment -%}
+
+<section
+  class="drv-how-it-works"
+  style="
+    --drv-hiw-bg: {{ section.settings.background_color }};
+    --drv-hiw-text: {{ section.settings.text_color }};
+    --drv-hiw-pt: {{ section.settings.padding_top }}px;
+    --drv-hiw-pb: {{ section.settings.padding_bottom }}px;
+    --drv-hiw-px: {{ section.settings.frame_padding_sides }}px;
+  "
+>
+  <div class="drv-how-it-works__inner">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="drv-how-it-works__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="drv-how-it-works__row">
+        <div class="drv-how-it-works__media">
+          {%- if section.settings.image != blank -%}
+            <img
+              src="{{ section.settings.image | image_url: width: 1200 }}"
+              srcset="
+                {{ section.settings.image | image_url: width: 600 }} 600w,
+                {{ section.settings.image | image_url: width: 900 }} 900w,
+                {{ section.settings.image | image_url: width: 1200 }} 1200w
+              "
+              sizes="(min-width: 750px) 50vw, 100vw"
+              width="{{ section.settings.image.width }}"
+              height="{{ section.settings.image.height }}"
+              alt="{{ section.settings.image.alt | default: section.settings.heading | escape }}"
+              class="drv-how-it-works__image"
+              loading="lazy"
+            >
+          {%- else -%}
+            {{ 'lifestyle-1' | placeholder_svg_tag: 'drv-how-it-works__image drv-how-it-works__image--placeholder' }}
+          {%- endif -%}
+        </div>
+
+        <div class="drv-how-it-works__steps">
+          {%- for block in section.blocks -%}
+            <div class="drv-how-it-works__step" {{ block.shopify_attributes }}>
+              {%- if block.settings.heading != blank -%}
+                <h4 class="drv-how-it-works__step-heading">{{ block.settings.heading }}</h4>
+              {%- endif -%}
+
+              {%- if block.settings.text != blank -%}
+                <div class="drv-how-it-works__step-text">{{ block.settings.text }}</div>
+              {%- endif -%}
+
+              {%- if block.settings.show_button and block.settings.button_label != blank -%}
+                <a
+                  href="{{ block.settings.button_link | default: '#' }}"
+                  class="drv-how-it-works__button"
+                  style="--drv-hiw-button-bg: {{ block.settings.button_bg }}; --drv-hiw-button-text: {{ block.settings.button_text_color }};"
+                >
+                  {{ block.settings.button_label }}
+                </a>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{{ 'dreamer-rv-how-it-works.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "How it works",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 6,
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "How it works" },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    { "type": "color", "id": "background_color", "label": "Background colour", "default": "#F9F2E8" },
+    { "type": "color", "id": "text_color", "label": "Text colour", "default": "#2B2621" },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "frame_padding_sides",
+      "label": "Side padding",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "default": 42
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading", "default": "Step heading" },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Body text",
+          "default": "<p>Describe this step.</p>"
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        { "type": "checkbox", "id": "show_button", "label": "Show button", "default": false },
+        { "type": "text", "id": "button_label", "label": "Button label" },
+        { "type": "url", "id": "button_link", "label": "Button link" },
+        { "type": "color", "id": "button_bg", "label": "Button background", "default": "#2F8F86" },
+        { "type": "color", "id": "button_text_color", "label": "Button text colour", "default": "#FFFFFF" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "How it works",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "heading": "Apply to stock Dreamer RV products",
+            "text": "<p>Fill out the form below and our team will get back to you with everything you need to get started.</p>",
+            "show_button": true,
+            "button_label": "Become a stockist"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "heading": "Order your range",
+            "text": "<p>Choose the sizes and bundles, with clear minimums and terms up front.</p>",
+            "show_button": true,
+            "button_label": "Log into catalogue",
+            "button_bg": "#BDE9D8",
+            "button_text_color": "#2B2621"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "heading": "We'll get it to you fast",
+            "text": "<p>Orders are packed and sent quickly, so your shelves don't sit empty waiting on stock.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

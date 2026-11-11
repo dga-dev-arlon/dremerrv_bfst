@@ -1,0 +1,564 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "disabled": true,
+      "settings": {
+        "hide_desktop": false,
+        "hide_mobile": false,
+        "enable_share_button": false
+      }
+    },
+    "main-page": {
+      "type": "main-page",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "h2"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "content"
+      ],
+      "disabled": true,
+      "settings": {
+        "max_width": 980,
+        "content_alignment": "start",
+        "text_alignment": "start",
+        "spacing_desktop": 50,
+        "spacing_mobile": 30
+      }
+    },
+    "dreamer_rv_image_frame_VmeMar": {
+      "type": "dreamer-rv-image-frame",
+      "name": "Image with colour frame",
+      "settings": {
+        "image": "shopify://shop_images/DreamerRv-40.jpg",
+        "image_position": "right",
+        "heading": "We look good on shelves too",
+        "text": "<p>A product with the reviews, the certification and the reputation to sell itself &nbsp;once it's on your shelf.</p>",
+        "show_button": true,
+        "button_label": "Become a stockist",
+        "button_link": "/pages/wholesale#shopify-section-template--20805939036202__section_contact_form_Vdwxf6",
+        "button_bg": "#5CC0C3",
+        "button_text_color": "#424345",
+        "show_button_2": false,
+        "button_2_label": "Log into catalogue",
+        "button_2_link": "",
+        "button_2_bg": "#bde9d8",
+        "button_2_text_color": "#424345",
+        "background_color": "#f9f2e8",
+        "text_color": "#424345",
+        "frame_color": "#bde9d8",
+        "min_height": 756,
+        "padding_top": 76,
+        "padding_bottom": 80
+      }
+    },
+    "dreamer_rv_trust_cards_4HHx3y": {
+      "type": "dreamer-rv-trust-cards",
+      "blocks": {
+        "card_ctkxcY": {
+          "type": "card",
+          "settings": {
+            "card_style": "image",
+            "image": "shopify://shop_images/DreamerRv-71.jpg",
+            "solid_color": "#fffbf5",
+            "solid_text_color": "#424345",
+            "heading": "We get it, because we live it",
+            "text": "Every person answering your email has caravanned or camped and know our products inside out."
+          }
+        },
+        "card_gFETKT": {
+          "type": "card",
+          "settings": {
+            "card_style": "solid",
+            "solid_color": "#36b2af",
+            "solid_text_color": "#fffbf5",
+            "heading": "If it arrives wrong, we fix it",
+            "text": "A mark, a fault, the wrong size sent by us, and you're getting a new one straight away, no questions asked."
+          }
+        },
+        "card_7tVfJr": {
+          "type": "card",
+          "settings": {
+            "card_style": "image",
+            "image": "shopify://shop_images/Card.png",
+            "solid_color": "#fffbf5",
+            "solid_text_color": "#424345",
+            "heading": "You can count on us",
+            "text": "A dedicated customer service team behind every enquiry, good or bad. We’ll get back to you ASAP."
+          }
+        }
+      },
+      "block_order": [
+        "card_ctkxcY",
+        "card_gFETKT",
+        "card_7tVfJr"
+      ],
+      "disabled": true,
+      "name": "Trust cards",
+      "settings": {
+        "eyebrow_text": "PROUDLY OWNED AND RUN ON AUSTRALIAN SOIL",
+        "heading": "From one happy camper to another",
+        "subheading": "<p>Every email lands with someone who's towed a van, measured a bed and knows exactly what you're describing. Send us your measurements and you'll hear back personally, usually within 24 hours on working days.</p>",
+        "show_button": false,
+        "button_label": "Shop all",
+        "button_link": "",
+        "button_bg": "#2f8f86",
+        "button_text": "#ffffff",
+        "card_text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 25,
+        "card_border_radius": 8,
+        "card_padding": 20,
+        "card_gap": 10,
+        "background_color": "#f9f2e8",
+        "text_color": "#424345",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "frame_padding_sides": 20
+      }
+    },
+    "dreamer_rv_how_it_works_GVJdeR": {
+      "type": "dreamer-rv-how-it-works",
+      "blocks": {
+        "step_UBPtCr": {
+          "type": "step",
+          "settings": {
+            "heading": "Apply to stock Dreamer RV products",
+            "text": "<p>Fill out the form below and our team will get back to you with everything you need to get started.</p>",
+            "show_button": true,
+            "button_label": "Become a stockist",
+            "button_link": "/pages/wholesale#shopify-section-template--20805939036202__section_contact_form_Vdwxf6",
+            "button_bg": "#44c5c3",
+            "button_text_color": "#424345"
+          }
+        },
+        "step_bERET4": {
+          "type": "step",
+          "settings": {
+            "heading": "Order your range",
+            "text": "<p>Choose the sizes and bundles, with clear minimums and terms up front.</p>",
+            "show_button": false,
+            "button_label": "Log into catalogue",
+            "button_link": "",
+            "button_bg": "#bde9d8",
+            "button_text_color": "#2b2621"
+          }
+        },
+        "step_rqqUMC": {
+          "type": "step",
+          "settings": {
+            "heading": "We'll get it to you fast",
+            "text": "<p>Orders are packed and sent quickly, so your shelves don't sit empty waiting on stock.</p>",
+            "show_button": false,
+            "button_label": "",
+            "button_link": "",
+            "button_bg": "#2f8f86",
+            "button_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "step_UBPtCr",
+        "step_bERET4",
+        "step_rqqUMC"
+      ],
+      "name": "How it works",
+      "settings": {
+        "heading": "How it works",
+        "image": "shopify://shop_images/Sand01.webp",
+        "background_color": "#f9f2e8",
+        "text_color": "#424345",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "frame_padding_sides": 42
+      }
+    },
+    "section_spacer_B8dBjn": {
+      "type": "section-spacer",
+      "name": "t:sections.spacer.presets.name",
+      "settings": {
+        "height": 20,
+        "height_mobile": 20
+      }
+    },
+    "section_faq_hhGQjj": {
+      "type": "section-faq",
+      "blocks": {
+        "text_U4MyYg": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How do I become a Dreamer RV stockist?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Fill out the become a stockist form on this page with your business details. Our team reviews every application and gets back to you with everything you need to get started.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_Ut3G6H": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Is there a minimum order quantity for wholesale?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes, minimum order quantities apply and vary depending on the products and bundles you choose. Full terms are shared once your application is approved.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_cCjKTH": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I sell Dreamer RV products both in store and online?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes, approved stockists can sell across both in-store and online channels, provided products are presented and priced in line with our stockist agreement.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_HD4ywE": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What makes Dreamer RV easy to sell in store?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Dreamer RV toppers already have strong recognition with caravan and camping customers, backed by 600+ five star reviews and CertiPUR-US certified foam. Many customers arrive already familiar with the brand from caravan shows and social media.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_cRVxem": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Do you exhibit at caravan and camping trade shows?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes, Dreamer RV attends caravan and camping shows throughout the year, where stockists are welcome to see the full range in person.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        }
+      },
+      "block_order": [
+        "text_U4MyYg",
+        "text_Ut3G6H",
+        "text_cCjKTH",
+        "text_HD4ywE",
+        "text_cRVxem"
+      ],
+      "name": "t:sections.faq.presets.name",
+      "settings": {
+        "alignment": "center",
+        "compact": true,
+        "eyebrow": "",
+        "title": "<h2>Frequently asked questions</h2>",
+        "body_text": "",
+        "title_underline_style": "none",
+        "show_button": true,
+        "button_label": "Read more",
+        "button_link": "shopify://pages/frequently-asked-questions",
+        "button_bg": "#44c5c3",
+        "button_text_color": "#424345",
+        "spacing_desktop": 50,
+        "spacing_mobile": 30,
+        "fix_zindex": 0
+      }
+    },
+    "section_spacer_8mt3RY": {
+      "type": "section-spacer",
+      "name": "t:sections.spacer.presets.name",
+      "settings": {
+        "height": 90,
+        "height_mobile": 20
+      }
+    },
+    "section_contact_form_Vdwxf6": {
+      "type": "section-contact-form",
+      "blocks": {
+        "text_4e9kfN": {
+          "type": "text",
+          "settings": {
+            "title": "Company name",
+            "placeholder": "",
+            "required": true
+          }
+        },
+        "text_PkeAaK": {
+          "type": "text",
+          "settings": {
+            "title": "ABN/ACN",
+            "placeholder": "",
+            "required": true
+          }
+        },
+        "text_bB98QB": {
+          "type": "text",
+          "settings": {
+            "title": "Location/s",
+            "placeholder": "",
+            "required": true
+          }
+        },
+        "text_wwDmEH": {
+          "type": "text",
+          "settings": {
+            "title": "Trading Name",
+            "placeholder": "Text",
+            "required": true
+          }
+        },
+        "text_qhiCh4": {
+          "type": "text",
+          "settings": {
+            "title": "Contact Person Name",
+            "placeholder": "Name",
+            "required": true
+          }
+        },
+        "email_8HxXVL": {
+          "type": "email",
+          "settings": {
+            "title": "Contact Person Email",
+            "placeholder": "Email"
+          }
+        },
+        "tel_azDAyj": {
+          "type": "tel",
+          "settings": {
+            "title": "Contact Person Phone",
+            "placeholder": "Phone number",
+            "required": true
+          }
+        },
+        "textarea_hUBjmq": {
+          "type": "textarea",
+          "settings": {
+            "title": "Message",
+            "placeholder": "Message",
+            "required": true
+          }
+        }
+      },
+      "block_order": [
+        "text_4e9kfN",
+        "text_PkeAaK",
+        "text_bB98QB",
+        "text_wwDmEH",
+        "text_qhiCh4",
+        "email_8HxXVL",
+        "tel_azDAyj",
+        "textarea_hUBjmq"
+      ],
+      "name": "t:sections.contact_form.presets.name",
+      "settings": {
+        "alignment": "center",
+        "eyebrow": "Apply",
+        "title": "<h2>Become a stockist</h2>",
+        "subtext": "<p>Enter your company information below to submit your stockist application</p>",
+        "title_underline_style": "none",
+        "button_style": "primary plain",
+        "show_placeholder": true,
+        "compact": true,
+        "spacing_desktop": 50,
+        "spacing_mobile": 30,
+        "fix_zindex": 0
+      }
+    },
+    "dreamer_rv_footer_links_3ixKFq": {
+      "type": "dreamer-rv-footer-links",
+      "blocks": {
+        "column_XMMf9i": {
+          "type": "column",
+          "settings": {
+            "heading": "Shop",
+            "link_1_label": "Mattress Toppers",
+            "link_1_url": "shopify://collections/wanderluxe-caravan-mattress-toppers",
+            "link_2_label": "Mattress Protectors",
+            "link_2_url": "shopify://collections/caravan-mattress-protectors",
+            "link_3_label": "Sheets",
+            "link_3_url": "shopify://collections/sheets",
+            "link_4_label": "Home Comfort Range",
+            "link_4_url": "shopify://collections/home-comfort-range",
+            "link_5_label": "Accessories",
+            "link_5_url": "shopify://collections/accessories",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        },
+        "column_8AimMn": {
+          "type": "column",
+          "settings": {
+            "heading": "Explore",
+            "link_1_label": "Our Story",
+            "link_1_url": "shopify://pages/our-story",
+            "link_2_label": "Blog",
+            "link_2_url": "shopify://blogs/news",
+            "link_3_label": "Exhibitions & Shows",
+            "link_3_url": "shopify://pages/exhibitions-shows",
+            "link_4_label": "Wholesale",
+            "link_4_url": "shopify://pages/wholesale",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        },
+        "column_DfkVnc": {
+          "type": "column",
+          "settings": {
+            "heading": "Help & Info",
+            "link_1_label": "Find Your Size",
+            "link_1_url": "shopify://pages/find-your-fit",
+            "link_2_label": "FAQs",
+            "link_2_url": "shopify://pages/frequently-asked-questions",
+            "link_3_label": "Shipping Information",
+            "link_3_url": "shopify://policies/shipping-policy",
+            "link_4_label": "Refund Policy",
+            "link_4_url": "shopify://policies/refund-policy",
+            "link_5_label": "Warranty",
+            "link_5_url": "shopify://pages/warranty",
+            "link_6_label": "Wash & Care Guide",
+            "link_6_url": "shopify://pages/wash-care-guide"
+          }
+        },
+        "column_jgUU4W": {
+          "type": "column",
+          "settings": {
+            "heading": "Wholesale",
+            "link_1_label": "About Wholesale",
+            "link_1_url": "shopify://pages/wholesale",
+            "link_2_label": "",
+            "link_2_url": "",
+            "link_3_label": "",
+            "link_3_url": "",
+            "link_4_label": "",
+            "link_4_url": "",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        },
+        "column_Nh6RW8": {
+          "type": "column",
+          "settings": {
+            "heading": "Legal",
+            "link_1_label": "Privacy Policy",
+            "link_1_url": "shopify://policies/privacy-policy",
+            "link_2_label": "Terms of Use",
+            "link_2_url": "",
+            "link_3_label": "",
+            "link_3_url": "",
+            "link_4_label": "",
+            "link_4_url": "",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_XMMf9i",
+        "column_8AimMn",
+        "column_DfkVnc",
+        "column_jgUU4W",
+        "column_Nh6RW8"
+      ],
+      "name": "Footer links",
+      "settings": {
+        "background_color": "#f9f2e8",
+        "text_color": "#424345",
+        "padding_top": 60,
+        "padding_bottom": 40
+      }
+    },
+    "dreamer_rv_footer_panel_zqnVRR": {
+      "type": "dreamer-rv-footer-panel",
+      "name": "Footer panel",
+      "settings": {
+        "icon": "shopify://shop_images/CROPPED_Dreamer_RV_Logo_Screen_Horizontal_Tagline_Night_Sky_RGB.svg",
+        "acknowledgement": "<p>In the spirit of reconciliation, Dreamer RV acknowledges the Traditional Custodians of Country throughout Australia and their connections to land, sea and community. We pay our respects to Elders past, present and emerging and extend that respect to all Aboriginal and Torres Strait Islander people today.</p>",
+        "show_newsletter": true,
+        "newsletter_heading": "Subscribe",
+        "newsletter_text": "Join our newsletter for new product drops and travel inspiration from the road.",
+        "newsletter_button_label": "Subscribe",
+        "newsletter_consent": "By subscribing you agree to our privacy policy and consent to receive updates from Dreamer RV.",
+        "background_color": "#f9f2e8",
+        "text_color": "#2b2621",
+        "panel_background_color": "#fffbf5",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "dreamer_rv_footer_bar_gerCyH": {
+      "type": "dreamer-rv-footer-bar",
+      "name": "Footer bar",
+      "settings": {
+        "copyright_text": "© 2026 Dreamer RV. All rights reserved.",
+        "credit_text": "Website by Sparo Studios",
+        "credit_link": "",
+        "background_color": "#bde9d8",
+        "text_color": "#2b2621"
+      }
+    },
+    "section_spacer_n8RRt4": {
+      "type": "section-spacer",
+      "name": "t:sections.spacer.presets.name",
+      "settings": {
+        "height": 20,
+        "height_mobile": 20
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main-page",
+    "dreamer_rv_image_frame_VmeMar",
+    "dreamer_rv_trust_cards_4HHx3y",
+    "dreamer_rv_how_it_works_GVJdeR",
+    "section_spacer_B8dBjn",
+    "section_faq_hhGQjj",
+    "section_spacer_8mt3RY",
+    "section_contact_form_Vdwxf6",
+    "dreamer_rv_footer_links_3ixKFq",
+    "dreamer_rv_footer_panel_zqnVRR",
+    "dreamer_rv_footer_bar_gerCyH",
+    "section_spacer_n8RRt4"
+  ]
+}

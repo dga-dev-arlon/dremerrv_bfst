@@ -1,0 +1,743 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "disabled": true,
+      "settings": {
+        "hide_desktop": false,
+        "hide_mobile": false,
+        "enable_share_button": false
+      }
+    },
+    "main-page": {
+      "type": "main-page",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "h1"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "content"
+      ],
+      "disabled": true,
+      "settings": {
+        "max_width": 980,
+        "content_alignment": "center",
+        "text_alignment": "center",
+        "spacing_desktop": 50,
+        "spacing_mobile": 30
+      }
+    },
+    "section_rich_text_rVRBXq": {
+      "type": "section-rich-text",
+      "blocks": {
+        "title_UfAhMr": {
+          "type": "title",
+          "settings": {
+            "title": "<h1>Wash & Care Guide</h1>",
+            "title_underline_style": "none"
+          }
+        },
+        "content_hJVVhF": {
+          "type": "content",
+          "settings": {
+            "page": "",
+            "text": "<p>A little care goes a long way. &nbsp;Here’s how to keep every Dreamer RV product feeling as good as day one. Visit our FAQs page for more information.</p>",
+            "font": "secondary",
+            "font_weight": "400"
+          }
+        },
+        "button_HWkPgJ": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link_text": "Button",
+            "link_url": "/",
+            "button_style": "primary plain"
+          }
+        }
+      },
+      "block_order": [
+        "title_UfAhMr",
+        "content_hJVVhF",
+        "button_HWkPgJ"
+      ],
+      "name": "t:sections.rich_text.presets.name",
+      "settings": {
+        "color_palette": "",
+        "overlay_opacity": 100,
+        "text_position": "align-center text-center",
+        "content_width": 1280,
+        "height": "xs",
+        "enable_custom_height": false,
+        "custom_height": 300,
+        "width": "wide",
+        "height_mobile": "xs",
+        "spacing_desktop": 0,
+        "spacing_mobile": 30,
+        "fix_zindex": 0
+      }
+    },
+    "16534818921d9da639": {
+      "type": "section-faq",
+      "blocks": {
+        "1653481892aca601d3-0": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I wash my Wanderluxe™ Mattress Topper?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>The <strong>Wanderluxe™ Mattress Topper</strong> features a removable, machine-washable cover, making it easy to keep your sleep surface fresh and clean.</p><p>The memory foam core itself should never be placed in a washing machine or fully submerged in water, as excess moisture can damage the foam.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "1653481892aca601d3-1": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How do I remove the cover for washing?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Remove your bedding and Mattress Protector, then unzip the Wanderluxe™ cover and carefully remove it from the memory foam core.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_JCdeMT": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How should I wash the removable cover?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Always remove the memory foam insert and close the zipper before washing your Wanderluxe™ cover.</p><p>Machine wash on a cold, gentle cycle using a mild detergent. Do not bleach.</p><p>Once washed, line dry or tumble dry on low. Make sure the cover is completely dry before placing it back over the memory foam insert.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_JeDm9J": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How do I clean the memory foam insert?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>The memory foam insert cannot be machine washed or submerged in water.</p><p>If needed, spot clean only using a mild detergent and warm soapy water. Do not wring the foam. Gently squeeze out any excess moisture and allow it to dry thoroughly in the shade before replacing the cover or using your topper again.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_A3c9cP": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How can I protect my topper from spills and accidents?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>We recommend using a <strong>Dreamer RV Waterproof Mattress Protector</strong> over your topper and mattress.</p><p>As well as helping protect against spills and accidents, the protector creates an additional barrier between your topper and everyday moisture, helping keep your Wanderluxe™ fresh and protected for longer.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        }
+      },
+      "block_order": [
+        "1653481892aca601d3-0",
+        "1653481892aca601d3-1",
+        "text_JCdeMT",
+        "text_JeDm9J",
+        "text_A3c9cP"
+      ],
+      "name": "Wanderluxe™  caravan toppers",
+      "settings": {
+        "alignment": "left",
+        "compact": true,
+        "eyebrow": "",
+        "title": "<h3>Wanderluxe™ Mattress Topper Wash & Care Guide</h3>",
+        "body_text": "",
+        "title_underline_style": "none",
+        "show_button": false,
+        "button_label": "Read more",
+        "button_link": "",
+        "button_bg": "#2f8f86",
+        "button_text_color": "#ffffff",
+        "spacing_desktop": 80,
+        "spacing_mobile": 60,
+        "fix_zindex": 0
+      }
+    },
+    "section_faq_bmpaKY": {
+      "type": "section-faq",
+      "blocks": {
+        "text_qLCUnV": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Should I wash my Waterproof Mattress Protector before first use?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>We know that when you’re travelling, a pre-wash isn’t always practical. It’s absolutely fine to put your new protector straight onto the bed and start using it.</p><p>Simply wash it as part of your regular bedding routine when it suits you.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_r4rfmd": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How should I wash my Waterproof Mattress Protector?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Machine wash your Mattress Protector on a regular cold wash cycle using a mild detergent.</p><p>Because of its waterproof properties, the protector can hold a significant amount of water during washing. We recommend using a washing machine with a drum large enough for the protector to move freely and, where possible, a high-speed spin cycle to help remove excess water before drying.</p><p>Avoid overloading your washing machine and make sure the protector has plenty of room to move freely within the drum.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_T7fhDz": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I use bleach or fabric softener?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>No. We recommend avoiding bleach and fabric softeners, as harsh laundry products can damage the waterproof membrane and reduce the performance and lifespan of your Mattress Protector.</p><p>A mild laundry detergent is all you need to keep it fresh and clean.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_8QTRXM": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How should I dry my Waterproof Mattress Protector?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Your Mattress Protector can be line dried or tumble dried on a low heat setting.</p><p>Because the waterproof backing can retain water during washing, a high-speed spin before drying will help remove excess moisture and reduce drying time.</p><p>Make sure the protector is completely dry before placing it back on your bed or storing it.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_KePhEm": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I iron or dry clean my Waterproof Mattress Protector?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>No. Your Dreamer RV Waterproof Mattress Protector should not be ironed or dry cleaned, as these processes can damage the materials and waterproof backing.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_WBcdai": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How often should I wash my Mattress Protector?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Your Mattress Protector doesn’t necessarily need to be washed every time you wash your sheets.</p><p>As a general guide, many customers wash their Mattress Protector every few sheet changes, or more often if needed.</p><p>We also recommend washing it promptly after any spills or accidents to help keep your sleep setup fresh, clean and protected.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_Kjq6iC": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Is the entire Mattress Protector waterproof?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>The sleep surface of the Mattress Protector is waterproof, helping protect the mattress and topper underneath from spills and accidents.</p><p>The fitted side panels are designed to stretch around your bed and are not waterproof, so liquids that come into contact with the sides may still reach the mattress or topper underneath.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        }
+      },
+      "block_order": [
+        "text_qLCUnV",
+        "text_r4rfmd",
+        "text_T7fhDz",
+        "text_8QTRXM",
+        "text_KePhEm",
+        "text_WBcdai",
+        "text_Kjq6iC"
+      ],
+      "name": "Wanderluxe™ caravan mattress topper",
+      "settings": {
+        "alignment": "left",
+        "compact": true,
+        "eyebrow": "",
+        "title": "<h3>Dreamer RV Waterproof Mattress Protector Wash & Care Guide</h3>",
+        "body_text": "",
+        "title_underline_style": "none",
+        "show_button": false,
+        "button_label": "Read more",
+        "button_link": "",
+        "button_bg": "#2f8f86",
+        "button_text_color": "#ffffff",
+        "spacing_desktop": 80,
+        "spacing_mobile": 60,
+        "fix_zindex": 0
+      }
+    },
+    "section_faq_qrCBHp": {
+      "type": "section-faq",
+      "blocks": {
+        "text_kBPXrG": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How should I wash my MeanderWild caravan sheets?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Machine wash your MeanderWild sheets in cold water on a gentle cycle using a mild liquid detergent.</p><p>Cold water and a gentle wash help protect the fibres and maintain the quality, softness and fit of your sheets over time.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_i7fMtm": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I use bleach or fabric softener?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>No. We recommend avoiding both bleach and fabric softeners, as they can damage the fibres and affect the quality and longevity of your sheets.&nbsp;<br/>A mild liquid laundry detergent is all you need to keep them fresh and clean.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_JrYHCi": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How should I dry my sheets?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Whenever possible, we recommend line drying your MeanderWild sheets. This is a gentle way to dry the fabric and helps minimise the risk of shrinkage.</p><p>If line drying isn’t an option, your sheets can be tumble dried on a low heat setting. Avoid high temperatures, as excessive heat may cause shrinkage or damage to the fabric.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_ngxRwm": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Should I wash my MeanderWild sheets before first use?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes. We recommend giving your MeanderWild sheets a cold, gentle wash before their first use.</p><p>This helps freshen the fabric after manufacturing and packaging and prepares your new sheets for their first night on the bed.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_y69W6V": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I iron my MeanderWild sheets?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>If ironing is required, check the care label on your sheets and follow the temperature instructions provided.<br/>For everyday use, removing your sheets promptly from the washing machine and allowing them to dry naturally can also help minimise creasing.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_XTbbQJ": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How should I store my sheets when they’re not being used?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Make sure your sheets are completely clean and dry before storing them in a cool, dry and well-ventilated place.</p><p>Avoid storing damp bedding or leaving sheets in areas where moisture can build up, as this may encourage mildew or unwanted odours — particularly inside a caravan being stored for an extended period.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_FmEQVQ": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How can I keep my MeanderWild sheets feeling their best?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>A little gentle care goes a long way. Wash your sheets in cold water on a gentle cycle, use a mild liquid detergent, avoid bleach and fabric softeners, and line dry whenever possible.</p><p>Following these simple care instructions will help preserve the comfort, fit and quality of your MeanderWild caravan sheets for plenty of adventures to come.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        }
+      },
+      "block_order": [
+        "text_kBPXrG",
+        "text_i7fMtm",
+        "text_JrYHCi",
+        "text_ngxRwm",
+        "text_y69W6V",
+        "text_XTbbQJ",
+        "text_FmEQVQ"
+      ],
+      "name": "Sheets",
+      "settings": {
+        "alignment": "left",
+        "compact": true,
+        "eyebrow": "",
+        "title": "<h3>MeanderWild Caravan Sheets Wash & Care Guide</h3>",
+        "body_text": "",
+        "title_underline_style": "none",
+        "show_button": false,
+        "button_label": "Read more",
+        "button_link": "",
+        "button_bg": "#2f8f86",
+        "button_text_color": "#ffffff",
+        "spacing_desktop": 80,
+        "spacing_mobile": 60,
+        "fix_zindex": 0
+      }
+    },
+    "section_faq_xRNVKL": {
+      "type": "section-faq",
+      "blocks": {
+        "text_QaeMNx": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Do I need to air my topper?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes. We recommend giving your Wanderluxe™ Mattress Topper some time to air when you first unbox it.<br/>As the topper has been compressed for shipping, you may notice a slight “new foam” smell when it is first opened. This is normal and should naturally dissipate with fresh air and ventilation.<br/><br/>Once in use, giving your topper an opportunity to air from time to time can also help keep it fresh, particularly when travelling in warm or humid conditions.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_xWmH9U": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I use an electric blanket with my Wanderluxe™ Mattress Topper?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes. Your electric blanket should be placed on top of your Wanderluxe™ Mattress Topper and Mattress Protector, and underneath your fitted sheet.</p><p>Before use, always check the care and safety instructions provided by your electric blanket manufacturer to ensure it is suitable for use with a memory foam mattress topper, and follow their recommended usage guidelines.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_t8zVtP": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I use my Wanderluxe™ Mattress Topper with a folding or hybrid-style bed?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes. Wanderluxe™ Mattress Toppers can be used with folding and hybrid-style beds, provided there is enough space for the topper to fold comfortably and be stowed within the bed cavity while travelling.</p><p>For extended storage periods of one month or more, we recommend removing the topper from the bed and rolling it for storage rather than leaving it folded or compressed.</p><p>If your topper has been folded or compressed for more than a day or two, allow up to 12 hours for the memory foam to fully regain its shape before use.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        }
+      },
+      "block_order": [
+        "text_QaeMNx",
+        "text_xWmH9U",
+        "text_t8zVtP"
+      ],
+      "name": "Sheets",
+      "settings": {
+        "alignment": "left",
+        "compact": true,
+        "eyebrow": "",
+        "title": "<h3>Setup & Everyday Use</h3>",
+        "body_text": "",
+        "title_underline_style": "none",
+        "show_button": false,
+        "button_label": "Read more",
+        "button_link": "",
+        "button_bg": "#2f8f86",
+        "button_text_color": "#ffffff",
+        "spacing_desktop": 80,
+        "spacing_mobile": 60,
+        "fix_zindex": 0
+      }
+    },
+    "section_rich_text_k6fbYM": {
+      "type": "section-rich-text",
+      "blocks": {
+        "title_hQkTYH": {
+          "type": "title",
+          "settings": {
+            "title": "<h2>Still have a question?</h2>",
+            "title_underline_style": "none"
+          }
+        },
+        "content_3Nm8ji": {
+          "type": "content",
+          "settings": {
+            "page": "",
+            "text": "<p>Don’t be shy. Get in touch with the Dreamer team and we’ll help sort you out.</p>",
+            "font": "secondary",
+            "font_weight": "400"
+          }
+        },
+        "button_JGUQnz": {
+          "type": "button",
+          "settings": {
+            "link_text": "Contact our team",
+            "link_url": "shopify://pages/contact",
+            "button_style": "primary plain"
+          }
+        },
+        "button_yFiR7D": {
+          "type": "button",
+          "settings": {
+            "link_text": "Find your size",
+            "link_url": "shopify://pages/find-your-fit",
+            "button_style": "secondary plain"
+          }
+        }
+      },
+      "block_order": [
+        "title_hQkTYH",
+        "content_3Nm8ji",
+        "button_JGUQnz",
+        "button_yFiR7D"
+      ],
+      "name": "t:sections.rich_text.presets.name",
+      "settings": {
+        "color_palette": "scheme-9",
+        "overlay_opacity": 100,
+        "text_position": "align-center text-center",
+        "content_width": 1280,
+        "height": "xs",
+        "enable_custom_height": false,
+        "custom_height": 300,
+        "width": "wide",
+        "height_mobile": "xs",
+        "spacing_desktop": 50,
+        "spacing_mobile": 30,
+        "fix_zindex": 0
+      }
+    },
+    "dreamer_rv_footer_links_mNW7Me": {
+      "type": "dreamer-rv-footer-links",
+      "blocks": {
+        "column_VMXEQx": {
+          "type": "column",
+          "settings": {
+            "heading": "Shop",
+            "link_1_label": "Mattress Toppers",
+            "link_1_url": "shopify://collections/wanderluxe-caravan-mattress-toppers",
+            "link_2_label": "Mattress Protectors",
+            "link_2_url": "shopify://collections/caravan-mattress-protectors",
+            "link_3_label": "Sheets",
+            "link_3_url": "shopify://collections/sheets",
+            "link_4_label": "Home Comfort Range",
+            "link_4_url": "shopify://collections/home-comfort-range",
+            "link_5_label": "Accessories",
+            "link_5_url": "shopify://collections/accessories",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        },
+        "column_PcyTPf": {
+          "type": "column",
+          "settings": {
+            "heading": "Explore",
+            "link_1_label": "Our Story",
+            "link_1_url": "shopify://pages/our-story",
+            "link_2_label": "Blog",
+            "link_2_url": "shopify://blogs/news",
+            "link_3_label": "Exhibitions & Shows",
+            "link_3_url": "shopify://pages/exhibitions-shows",
+            "link_4_label": "Wholesale",
+            "link_4_url": "shopify://pages/wholesale",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        },
+        "column_XKVXgt": {
+          "type": "column",
+          "settings": {
+            "heading": "Help & Info",
+            "link_1_label": "Find Your Size",
+            "link_1_url": "shopify://pages/find-your-fit",
+            "link_2_label": "FAQs",
+            "link_2_url": "shopify://pages/frequently-asked-questions",
+            "link_3_label": "Shipping Infomation",
+            "link_3_url": "shopify://policies/shipping-policy",
+            "link_4_label": "Refund Policy",
+            "link_4_url": "shopify://policies/refund-policy",
+            "link_5_label": "Warranty",
+            "link_5_url": "shopify://pages/warranty",
+            "link_6_label": "Wash & Care Guide",
+            "link_6_url": "shopify://pages/wash-care-guide"
+          }
+        },
+        "column_6xrxTi": {
+          "type": "column",
+          "settings": {
+            "heading": "Wholesale",
+            "link_1_label": "About Wholesale",
+            "link_1_url": "shopify://pages/wholesale",
+            "link_2_label": "",
+            "link_2_url": "",
+            "link_3_label": "",
+            "link_3_url": "",
+            "link_4_label": "",
+            "link_4_url": "",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        },
+        "column_jGVNmN": {
+          "type": "column",
+          "settings": {
+            "heading": "Legal",
+            "link_1_label": "Privacy Policy",
+            "link_1_url": "shopify://policies/privacy-policy",
+            "link_2_label": "Terms of Use",
+            "link_2_url": "",
+            "link_3_label": "",
+            "link_3_url": "",
+            "link_4_label": "",
+            "link_4_url": "",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_VMXEQx",
+        "column_PcyTPf",
+        "column_XKVXgt",
+        "column_6xrxTi",
+        "column_jGVNmN"
+      ],
+      "name": "Footer links",
+      "settings": {
+        "background_color": "#f9f2e8",
+        "text_color": "#424345",
+        "padding_top": 60,
+        "padding_bottom": 40
+      }
+    },
+    "dreamer_rv_footer_panel_HFXxDW": {
+      "type": "dreamer-rv-footer-panel",
+      "name": "Footer panel",
+      "settings": {
+        "icon": "shopify://shop_images/CROPPED_Dreamer_RV_Logo_Screen_Horizontal_Tagline_Night_Sky_RGB.svg",
+        "acknowledgement": "<p>In the spirit of reconciliation, Dreamer RV acknowledges the Traditional Custodians of Country throughout Australia and their connections to land, sea and community. We pay our respects to Elders past, present and emerging and extend that respect to all Aboriginal and Torres Strait Islander people today.</p>",
+        "show_newsletter": true,
+        "newsletter_heading": "Subscribe",
+        "newsletter_text": "Join our newsletter for new product drops and travel inspiration from the road.",
+        "newsletter_button_label": "Subscribe",
+        "newsletter_consent": "By subscribing you agree to our privacy policy and consent to receive updates from Dreamer RV.",
+        "background_color": "#f9f2e8",
+        "text_color": "#2b2621",
+        "panel_background_color": "#fffbf5",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "dreamer_rv_footer_bar_E4drEk": {
+      "type": "dreamer-rv-footer-bar",
+      "name": "Footer bar",
+      "settings": {
+        "copyright_text": "© 2026 Dreamer RV. All rights reserved.",
+        "credit_text": "Website by Sparo Studios",
+        "credit_link": "",
+        "background_color": "#bde9d8",
+        "text_color": "#2b2621"
+      }
+    },
+    "section_spacer_fqjahW": {
+      "type": "section-spacer",
+      "name": "t:sections.spacer.presets.name",
+      "settings": {
+        "height": 20,
+        "height_mobile": 20
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main-page",
+    "section_rich_text_rVRBXq",
+    "16534818921d9da639",
+    "section_faq_bmpaKY",
+    "section_faq_qrCBHp",
+    "section_faq_xRNVKL",
+    "section_rich_text_k6fbYM",
+    "dreamer_rv_footer_links_mNW7Me",
+    "dreamer_rv_footer_panel_HFXxDW",
+    "dreamer_rv_footer_bar_E4drEk",
+    "section_spacer_fqjahW"
+  ]
+}

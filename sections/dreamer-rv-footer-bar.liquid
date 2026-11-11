@@ -1,0 +1,66 @@
+{%- comment -%}
+  Dreamer RV - Footer bar (the mint copyright strip at the very bottom of
+  the page, with a centred palm icon, copyright text and credit text).
+{%- endcomment -%}
+
+{%- comment -%} DRV: footer now lives in the Footer group. Copies left in templates render nothing. {%- endcomment -%}
+{%- unless section.location == 'template' -%}
+<section
+  class="drv-footer-bar"
+  style="
+    --drv-fb-bg: {{ section.settings.background_color }};
+    --drv-fb-text: {{ section.settings.text_color }};
+  "
+>
+  <div class="drv-footer-bar__inner">
+    <p class="drv-footer-bar__copyright">{{ section.settings.copyright_text }}</p>
+
+    {%- if section.settings.icon != blank -%}
+      <img
+        class="drv-footer-bar__icon"
+        src="{{ section.settings.icon | image_url: width: 60 }}"
+        width="24"
+        height="24"
+        alt=""
+        loading="lazy"
+      >
+    {%- endif -%}
+
+    {%- if section.settings.credit_text != blank -%}
+      {%- if section.settings.credit_link != blank -%}
+        <a href="{{ section.settings.credit_link }}" class="drv-footer-bar__credit" target="_blank" rel="noopener">{{ section.settings.credit_text }}</a>
+      {%- else -%}
+        <p class="drv-footer-bar__credit">{{ section.settings.credit_text }}</p>
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+</section>
+
+{{ 'dreamer-rv-footer-bar.css' | asset_url | stylesheet_tag }}
+
+{%- endunless -%}
+
+{% schema %}
+{
+  "name": "Footer bar",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "image_picker", "id": "icon", "label": "Centre icon (e.g. palm tree)" },
+    { "type": "text", "id": "copyright_text", "label": "Copyright text", "default": "© 2026 Dreamer RV. All rights reserved." },
+    { "type": "text", "id": "credit_text", "label": "Credit text", "default": "Website by Sparo Studios" },
+    { "type": "url", "id": "credit_link", "label": "Credit link" },
+    {
+      "type": "header",
+      "content": "Section styling"
+    },
+    { "type": "color", "id": "background_color", "label": "Bar background", "default": "#BDE9D8" },
+    { "type": "color", "id": "text_color", "label": "Text colour", "default": "#2B2621" }
+  ],
+  "presets": [
+    {
+      "name": "Footer bar"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,199 @@
+{%- comment -%}
+  Dreamer RV - Events section
+  Replaces the theme's native "Events calendar" section, which has no
+  eyebrow/description settings, no state filtering, and no per-event
+  ticket button.
+
+  Filtering: each event block picks one Australian state from a fixed
+  list. The tab row always shows "All states" plus all 8 states
+  (matching the Figma, which shows every tab regardless of whether an
+  event exists for it yet). Clicking a tab shows only events whose
+  state matches - done client-side in dreamer-rv-events.js so it works
+  instantly with no page reload.
+{%- endcomment -%}
+
+{%- assign states = "Queensland,Northern Territory,Victoria,New South Wales,South Australia,Western Australia,Australian Capital Territory,Tasmania" | split: ',' -%}
+
+<section
+  class="drv-events"
+  id="drv-events-{{ section.id }}"
+  style="
+    --drv-events-bg: {{ section.settings.background_color }};
+    --drv-events-text: {{ section.settings.text_color }};
+    --drv-events-border: {{ section.settings.border_color }};
+    --drv-events-btn-bg: {{ section.settings.button_color }};
+    --drv-events-btn-text: {{ section.settings.button_text_color }};
+    --drv-events-pt: {{ section.settings.padding_top }}px;
+    --drv-events-pb: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="drv-events__inner">
+    {%- if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.description != blank -%}
+      <div class="drv-events__header">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="drv-events__eyebrow">{{ section.settings.eyebrow }}</p>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="drv-events__heading">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.description != blank -%}
+          <p class="drv-events__description">{{ section.settings.description }}</p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="drv-events__tabs" data-drv-events-tabs role="tablist">
+        <button type="button" class="drv-events__tab is-active" data-drv-events-tab data-state="all" role="tab" aria-selected="true">
+          All states
+        </button>
+        {%- for state in states -%}
+          <button type="button" class="drv-events__tab" data-drv-events-tab data-state="{{ state | handleize }}" role="tab" aria-selected="false">
+            {{ state }}
+          </button>
+        {%- endfor -%}
+      </div>
+
+      <div class="drv-events__list" data-drv-events-list>
+        {%- for block in section.blocks -%}
+          <div
+            class="drv-events__item"
+            data-drv-events-item
+            data-state="{{ block.settings.state | handleize }}"
+            {{ block.shopify_attributes }}
+          >
+            <div class="drv-events__date">
+              {%- if block.settings.weekday != blank -%}
+                <p class="drv-events__weekday">{{ block.settings.weekday }}</p>
+              {%- endif -%}
+              {%- if block.settings.day != blank -%}
+                <p class="drv-events__day">{{ block.settings.day }}</p>
+              {%- endif -%}
+              {%- if block.settings.month_year != blank -%}
+                <p class="drv-events__month">{{ block.settings.month_year }}</p>
+              {%- endif -%}
+            </div>
+
+            <div class="drv-events__divider" aria-hidden="true"></div>
+
+            <div class="drv-events__content">
+              {%- if block.settings.heading != blank -%}
+                <h3 class="drv-events__title">{{ block.settings.heading }}</h3>
+              {%- endif -%}
+              {%- if block.settings.location != blank -%}
+                <p class="drv-events__location">{{ block.settings.location }}</p>
+              {%- endif -%}
+              {%- if block.settings.description != blank -%}
+                <p class="drv-events__text">{{ block.settings.description }}</p>
+              {%- endif -%}
+            </div>
+
+            {%- if block.settings.button_label != blank -%}
+              <a
+                {% if block.settings.button_url != blank %}href="{{ block.settings.button_url }}"{% else %}role="link" aria-disabled="true"{% endif %}
+                class="drv-events__button"
+              >
+                {{ block.settings.button_label }}
+              </a>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+
+      <p class="drv-events__empty" data-drv-events-empty hidden>
+        {{ section.settings.empty_state_text | default: "No events in this state right now - check back soon." }}
+      </p>
+    {%- endif -%}
+  </div>
+</section>
+
+{{ 'dreamer-rv-events.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'dreamer-rv-events.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "Dreamer RV Events",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 24,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow text", "default": "Upcoming dates" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Events" },
+    { "type": "textarea", "id": "description", "label": "Description", "default": "Find a show near you and come say g'day, we'd love to help you find your exact fit in person." },
+    { "type": "text", "id": "empty_state_text", "label": "No results text", "default": "No events in this state right now - check back soon." },
+    { "type": "header", "content": "Colours" },
+    { "type": "color", "id": "background_color", "label": "Section background", "default": "#FBF6EC" },
+    { "type": "color", "id": "text_color", "label": "Text colour", "default": "#2B2621" },
+    { "type": "color", "id": "border_color", "label": "Card border colour", "default": "#2B2621" },
+    { "type": "color", "id": "button_color", "label": "Button background", "default": "#BFE3DB" },
+    { "type": "color", "id": "button_text_color", "label": "Button text colour", "default": "#2B2621" },
+    { "type": "header", "content": "Spacing" },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "default": 80
+    }
+  ],
+  "blocks": [
+    {
+      "type": "event",
+      "name": "Event",
+      "settings": [
+        { "type": "header", "content": "Date" },
+        { "type": "text", "id": "weekday", "label": "Weekday", "info": "e.g. Fri", "default": "Fri" },
+        { "type": "text", "id": "day", "label": "Day", "info": "e.g. 09", "default": "09" },
+        { "type": "text", "id": "month_year", "label": "Month + year", "info": "e.g. Feb 2024", "default": "Feb 2024" },
+        { "type": "header", "content": "Details" },
+        { "type": "text", "id": "heading", "label": "Event title", "default": "Event title heading" },
+        { "type": "text", "id": "location", "label": "Location", "default": "Location" },
+        { "type": "textarea", "id": "description", "label": "Description", "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." },
+        {
+          "type": "select",
+          "id": "state",
+          "label": "State",
+          "info": "Controls which filter tab this event appears under",
+          "options": [
+            { "value": "Queensland", "label": "Queensland" },
+            { "value": "Northern Territory", "label": "Northern Territory" },
+            { "value": "Victoria", "label": "Victoria" },
+            { "value": "New South Wales", "label": "New South Wales" },
+            { "value": "South Australia", "label": "South Australia" },
+            { "value": "Western Australia", "label": "Western Australia" },
+            { "value": "Australian Capital Territory", "label": "Australian Capital Territory" },
+            { "value": "Tasmania", "label": "Tasmania" }
+          ],
+          "default": "Queensland"
+        },
+        { "type": "header", "content": "Button" },
+        { "type": "text", "id": "button_label", "label": "Button label", "default": "Purchase ticket" },
+        { "type": "url", "id": "button_url", "label": "Button link" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dreamer RV Events",
+      "blocks": [
+        { "type": "event", "settings": { "weekday": "Fri", "day": "09", "month_year": "Feb 2024", "state": "Queensland" } },
+        { "type": "event", "settings": { "weekday": "Sat", "day": "10", "month_year": "Feb 2024", "state": "New South Wales" } },
+        { "type": "event", "settings": { "weekday": "Sun", "day": "11", "month_year": "Feb 2024", "state": "Victoria" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

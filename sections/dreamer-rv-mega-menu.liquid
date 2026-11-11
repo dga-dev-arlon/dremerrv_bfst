@@ -1,0 +1,116 @@
+{%- comment -%}
+  Dreamer RV – desktop mega menu (image cards).
+  Lives in the Header group as its own section, so the theme's header files are
+  untouched. JS attaches the panel to the header menu item whose title matches
+  the "Menu item" setting. Desktop only (min-width: 1001px).
+{%- endcomment -%}
+{{ 'dreamer-rv-mega-menu.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'dreamer-rv-mega-menu.js' | asset_url }}" defer="defer"></script>
+
+{%- liquid
+  assign cols = section.blocks.size
+  if cols > 6
+    assign cols = 6
+  endif
+  if cols < 1
+    assign cols = 1
+  endif
+-%}
+<div
+  class="drv-mega"
+  id="drv-mega-{{ section.id }}"
+  data-drv-mega-panel
+  data-menu-item="{{ section.settings.menu_item | strip | escape }}"
+  role="region"
+  aria-label="{{ section.settings.menu_item | escape }}"
+  hidden
+>
+  <ul class="drv-mega__grid" style="--drv-mega-cols: {{ cols }};">
+    {%- for block in section.blocks -%}
+      {%- liquid
+        assign card_url = block.settings.link | default: '#'
+        assign card_title = block.settings.title
+      -%}
+      <li class="drv-mega__card" {{ block.shopify_attributes }}>
+        <a class="drv-mega__media" href="{{ card_url }}" tabindex="-1" aria-hidden="true" style="position:relative !important;display:block !important;height:0 !important;padding:125% 0 0 !important;overflow:hidden !important;">
+          {%- if block.settings.image != blank -%}
+            {%- liquid
+              assign focal = block.settings.image.presentation.focal_point | default: 'center'
+              # Inline !important so theme-wide img rules can't change the crop
+              assign img_style = 'position:absolute !important;top:0 !important;left:0 !important;width:100% !important;height:100% !important;min-height:100% !important;max-width:none !important;max-height:none !important;margin:0 !important;aspect-ratio:auto !important;object-fit:cover !important;object-position:' | append: focal | append: ' !important;'
+            -%}
+            {{-
+              block.settings.image
+              | image_url: width: 760
+              | image_tag:
+                loading: 'lazy',
+                widths: '380, 570, 760',
+                sizes: '(min-width: 1440px) 220px, 16vw',
+                alt: '',
+                class: 'drv-mega__img',
+                style: img_style
+            -}}
+          {%- else -%}
+            {{- 'image' | placeholder_svg_tag: 'drv-mega__placeholder' -}}
+          {%- endif -%}
+        </a>
+        {%- if card_title != blank -%}
+          <p class="drv-mega__title">
+            <a href="{{ card_url }}">{{ card_title | escape }}</a>
+          </p>
+        {%- endif -%}
+        {%- if block.settings.text != blank -%}
+          <p class="drv-mega__text">{{ block.settings.text | escape | newline_to_br }}</p>
+        {%- endif -%}
+        {%- if block.settings.button_label != blank -%}
+          <p class="drv-mega__cta">
+            <a class="drv-mega__btn" href="{{ card_url }}">{{ block.settings.button_label | escape }}</a>
+          </p>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>
+
+{% schema %}
+{
+  "name": "Mega menu",
+  "class": "drv-mega-section",
+  "enabled_on": { "groups": ["header"] },
+  "max_blocks": 12,
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Image cards that drop down under a header menu item on desktop. Mobile keeps the normal menu."
+    },
+    {
+      "type": "text",
+      "id": "menu_item",
+      "label": "Menu item",
+      "default": "Shop",
+      "info": "Must match the header menu item's title exactly (not case-sensitive)."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image", "info": "Images are cropped to a 4:5 portrait frame. Use at least 760 × 950px. To control the crop, set a focal point on the image (Edit > Focal point)." },
+        { "type": "text", "id": "title", "label": "Heading", "default": "Caravan toppers" },
+        { "type": "textarea", "id": "text", "label": "Description", "default": "Certified, premium memory foam, cut to fit the real shape of your caravan bed." },
+        { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop toppers" },
+        { "type": "url", "id": "link", "label": "Link" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Mega menu",
+      "blocks": [
+        { "type": "card" }
+      ]
+    }
+  ]
+}
+{% endschema %}

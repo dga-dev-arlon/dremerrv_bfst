@@ -1,0 +1,106 @@
+/* Dreamer RV - "How it works" section */
+
+.drv-how-it-works {
+  background-color: var(--drv-hiw-bg, #F9F2E8);
+  color: var(--drv-hiw-text, #2B2621);
+  padding-top: var(--drv-hiw-pt, 80px);
+  padding-bottom: var(--drv-hiw-pb, 80px);
+}
+
+.drv-how-it-works__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--drv-hiw-px, 42px);
+}
+
+.drv-how-it-works__heading {
+  margin: 0 0 48px;
+  color: inherit;
+  text-align: center;
+}
+
+.drv-how-it-works__row {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+.drv-how-it-works__media {
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
+.drv-how-it-works__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.drv-how-it-works__image--placeholder {
+  width: 100%;
+  height: auto;
+}
+
+.drv-how-it-works__steps {
+  flex: 1 1 50%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.drv-how-it-works__step-heading {
+  margin: 0 0 12px;
+  color: inherit;
+}
+
+.drv-how-it-works__step-text {
+  color: inherit;
+}
+
+.drv-how-it-works__step-text p {
+  margin: 0;
+}
+
+.drv-how-it-works__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 15px;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+  background: var(--drv-hiw-button-bg, #2F8F86) !important;
+  color: var(--drv-hiw-button-text, #FFFFFF) !important;
+}
+
+.drv-how-it-works__button:hover {
+  opacity: 0.85;
+}
+
+/* Mobile: image moves below the steps, not above them */
+@media only screen and (max-width: 749px) {
+  .drv-how-it-works__row {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .drv-how-it-works__steps {
+    order: 1;
+  }
+
+  .drv-how-it-works__media {
+    order: 2;
+    width: 100%;
+  }
+
+  .drv-how-it-works__heading {
+    text-align: left;
+  }
+}

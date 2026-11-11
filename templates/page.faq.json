@@ -1,0 +1,1786 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "disabled": true,
+      "settings": {
+        "hide_desktop": false,
+        "hide_mobile": false,
+        "enable_share_button": false
+      }
+    },
+    "main-page": {
+      "type": "main-page",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "h1"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "content"
+      ],
+      "settings": {
+        "max_width": 980,
+        "content_alignment": "center",
+        "text_alignment": "center",
+        "spacing_desktop": 50,
+        "spacing_mobile": 30
+      }
+    },
+    "faq_01": {
+      "type": "section-faq",
+      "blocks": {
+        "text_Ja4rn6": {
+          "type": "text",
+          "settings": {
+            "faq_question": "When does the Black Friday Sale start and end?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Our Black Friday Sale starts on Thursday, 19 November and ends at 11:59pm AEST on Tuesday, 1 December 2026. Complete checkout before the sale ends to secure your savings!</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_bett6r": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What’s on sale?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Enjoy 20% off the regular price of all individual items, including mattress toppers, mattress protectors and sheets.</p><p>During the sale, our usual bundle discount does not apply. Instead, the 20% sale discount is applied to the regular price of each item in the bundle.</p><p>Gift cards are excluded.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_76NJ6U": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How can I get a free gift with my order?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Spend $350 or more and a free Dreamer RV Cooler Bag will be automatically added to your cart. Spend $490 or more to also receive a free Sand-Free Beach Towel, simply choose your preferred colour in your cart.</p><p>Limit one cooler bag and, where eligible, one towel per order. Gifts and towel colours are subject to availability, while stocks last. T&Cs apply.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_Ga9BcL": {
+          "type": "text",
+          "settings": {
+            "faq_question": "When will my order ship?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Our warehouse team will be working hard to get orders on their way, but please allow 3–4 business days for dispatch during the sale. All orders are delivered by Australia Post.</p><p>If you’re on a tight timeline, choose Express Post and contact our customer care team after ordering so we can flag your order for priority dispatch. Visit our shipping page for more details.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_aPRn3t": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I pre-order or reserve sold-out items?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Sale discounts apply to in-stock items only. Sold-out items and products on our waitlist aren’t eligible for sale pricing. We can’t reserve stock or guarantee every size will remain available throughout the sale, so we recommend shopping early.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        }
+      },
+      "block_order": [
+        "text_Ja4rn6",
+        "text_bett6r",
+        "text_76NJ6U",
+        "text_Ga9BcL",
+        "text_aPRn3t"
+      ],
+      "name": "Black Friday FAQs",
+      "settings": {
+        "alignment": "left",
+        "compact": true,
+        "eyebrow": "",
+        "title": "<h2>Black Friday FAQs</h2>",
+        "body_text": "",
+        "title_underline_style": "none",
+        "show_button": false,
+        "button_label": "Read more",
+        "button_link": "",
+        "button_bg": "#2f8f86",
+        "button_text_color": "#ffffff",
+        "spacing_desktop": 80,
+        "spacing_mobile": 60,
+        "fix_zindex": 0
+      }
+    },
+    "section_faq_GkWkc7": {
+      "type": "section-faq",
+      "blocks": {
+        "text_w8XeKY": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How do I work out the right size for my setup?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Caravan beds can be a little tricky — unlike domestic beds, there’s no consistent sizing across caravan makes and models. That’s why we always recommend measuring your mattress rather than relying on whether it’s called a Queen, Double or Single.</p><p>Measure the <strong>width and length of your mattress in millimetres</strong>, including any head-end bolster in the total length, and take note of the corner profile at the foot end of your mattress.</p><p>You can then enter your measurements into our <a href=\"/pages/find-your-fit\">Sizing Calculator</a> to find the best Wanderluxe™ fit for your setup.</p><p>Still unsure? Send your measurements through to our Australian Customer Care team via our <a href=\"/pages/contact\">Contact Us Form</a> and we’ll be happy to help.</p><p><strong>Quick Sizing Checklist</strong></p><ul><li>Orientation: Note if your mattress runs north–south or east–west to check for cabinetry or frame limits.</li><li>Corners: Identify if corners are square or rounded – rounded toppers fit both styles.</li><li>Dimensions: Measure width and length across the centre: Include any bolster section in your measurement.</li><li>Fit tip: Choose a topper that’s slightly shorter rather than one that overhangs — overhang can cause shifting or edge compression.</li><li>Overhang: Keep it minimal if unavoidable, and avoid entirely where bunk frames or cabinetry restrict space.</li></ul>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_qdJEKP": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Do you offer custom sizes?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>At this stage, we don’t manufacture one-off custom sizes. Instead, we’ve developed our Wanderluxe™ range in a wide variety of shapes, sizes and corner profiles to suit many of the caravan bed configurations found across Australia.</p><p>Your topper also doesn’t need to be an exact millimetre-for-millimetre match to your mattress to provide a great fit. In many cases, a slightly smaller topper is preferable to one that overhangs your mattress or interferes with surrounding cabinetry.</p><p>Rounded-corner toppers can also be used successfully on many square or cut-corner mattresses.</p><p>Enter your measurements into our <a href=\"/pages/find-your-fit\">Sizing Calculator</a>, or contact our <a href=\"/pages/contact\">Customer Care team</a> if you’d like help finding the closest fit.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_bdpQ8g": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I try a Wanderluxe™ Mattress Topper before I buy?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>You can experience our Wanderluxe™ Mattress Toppers in person at selected retailers and at caravan and camping shows throughout Australia.</p><p>Visit our <a href=\"/pages/stockists\">Stockists</a> page to find an authorised retailer, or check our <a href=\"/pages/exhibitions-shows\">Exhibitions</a> page for upcoming caravan and camping shows.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_EpXBYk": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How long does shipping take?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>We use Australia Post for all deliveries Australia-wide.</p><p>In-stock orders are generally dispatched from our Sydney warehouse within <strong>1–2 business days</strong>. During peak periods, dispatch may take up to <strong>3–4 business days</strong>.</p><p>Delivery times after dispatch depend on your location and whether you select Regular or Express Shipping, with regional and remote areas generally taking a little longer.</p><p>Enter your postcode at checkout to view an estimated delivery timeframe. Once your order has been dispatched, you’ll receive tracking details by email and Australia Post will provide the most up-to-date delivery estimate.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        }
+      },
+      "block_order": [
+        "text_w8XeKY",
+        "text_qdJEKP",
+        "text_bdpQ8g",
+        "text_EpXBYk"
+      ],
+      "name": "Featured FAQs",
+      "settings": {
+        "alignment": "left",
+        "compact": true,
+        "eyebrow": "",
+        "title": "<h2>Featured FAQs</h2>",
+        "body_text": "",
+        "title_underline_style": "none",
+        "show_button": false,
+        "button_label": "Read more",
+        "button_link": "",
+        "button_bg": "#2f8f86",
+        "button_text_color": "#ffffff",
+        "spacing_desktop": 80,
+        "spacing_mobile": 60,
+        "fix_zindex": 0
+      }
+    },
+    "faq_02": {
+      "type": "section-faq",
+      "blocks": {
+        "q_02_01": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How do I measure my caravan mattress correctly?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Measure the <strong>width and length across the centre of your mattress in millimetres</strong>.</p><p>If your mattress has a head-end bolster, include the bolster in the <strong>total length measurement</strong>.</p><p>Also take note of the corner profile at the foot end of your mattress — <strong>rounded, square or cut corner</strong>.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_02_02": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Should I include the bolster when measuring my mattress?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes. If your mattress has a head-end bolster, include it in the total mattress length.</p><p>This allows us to recommend a topper that covers both the main mattress and bolster where appropriate.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_02_03": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What is a mattress bolster?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>A bolster is an additional section of mattress, usually positioned at the head end, that allows the bed to extend when in use and retract when more space is needed inside the caravan.</p><p>When measuring for a topper, include the bolster in your total mattress length.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_02_04": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How should I position my mattress topper on a bed with a bolster?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>For mattresses with a bolster, we generally recommend covering both the main mattress and the bolster where possible.</p><p>Position the topper flush with the bolster at the head of the bed and secure the corner straps at that end. When the bed base is retracted and the bolster lifts during the day, the topper will flex and curve upwards with your bedding.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_02_05": {
+          "type": "text",
+          "settings": {
+            "faq_question": "My mattress is called a Queen, Double or Single. Is that enough to choose a topper?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>No. Caravan mattress dimensions can vary considerably between manufacturers, models and year ranges.</p><p>Always measure your mattress before ordering rather than relying on the mattress name alone.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_02_06": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What if my mattress doesn’t exactly match one of your topper sizes?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>That’s very common.</p><p>A topper does not need to match your mattress millimetre for millimetre. We generally look for the closest fit while avoiding excessive overhang.</p><p>In many cases, a topper that is slightly smaller than the mattress is preferable to one that hangs over the edges.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_02_07": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Will a topper fit my mattress shape?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Most likely! Our Wanderluxe™ range includes a variety of sizes and corner profiles designed to suit many of the different caravan bed shapes found across Australia.</p><p>Rounded-corner toppers can work well on rounded, square and many cut-corner mattresses, while a slightly smaller topper is generally preferable to one that overhangs your mattress or interferes with surrounding cabinetry.</p><p>If your mattress is angled, varies in width or has an unusual shape, enter your measurements into our <a href=\"/pages/find-your-fit\">Sizing Calculator</a> or send them through to our Customer Care team and we’ll help you find the best fit.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_02_08": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Is it better for a topper to be slightly smaller or slightly larger than my mattress?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Slightly smaller is generally preferable.</p><p>A small shortfall around the edges is unlikely to affect comfort, whereas excessive overhang can allow the foam to move, compress or interfere with surrounding cabinetry.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_02_09": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Will a small gap at the foot end affect comfort?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Usually not.</p><p>A small length shortfall at the foot end is generally less important than getting the width right and avoiding overhang.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_02_10": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Why is mattress width so important?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>We recommend matching the <strong>width</strong> of your mattress before the length, as any shortfall across the width is more likely to be noticed — especially when two people are sharing the bed.</p><p>A small difference in length is usually easier to accommodate, as any shortfall at the foot end is less likely to affect comfort.</p><p>Once you’ve matched the width as closely as possible, check the overall fit and avoid excessive overhang in either direction. A small amount of overhang may be acceptable, but less is generally better.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_02_11": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I use a rounded-corner topper on a square mattress?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes. It’s very common to use a rounded-corner topper on a square-corner mattress.</p><p>There may be a small gap at the square corners, but this is typically unnoticeable once your bedding is fitted.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_02_12": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I use a square-corner topper on a rounded mattress?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>We generally don’t recommend it, as the square corners may extend beyond the rounded mattress underneath.</p><p>A rounded topper is usually the better option for a rounded mattress.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_02_13": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What if my mattress has cut or angled corners?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Many cut-corner mattresses can be matched with one of our rounded-corner toppers.</p><p>Enter your dimensions and corner profile into our <a href=\"/pages/find-your-fit\">Sizing Calculator</a>, or contact our Customer Care team if you’re unsure.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_02_14": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What if my mattress is wider at one end than the other?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Measure the mattress across the centre and provide any additional dimensions that may affect the fit.</p><p>If the shape is unusual, contact our <a href=\"/pages/contact\">Customer Care team</a> with your measurements and, if helpful, photos of the mattress so we can assist.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_02_15": {
+          "type": "text",
+          "settings": {
+            "faq_question": "My mattress sits tightly between walls or cabinetry. Does this affect sizing?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes. If your mattress sits within a tight bed frame or between cabinetry, it is particularly important to avoid choosing a topper that is too wide.</p><p>A slightly smaller topper is generally preferable to one that needs to be compressed into the available space.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_02_16": {
+          "type": "text",
+          "settings": {
+            "faq_question": "My measurements are in between two topper sizes. Which should I choose?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>The best option depends on the width, length and corner profile of your mattress.</p><p>As a general rule, we prefer to avoid overhang and will often recommend the slightly smaller option where two sizes are close.</p><p>Our <a href=\"/pages/find-your-fit\">Sizing Calculator</a> can help narrow this down, or our Customer Care team can assist.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_02_17": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Should I wait until I have access to my caravan before ordering?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p><strong>Yes, we recommend waiting until you can physically measure your mattress!</strong></p><p>Mattress dimensions and corner profiles can vary even between caravans of the same make or model. Waiting until you have access to your caravan means you can take accurate measurements with a measuring tape and check the corner profile at the foot end before placing your order.</p><p>This gives you the best chance of finding the right fit and avoiding unnecessary returns.</p><p>For full details on returns, head on over to our <a href=\"/policies/refund-policy\">Returns Policy</a> page.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_02_18": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can you recommend a topper based on my caravan make and model?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p><strong>No</strong>. Caravan mattress sizes, shapes and profiles can vary between models and years, and manufacturers may also change their specifications over time. With so many different configurations available, we’re unable to maintain a complete and reliable list based on caravan make and model alone.</p><p>For the most accurate recommendation, we always recommend measuring your actual mattress and choosing your topper based on its <strong>width, length and corner profile</strong>.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        }
+      },
+      "block_order": [
+        "q_02_01",
+        "q_02_02",
+        "q_02_03",
+        "q_02_04",
+        "q_02_05",
+        "q_02_06",
+        "q_02_07",
+        "q_02_08",
+        "q_02_09",
+        "q_02_10",
+        "q_02_11",
+        "q_02_12",
+        "q_02_13",
+        "q_02_14",
+        "q_02_15",
+        "q_02_16",
+        "q_02_17",
+        "q_02_18"
+      ],
+      "name": "Sizing & Fit",
+      "settings": {
+        "alignment": "left",
+        "compact": true,
+        "eyebrow": "",
+        "title": "<h2>Sizing & Fit</h2>",
+        "body_text": "",
+        "title_underline_style": "none",
+        "show_button": false,
+        "button_label": "Read more",
+        "button_link": "",
+        "button_bg": "#2f8f86",
+        "button_text_color": "#ffffff",
+        "spacing_desktop": 80,
+        "spacing_mobile": 60,
+        "fix_zindex": 0
+      }
+    },
+    "faq_03": {
+      "type": "section-faq",
+      "blocks": {
+        "q_03_01": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Will the topper work with a bolster-style mattress?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes. Our range includes longer topper sizes that can suit mattresses with bolsters.</p><p>If your bed retracts and the bolster lifts during the day, the memory foam can flex and lift with the mattress, similar to your bedding.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_03_02": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Should the topper cover the bolster?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Where possible, yes. We recommend including the bolster in your total mattress length so the topper can cover the complete sleep surface.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_03_03": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I use a Wanderluxe™ Mattress Topper on a folding or hybrid bed?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes. Many customers use Wanderluxe™ Toppers with folding beds, hybrid beds and camper trailers.</p><p>The memory foam is soft and flexible, provided there is enough room for the topper to fold comfortably within the bed cavity. For long periods of non-use, we recommend removing the topper and storing it flat or gently rolled rather than leaving it folded or compressed.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_03_04": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I leave the topper folded when the caravan isn’t being used?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Short-term folding while travelling is generally fine.</p><p>For extended storage periods of around a month or more, we recommend removing the topper and storing it flat or gently rolled rather than leaving it folded or compressed.</p><p>If it has been folded or compressed for more than a day or two, allow up to <strong>12 hours</strong> for the memory foam to fully regain its shape before use.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_03_05": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Will a topper hide a join or fold in a split mattress?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>A topper can help create a more continuous sleep surface over a split or folding mattress, but the result will depend on the condition and structure of the mattress underneath.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_03_06": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Will a topper fix a dip, ridge or sag in my mattress?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>A Wanderluxe™ Topper can add cushioning and comfort to a firm, flat mattress, but it cannot correct structural issues such as significant sagging, deep dips or an uneven mattress base.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        }
+      },
+      "block_order": [
+        "q_03_01",
+        "q_03_02",
+        "q_03_03",
+        "q_03_04",
+        "q_03_05",
+        "q_03_06"
+      ],
+      "name": "Bolsters, Folding Beds & Unusual Setups",
+      "settings": {
+        "alignment": "left",
+        "compact": true,
+        "eyebrow": "",
+        "title": "<h2>Bolsters, Folding Beds & Unusual Setups</h2>",
+        "body_text": "",
+        "title_underline_style": "none",
+        "show_button": false,
+        "button_label": "Read more",
+        "button_link": "",
+        "button_bg": "#2f8f86",
+        "button_text_color": "#ffffff",
+        "spacing_desktop": 80,
+        "spacing_mobile": 60,
+        "fix_zindex": 0
+      }
+    },
+    "faq_04": {
+      "type": "section-faq",
+      "blocks": {
+        "q_04_01": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What does the Wanderluxe™ Mattress Topper feel like?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Our Wanderluxe™ Mattress Topper is made from <strong>50mm gel-infused memory foam</strong> with a medium-soft feel, designed to add an extra layer of cushioning and comfort to a firm caravan mattress.</p><p>The memory foam gently conforms to your body to help relieve pressure, while the gel infusion helps with temperature regulation for a more comfortable night’s sleep.</p><p>Soft, supportive and made for life on the road — it’s all about making your caravan bed somewhere you genuinely look forward to climbing into.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_04_02": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What is the Wanderluxe™ Mattress Topper made from?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>The topper is made from premium polyurethane memory foam with a medium-soft feel.</p><p>It is infused with cooling gel to assist with temperature regulation and covered with a soft Tencel/polyester zippered cover.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_04_03": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How firm is the Wanderluxe™ Mattress Topper?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Our Wanderluxe™ Mattress Toppers use <strong>medium-soft memory foam</strong>, designed to add cushioning and comfort to a firm caravan mattress while still providing support.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_04_04": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How thick is the Wanderluxe™ Mattress Topper?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>The Wanderluxe™ Mattress Topper is <strong>50mm thick</strong>, providing a comfortable layer of memory foam without adding unnecessary bulk to your caravan setup.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_04_05": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How much does a Wanderluxe™ Mattress Topper weigh?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Weights vary depending on the topper dimensions.</p><p>As an example, the Caravan Queen Wanderluxe™ Mattress Topper weighs approximately <strong>7.5kg</strong>.</p><p>For the exact weight and specifications of a particular size, scroll down on the relevant product page and open the <strong>Specifications</strong> section.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_04_06": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Is the foam CertiPUR-US® certified?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes! All the Wanderluxe™️ Mattress Toppers are made with <a href=\"https://certipur.us/directory/\">CertiPUR-US®</a> certified foam.</p><p>This means that the foam inside the cover has been tested to meet CertiPUR-US® rigorous standards for emissions, content, performance and durability.</p><p>Specifically, the foam is:</p><ul><li>Made without formaldehyde</li><li>Made without ozone depleters</li><li>Made without phthalates regulated by the U.S. Consumer Product Safety Commission</li><li>Made without mercury, lead and other heavy metals</li><li>Low VOC (volatile organic compound) emissions for indoor air quality (less than 0.5 parts per million)</li><li>Screened for relevant chemicals, including flame retardants, that are classified as carcinogens, mutagens or reproductive toxins and are harmful to human health</li></ul>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_04_07": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Is the Wanderluxe™ Mattress Topper OEKO-TEX® certified?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes. Wanderluxe™ Mattress Toppers carry <strong>OEKO-TEX® STANDARD 100 certification</strong>, which means the certified materials and components have been independently tested for harmful substances.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_04_08": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can the topper help relieve pressure points?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>The memory foam gently conforms to your body and can help distribute pressure more evenly, making a firm caravan mattress feel more comfortable.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_04_09": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Will the topper make a firm caravan mattress more comfortable?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>That is exactly what it has been designed to do.</p><p>The medium-soft memory foam adds a cushioning comfort layer over a firm mattress while maintaining support.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_04_10": {
+          "type": "text",
+          "settings": {
+            "faq_question": "I’m a hot sleeper. Will memory foam make me hotter?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Our memory foam is infused with cooling gel to help regulate temperature.</p><p>Everyone experiences sleeping temperature differently, so individual results can vary, but the gel infusion is designed to help create a more comfortable sleeping environment.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_04_11": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What does the cooling gel do?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>The gel infusion helps with temperature regulation while you sleep.</p><p>It is designed to reduce heat build-up compared with traditional memory foam and help maintain a more comfortable sleeping temperature.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_04_12": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Will the gel make the topper cold in winter?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>No. The cooling gel is designed to assist with temperature regulation rather than make the topper feel cold.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_04_13": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Will the topper reduce partner movement?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Memory foam naturally absorbs and isolates movement, which can help reduce the amount of movement transferred across the bed when your partner moves during the night.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_04_14": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Will the topper move or slide?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>The Wanderluxe™ Mattress Topper features an <strong>anti-slip underside and securing straps</strong> to help keep it comfortably in place.</p><p>For the best grip, the topper should sit on a <strong>firm, flat mattress surface</strong> and fit within the mattress edges as closely as possible. Excessive overhang can allow the foam to flex over the edge of the mattress and may contribute to movement, which is why we generally recommend a slightly smaller topper rather than one that is too large.</p><p>The surface of your existing mattress can also make a difference. Very soft, cushioned or pillow-top mattresses may not provide as much grip for the anti-slip base as a firmer, flatter mattress.</p><p>Making sure all straps are fitted securely and choosing the closest possible fit will help minimise movement during use.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_04_15": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I use an electric blanket?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes. Your electric blanket should be placed <strong>on top of the Wanderluxe™ Mattress Topper and Mattress Protector, underneath your fitted sheet</strong>.</p><p>Always check the care and safety instructions supplied by your electric blanket manufacturer to ensure it is suitable for use with a memory foam topper.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        }
+      },
+      "block_order": [
+        "q_04_01",
+        "q_04_02",
+        "q_04_03",
+        "q_04_04",
+        "q_04_05",
+        "q_04_06",
+        "q_04_07",
+        "q_04_08",
+        "q_04_09",
+        "q_04_10",
+        "q_04_11",
+        "q_04_12",
+        "q_04_13",
+        "q_04_14",
+        "q_04_15"
+      ],
+      "name": "Comfort & Performance",
+      "settings": {
+        "alignment": "left",
+        "compact": true,
+        "eyebrow": "",
+        "title": "<h2>Comfort & Performance</h2>",
+        "body_text": "",
+        "title_underline_style": "none",
+        "show_button": false,
+        "button_label": "Read more",
+        "button_link": "",
+        "button_bg": "#2f8f86",
+        "button_text_color": "#ffffff",
+        "spacing_desktop": 80,
+        "spacing_mobile": 60,
+        "fix_zindex": 0
+      }
+    },
+    "faq_05": {
+      "type": "section-faq",
+      "blocks": {
+        "q_05_01": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Which Waterproof Mattress Protector should I choose?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Where possible, choose the Waterproof Mattress Protector designed to match your Wanderluxe™ Mattress Topper size.</p><p>However, the topper and protector do not always need to be the same size. In some setups, we may recommend a topper that is slightly smaller than the mattress to avoid overhang. If your mattress is longer than the topper, or has a different corner profile, the protector still needs to be large enough and shaped appropriately to fit over the <strong>mattress itself</strong>.</p><p>For example, a mattress with square corners may need a square-corner protector even if a rounded topper is the best fit.</p><p>If you’re unsure which size is best, check our <a href=\"/pages/find-your-fit\">Sizing Calculator</a> or contact our Customer Care team with your mattress dimensions and corner profile and we’ll help you find the most suitable option.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_05_02": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Will the protector fit over both my mattress and topper?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes. Our protectors feature either a <strong>200mm or 300mm elastic skirt</strong>, depending on the size, designed to fit securely over your mattress and topper together.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_05_03": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Is the Dreamer RV Mattress Protector waterproof?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes. The sleep surface has a waterproof TPU backing designed to protect the mattress and topper underneath from spills and accidents.</p><p>The fitted side panels are designed to stretch around your bed and are <strong>not waterproof</strong>.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_05_04": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Are the protectors noisy or crinkly?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>No. Our Waterproof Mattress Protectors are designed with a soft, flexible waterproof backing for a quiet and comfortable sleeping surface.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_05_05": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What is the Waterproof Mattress Protector made from?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>The upper fabric is made from a soft <strong>Tencel/polyester blend</strong>, with a <strong>TPU waterproof backing</strong> underneath.</p><p>Together, these materials provide a soft, breathable sleep surface with reliable waterproof protection.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        }
+      },
+      "block_order": [
+        "q_05_01",
+        "q_05_02",
+        "q_05_03",
+        "q_05_04",
+        "q_05_05"
+      ],
+      "name": "Mattress Protectors",
+      "settings": {
+        "alignment": "left",
+        "compact": true,
+        "eyebrow": "",
+        "title": "<h2>Mattress Protectors</h2>",
+        "body_text": "",
+        "title_underline_style": "none",
+        "show_button": false,
+        "button_label": "Read more",
+        "button_link": "",
+        "button_bg": "#2f8f86",
+        "button_text_color": "#ffffff",
+        "spacing_desktop": 80,
+        "spacing_mobile": 60,
+        "fix_zindex": 0
+      }
+    },
+    "faq_06": {
+      "type": "section-faq",
+      "blocks": {
+        "q_06_01": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Do you sell sheets to fit caravan mattresses and toppers?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes. MeanderWild offers caravan bedding designed to complement many of the shapes and sizes across our Wanderluxe™ range.</p><p>We stock a selection of the MeanderWild range on our website, making it easy to pair your topper with sheets designed for caravan beds.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_06_02": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I buy sheets without purchasing a topper?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes. MeanderWild sheets can be purchased separately.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_06_03": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Do you offer bedding bundles?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes. MeanderWild offers caravan bedding designed to complement many of the shapes and sizes across our Wanderluxe™ range.</p><p>With our <a href=\"/collections/bundles-1\">Build Your Bundle</a> option, you can choose the topper, protector and sheet sizes that best suit your mattress setup, with bundle savings applied as you add more items to your cart.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_06_04": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Where can I see the full MeanderWild range?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>You can explore the complete range through the MeanderWild collection on their website.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        }
+      },
+      "block_order": [
+        "q_06_01",
+        "q_06_02",
+        "q_06_03",
+        "q_06_04"
+      ],
+      "name": "Sheets & Bedding",
+      "settings": {
+        "alignment": "left",
+        "compact": true,
+        "eyebrow": "",
+        "title": "<h2>Sheets & Bedding</h2>",
+        "body_text": "",
+        "title_underline_style": "none",
+        "show_button": false,
+        "button_label": "Read more",
+        "button_link": "",
+        "button_bg": "#2f8f86",
+        "button_text_color": "#ffffff",
+        "spacing_desktop": 80,
+        "spacing_mobile": 60,
+        "fix_zindex": 0
+      }
+    },
+    "faq_07": {
+      "type": "section-faq",
+      "blocks": {
+        "q_07_01": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Do you sell complete caravan mattresses?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>No. Dreamer RV specialises in mattress toppers, protectors and complementary bedding rather than complete mattresses.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_07_02": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I use a Wanderluxe™ Topper on my bed at home?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Absolutely. Our <a href=\"/collections/home-comfort-range\">Wanderluxe™ Home Comfort Range</a> is designed specifically for beds at home, bringing the same premium comfort you love on the road into your everyday sleep setup.</p><p>If one of the Home Comfort sizes isn’t the right fit, you can also choose the most suitable option from our caravan range by matching your mattress dimensions as closely as possible.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_07_03": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Do you have bunk sizes?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes. We offer several topper sizes designed to suit caravan bunks and smaller single beds.</p><p>Because bunk dimensions vary considerably, always measure your bunk mattress before choosing a size.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_07_04": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Do you offer sizes for east-west beds?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes. We offer several options suitable for east-west caravan beds.</p><p>Measure your mattress and use our <a href=\"/pages/find-your-fit\">Sizing Calculator</a> to find the closest fit.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_07_05": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Are you planning to release more sizes?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Our range continues to evolve as we identify commonly requested caravan mattress dimensions.</p><p>From time to time, new sizes are introduced based on customer demand and product development.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_07_06": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What does joining a Priority List mean?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>A Priority List allows you to register your interest in a particular size and receive updates when stock or a new release becomes available.</p><p>Joining a Priority List does not automatically reserve or purchase a topper unless specifically advised.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        }
+      },
+      "block_order": [
+        "q_07_01",
+        "q_07_02",
+        "q_07_03",
+        "q_07_04",
+        "q_07_05",
+        "q_07_06"
+      ],
+      "name": "Product Range & Availability",
+      "settings": {
+        "alignment": "left",
+        "compact": true,
+        "eyebrow": "",
+        "title": "<h2>Product Range & Availability</h2>",
+        "body_text": "",
+        "title_underline_style": "none",
+        "show_button": false,
+        "button_label": "Read more",
+        "button_link": "",
+        "button_bg": "#2f8f86",
+        "button_text_color": "#ffffff",
+        "spacing_desktop": 80,
+        "spacing_mobile": 60,
+        "fix_zindex": 0
+      }
+    },
+    "faq_08": {
+      "type": "section-faq",
+      "blocks": {
+        "q_08_01": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How long will my order take to arrive?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>In-stock orders are generally dispatched from our Sydney warehouse within <strong>1–2 business days,</strong> with dispatch extending to <strong>3–4 business days</strong> during peak periods.</p><p>Delivery times after dispatch depend on your location and whether you select Regular or Express Shipping. Enter your postcode at checkout to view the Australia Post delivery estimate for your order.</p><p>Express orders are prioritised for dispatch, but a particular delivery date cannot be guaranteed.</p><p>For full dispatch and delivery information, visit our <a href=\"/policies/shipping-policy\">Shipping Information page</a>.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_08_02": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How can I track my order?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>You’ll receive your Australia Post tracking information by email once your order has been dispatched.</p><p>Tracking may take a little time to show movement while your parcel is being scanned into the Australia Post network.</p><p>We also recommend using an Australia Post MyPost account with the same email address used for your order so you can access the latest tracking and delivery updates.</p><p>For more information, visit our <a href=\"/policies/shipping-policy\">Shipping Information page</a>.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_08_03": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I have my order delivered while I’m on the road?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Absolutely. If you don’t have a fixed delivery address, <a href=\"https://auspost.com.au/personal/receiving/parcel-deliveries/parcel-collect\">Australia Post Parcel Collect</a> is a great option while you’re travelling.</p><p>Choose a participating Post Office through your MyPost account and have your order sent there ready for collection.</p><p>We recommend choosing a location far enough ahead in your itinerary to allow time for both dispatch and delivery.</p><p>For step-by-step Parcel Collect information and tips for travelling with your order, head on over to our <a href=\"/policies/shipping-policy\">Shipping Information page</a>.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_08_04": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Do you ship to New Zealand?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes. We offer <strong>Regular</strong> Shipping to New Zealand for a flat <strong>$30 per order.</strong></p><p>For full shipping information, visit our <a href=\"/policies/shipping-policy\">Shipping Information page</a>.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        }
+      },
+      "block_order": [
+        "q_08_01",
+        "q_08_02",
+        "q_08_03",
+        "q_08_04"
+      ],
+      "name": "Ordering & Delivery",
+      "settings": {
+        "alignment": "left",
+        "compact": true,
+        "eyebrow": "",
+        "title": "<h2>Ordering & Delivery</h2>",
+        "body_text": "<p>For full details on dispatch timeframes, shipping options, delivery estimates, tracking and travelling with your order, head on over to our <a href=\"/policies/shipping-policy\">Shipping Information page</a>.</p>",
+        "title_underline_style": "none",
+        "show_button": false,
+        "button_label": "Read more",
+        "button_link": "",
+        "button_bg": "#2f8f86",
+        "button_text_color": "#ffffff",
+        "spacing_desktop": 80,
+        "spacing_mobile": 60,
+        "fix_zindex": 0
+      }
+    },
+    "faq_09": {
+      "type": "section-faq",
+      "blocks": {
+        "q_09_01": {
+          "type": "text",
+          "settings": {
+            "faq_question": "I ordered the wrong size. What should I do?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>If you’ve ordered the wrong size, please contact our Customer Care team before returning your item.</p><p>We don’t process direct exchanges, so the original item will need to be returned in accordance with our <a href=\"/policies/refund-policy\">Returns Policy</a>, and a new order placed separately for the correct size.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_09_02": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What is your returns policy?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Eligible products can be returned within <strong>30 days of purchase</strong>. Return shipping is the customer’s responsibility and a <strong>$25 handling fee</strong> applies to accepted returns.</p><p>For full eligibility requirements, return instructions and terms and conditions, please refer to our <a href=\"/policies/refund-policy\">Returns Policy</a>.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_09_03": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How long is the Dreamer RV warranty?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Dreamer RV products are covered by a <strong>2-year warranty against manufacturing faults</strong>.</p><p>For full details, including what’s covered and how to make a claim, head on over to our <a href=\"/pages/warranty\">Warranty</a> page.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        }
+      },
+      "block_order": [
+        "q_09_01",
+        "q_09_02",
+        "q_09_03"
+      ],
+      "name": "Returns, Warranty & Ordering Issues",
+      "settings": {
+        "alignment": "left",
+        "compact": true,
+        "eyebrow": "",
+        "title": "<h2>Returns, Warranty & Ordering Issues</h2>",
+        "body_text": "<p>For full details on returns, eligibility and associated costs, head on over to our <a href=\"/policies/refund-policy\">Returns Policy</a> page. For warranty information, including what’s covered and how to make a claim, visit our <a href=\"/pages/warranty\">Warranty</a> page.</p>",
+        "title_underline_style": "none",
+        "show_button": false,
+        "button_label": "Read more",
+        "button_link": "",
+        "button_bg": "#2f8f86",
+        "button_text_color": "#ffffff",
+        "spacing_desktop": 80,
+        "spacing_mobile": 60,
+        "fix_zindex": 0
+      }
+    },
+    "faq_10": {
+      "type": "section-faq",
+      "blocks": {
+        "q_10_01": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I wash the Wanderluxe™ Mattress Topper?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>The <strong>memory foam core cannot be machine washed or submerged in water</strong>. If needed, it can be spot cleaned and must be allowed to dry thoroughly before the cover is replaced.</p><p>The topper also has a <strong>removable, machine-washable cover</strong>.</p><p>For complete washing, drying and care instructions, head on over to our <a href=\"/pages/wash-care-guide\">Wash &amp; Care Guide</a>.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_10_02": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How should I care for my Waterproof Mattress Protector?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Our Waterproof Mattress Protectors are machine washable and designed for easy everyday care.</p><p>For full washing, drying and care instructions, including which products to avoid, visit our <a href=\"/pages/wash-care-guide\">Wash &amp; Care Guide</a>.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_10_03": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How should I store my topper?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>For longer periods of non-use, we recommend storing your topper <strong>flat or gently rolled</strong>, rather than leaving it tightly folded or compressed.</p><p>Make sure the topper is completely dry before storing it.</p><p>For more tips on folding, storage and everyday use, head on over to our <a href=\"/pages/wash-care-guide\">Wash &amp; Care Guide</a>.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        }
+      },
+      "block_order": [
+        "q_10_01",
+        "q_10_02",
+        "q_10_03"
+      ],
+      "name": "Wash, Care & Everyday Use",
+      "settings": {
+        "alignment": "left",
+        "compact": true,
+        "eyebrow": "",
+        "title": "<h2>Wash, Care & Everyday Use</h2>",
+        "body_text": "<p>For everything you need to know about washing, caring for and looking after your Dreamer RV products, head on over to our <a href=\"/pages/wash-care-guide\">Wash &amp; Care Guide</a>.</p>",
+        "title_underline_style": "none",
+        "show_button": false,
+        "button_label": "Read more",
+        "button_link": "",
+        "button_bg": "#2f8f86",
+        "button_text_color": "#ffffff",
+        "spacing_desktop": 80,
+        "spacing_mobile": 60,
+        "fix_zindex": 0
+      }
+    },
+    "faq_11": {
+      "type": "section-faq",
+      "blocks": {
+        "q_11_01": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Where can I see Dreamer RV products in person?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>You can visit selected authorised retailers or see us at caravan and camping shows around Australia.</p><p>Visit our <a href=\"/pages/stockists\">Stockists</a> and <a href=\"/pages/exhibitions-shows\">Exhibitions</a> pages for current locations and upcoming show dates.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_11_02": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I try a topper at a caravan show?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Yes. Our caravan and camping show displays give you the opportunity to see and feel the products in person and speak with our team.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_11_03": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What measurements should I bring to a caravan show?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Bring your mattress <strong>width and length in millimetres</strong>, including any head-end <strong>bolster</strong> in the total length, along with the <strong>corner profile</strong> at the foot end.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_11_04": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Do you offer show specials?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>From time to time, special show offers may be available during selected events. Any current show pricing will be displayed or communicated at the event.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        }
+      },
+      "block_order": [
+        "q_11_01",
+        "q_11_02",
+        "q_11_03",
+        "q_11_04"
+      ],
+      "name": "See Us In Person",
+      "settings": {
+        "alignment": "left",
+        "compact": true,
+        "eyebrow": "",
+        "title": "<h2>See Us In Person</h2>",
+        "body_text": "",
+        "title_underline_style": "none",
+        "show_button": false,
+        "button_label": "Read more",
+        "button_link": "",
+        "button_bg": "#2f8f86",
+        "button_text_color": "#ffffff",
+        "spacing_desktop": 80,
+        "spacing_mobile": 60,
+        "fix_zindex": 0
+      }
+    },
+    "faq_12": {
+      "type": "section-faq",
+      "blocks": {
+        "q_12_01": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How can I contact Dreamer RV Customer Care?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>You can contact our Australian Customer Care team by email at <a href=\"mailto:customercare@dreamerrv.com.au\">customercare@dreamerrv.com.au</a> or through our <a href=\"/pages/contact\">Contact Us</a> form.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_12_02": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Do you offer Customer Care support by phone?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Our Customer Care support is provided by email so we can keep accurate details of your measurements, order information and any recommendations provided.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "q_12_03": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What information should I include when asking for sizing advice?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Please provide:</p><ul><li>Your mattress <strong>width x length in millimetres</strong></li><li>Any <strong>head-end bolster included in the total length</strong></li><li>The <strong>corner profile at the foot end</strong> — rounded, square or cut corner</li><li>Any unusual features that may affect the fit, such as cabinetry, varying widths or an unusual mattress shape</li></ul><p>The more detail you provide, the easier it is for us to recommend the best fit.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        }
+      },
+      "block_order": [
+        "q_12_01",
+        "q_12_02",
+        "q_12_03"
+      ],
+      "name": "Customer Care",
+      "settings": {
+        "alignment": "left",
+        "compact": true,
+        "eyebrow": "",
+        "title": "<h2>Customer Care</h2>",
+        "body_text": "",
+        "title_underline_style": "none",
+        "show_button": false,
+        "button_label": "Read more",
+        "button_link": "",
+        "button_bg": "#2f8f86",
+        "button_text_color": "#ffffff",
+        "spacing_desktop": 80,
+        "spacing_mobile": 30,
+        "fix_zindex": 0
+      }
+    },
+    "section_rich_text_k6fbYM": {
+      "type": "section-rich-text",
+      "blocks": {
+        "title_hQkTYH": {
+          "type": "title",
+          "settings": {
+            "title": "<h2>Still have a question?</h2>",
+            "title_underline_style": "none"
+          }
+        },
+        "content_3Nm8ji": {
+          "type": "content",
+          "settings": {
+            "page": "",
+            "text": "<p>Email our team any time and we'll get back to you within 2 business days.</p>",
+            "font": "secondary",
+            "font_weight": "400"
+          }
+        },
+        "button_JGUQnz": {
+          "type": "button",
+          "settings": {
+            "link_text": "Contact our team",
+            "link_url": "shopify://pages/contact",
+            "button_style": "primary plain"
+          }
+        },
+        "button_yFiR7D": {
+          "type": "button",
+          "settings": {
+            "link_text": "Find your size",
+            "link_url": "shopify://pages/find-your-fit",
+            "button_style": "secondary plain"
+          }
+        }
+      },
+      "block_order": [
+        "title_hQkTYH",
+        "content_3Nm8ji",
+        "button_JGUQnz",
+        "button_yFiR7D"
+      ],
+      "name": "t:sections.rich_text.presets.name",
+      "settings": {
+        "color_palette": "scheme-9",
+        "overlay_opacity": 100,
+        "text_position": "align-center text-center",
+        "content_width": 1280,
+        "height": "xs",
+        "enable_custom_height": false,
+        "custom_height": 300,
+        "width": "wide",
+        "height_mobile": "xs",
+        "spacing_desktop": 50,
+        "spacing_mobile": 30,
+        "fix_zindex": 0
+      }
+    },
+    "dreamer_rv_footer_links_9peKib": {
+      "type": "dreamer-rv-footer-links",
+      "blocks": {
+        "column_4Li64P": {
+          "type": "column",
+          "settings": {
+            "heading": "Shop",
+            "link_1_label": "Mattress Toppers",
+            "link_1_url": "shopify://collections/wanderluxe-caravan-mattress-toppers",
+            "link_2_label": "Mattress Protectors",
+            "link_2_url": "shopify://collections/caravan-mattress-protectors",
+            "link_3_label": "Sheets",
+            "link_3_url": "shopify://collections/sheets",
+            "link_4_label": "Home Comfort Range",
+            "link_4_url": "shopify://collections/home-comfort-range",
+            "link_5_label": "Accessories",
+            "link_5_url": "shopify://collections/accessories",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        },
+        "column_MjF4b8": {
+          "type": "column",
+          "settings": {
+            "heading": "Explore",
+            "link_1_label": "Our Story",
+            "link_1_url": "shopify://pages/our-story",
+            "link_2_label": "Blog",
+            "link_2_url": "shopify://blogs/news",
+            "link_3_label": "Exhibitions & Shows",
+            "link_3_url": "shopify://pages/exhibitions-shows",
+            "link_4_label": "Wholesale",
+            "link_4_url": "shopify://pages/wholesale",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        },
+        "column_itzfaz": {
+          "type": "column",
+          "settings": {
+            "heading": "Help & Info",
+            "link_1_label": "Find Your Size",
+            "link_1_url": "shopify://pages/find-your-fit",
+            "link_2_label": "FAQs",
+            "link_2_url": "shopify://pages/frequently-asked-questions",
+            "link_3_label": "Shipping Information",
+            "link_3_url": "shopify://policies/shipping-policy",
+            "link_4_label": "Refund Policy",
+            "link_4_url": "shopify://policies/refund-policy",
+            "link_5_label": "Warranty",
+            "link_5_url": "shopify://pages/warranty",
+            "link_6_label": "Wash & Care Guide",
+            "link_6_url": "shopify://pages/wash-care-guide"
+          }
+        },
+        "column_6bFHqV": {
+          "type": "column",
+          "settings": {
+            "heading": "Wholesale",
+            "link_1_label": "About Wholesale",
+            "link_1_url": "",
+            "link_2_label": "",
+            "link_2_url": "",
+            "link_3_label": "",
+            "link_3_url": "",
+            "link_4_label": "",
+            "link_4_url": "",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        },
+        "column_iBTC7b": {
+          "type": "column",
+          "settings": {
+            "heading": "Legal",
+            "link_1_label": "Privacy Policy",
+            "link_1_url": "shopify://policies/privacy-policy",
+            "link_2_label": "Terms of Use",
+            "link_2_url": "",
+            "link_3_label": "",
+            "link_3_url": "",
+            "link_4_label": "",
+            "link_4_url": "",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_4Li64P",
+        "column_MjF4b8",
+        "column_itzfaz",
+        "column_6bFHqV",
+        "column_iBTC7b"
+      ],
+      "name": "Footer links",
+      "settings": {
+        "background_color": "#f9f2e8",
+        "text_color": "#424345",
+        "padding_top": 60,
+        "padding_bottom": 40
+      }
+    },
+    "dreamer_rv_footer_panel_nMExDR": {
+      "type": "dreamer-rv-footer-panel",
+      "name": "Footer panel",
+      "settings": {
+        "icon": "shopify://shop_images/CROPPED_Dreamer_RV_Logo_Screen_Horizontal_Tagline_Night_Sky_RGB.svg",
+        "acknowledgement": "<p>In the spirit of reconciliation, Dreamer RV acknowledges the Traditional Custodians of Country throughout Australia and their connections to land, sea and community. We pay our respects to Elders past, present and emerging and extend that respect to all Aboriginal and Torres Strait Islander people today.</p>",
+        "show_newsletter": true,
+        "newsletter_heading": "Subscribe",
+        "newsletter_text": "Join our newsletter for new product drops and travel inspiration from the road.",
+        "newsletter_button_label": "Subscribe",
+        "newsletter_consent": "By subscribing you agree to our privacy policy and consent to receive updates from Dreamer RV.",
+        "background_color": "#f9f2e8",
+        "text_color": "#2b2621",
+        "panel_background_color": "#fffbf5",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "dreamer_rv_footer_bar_KUXpka": {
+      "type": "dreamer-rv-footer-bar",
+      "name": "Footer bar",
+      "settings": {
+        "copyright_text": "© 2026 Dreamer RV. All rights reserved.",
+        "credit_text": "Website by Sparo Studios",
+        "credit_link": "",
+        "background_color": "#bde9d8",
+        "text_color": "#2b2621"
+      }
+    },
+    "section_spacer_di38rr": {
+      "type": "section-spacer",
+      "name": "t:sections.spacer.presets.name",
+      "settings": {
+        "height": 20,
+        "height_mobile": 20
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main-page",
+    "faq_01",
+    "section_faq_GkWkc7",
+    "faq_02",
+    "faq_03",
+    "faq_04",
+    "faq_05",
+    "faq_06",
+    "faq_07",
+    "faq_08",
+    "faq_09",
+    "faq_10",
+    "faq_11",
+    "faq_12",
+    "section_rich_text_k6fbYM",
+    "dreamer_rv_footer_links_9peKib",
+    "dreamer_rv_footer_panel_nMExDR",
+    "dreamer_rv_footer_bar_KUXpka",
+    "section_spacer_di38rr"
+  ]
+}

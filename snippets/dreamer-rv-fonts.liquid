@@ -1,0 +1,33 @@
+{%- comment -%}
+  Dreamer RV - Font declarations
+  ------------------------------------------------------------------
+  Loads the brand fonts sitewide. Add this snippet ONCE in
+  theme.liquid, inside <head>, ABOVE the typography.css include -
+  the typography file's font-family names need to match these exactly.
+{%- endcomment -%}
+
+<style>
+  @font-face {
+    font-family: 'Luxora Grotesk';
+    src: url('{{ 'luxoragrotesk-regular-webfont.woff2' | asset_url }}') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Luxora Grotesk Light';
+    src: url('https://cdn.shopify.com/s/files/1/0734/0572/6762/files/luxoragrotesk-light-webfont.woff?v=1790055212') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Bethany Elingston';
+    src: url('{{ 'bethany_elingston-regular-webfont.woff2' | asset_url }}') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+</style>

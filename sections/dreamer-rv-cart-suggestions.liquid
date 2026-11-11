@@ -1,0 +1,161 @@
+{%- comment -%}
+  Dreamer RV – "You may also like" on the /cart page.
+  Uses each cart item's Complementary products (Search & Discovery app,
+  shopify--discovery--product_recommendation.complementary_products) –
+  the same picks the cart drawer shows. Products already in the cart are
+  skipped, duplicates removed. Refreshes itself after cart changes.
+{%- endcomment -%}
+{%- liquid
+  assign in_cart_ids = cart.items | map: 'product_id' | join: ','
+  assign in_cart_ids = ',' | append: in_cart_ids | append: ','
+  assign picked_ids = ','
+  assign picks = 0
+  assign limit = section.settings.limit
+-%}
+{%- capture cards -%}
+  {%- for item in cart.items -%}
+    {%- assign comps = item.product.metafields.shopify--discovery--product_recommendation.complementary_products.value -%}
+    {%- for rec in comps -%}
+      {%- if picks >= limit -%}{%- break -%}{%- endif -%}
+      {%- assign key = ',' | append: rec.id | append: ',' -%}
+      {%- if in_cart_ids contains key or picked_ids contains key -%}{%- continue -%}{%- endif -%}
+      {%- unless rec.available -%}{%- continue -%}{%- endunless -%}
+      {%- if rec.requires_selling_plan -%}{%- continue -%}{%- endif -%}
+      {%- assign picked_ids = picked_ids | append: rec.id | append: ',' -%}
+      {%- assign picks = picks | plus: 1 -%}
+      {%- capture placeholder_int -%}{%- cycle 1, 2, 3, 4, 5, 6 -%}{%- endcapture -%}
+      {%- render 'product-item',
+        product: rec,
+        placeholder_int: placeholder_int,
+        enable_quick_buy_desktop: true,
+        enable_quick_buy_mobile: true,
+        quick_buy_compact: true,
+        product_view_context: 'dialog'
+      -%}
+    {%- endfor -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+<div class="drv-cart-suggest" data-drv-cart-suggest data-section-id="{{ section.id }}">
+  {%- if picks > 0 -%}
+    <article>
+      <header class="cols">
+        <div class="w900{% if section.settings.text_alignment == 'center' %} text-center align-center{% endif %}">
+          {{ section.settings.title }}
+        </div>
+      </header>
+      <ul class="l4cl slider w25">
+        {{ cards }}
+      </ul>
+    </article>
+  {%- endif -%}
+</div>
+
+<style>
+  #shopify-section-{{ section.id }} .drv-cart-suggest:empty { display: none; }
+  @media only screen and (min-width: 47.5em) {
+    #shopify-section-{{ section.id }} { margin-bottom: {{ section.settings.spacing_desktop }}px; }
+  }
+  @media only screen and (max-width: 47.5em) {
+    #shopify-section-{{ section.id }} { margin-bottom: {{ section.settings.spacing_mobile }}px; }
+  }
+</style>
+
+<script>
+  (function () {
+    /* Re-render this section after the cart changes (add / qty / remove),
+       so suggestions never show something that's now in the cart. */
+    if (window.__drvCartSuggest) return;
+    window.__drvCartSuggest = true;
+    var timer;
+    function refresh() {
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        var el = document.querySelector('[data-drv-cart-suggest]');
+        if (!el) return;
+        var id = el.getAttribute('data-section-id');
+        fetch(window.location.pathname + '?section_id=' + encodeURIComponent(id))
+          .then(function (r) { return r.text(); })
+          .then(function (html) {
+            var doc = new DOMParser().parseFromString(html, 'text/html');
+            var fresh = doc.querySelector('[data-drv-cart-suggest]');
+            var current = document.querySelector('[data-drv-cart-suggest]');
+            if (fresh && current) current.innerHTML = fresh.innerHTML;
+          })
+          .catch(function () {});
+      }, 400);
+    }
+    var origFetch = window.fetch;
+    if (origFetch) {
+      window.fetch = function (input) {
+        var url = typeof input === 'string' ? input : (input && input.url) || '';
+        var p = origFetch.apply(this, arguments);
+        if (/\/cart\/(add|change|update|clear)/.test(url)) p.then(refresh, function () {});
+        return p;
+      };
+    }
+    document.addEventListener('cart:updated', refresh);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Cart suggestions",
+  "class": "drv-cart-suggest-section",
+  "enabled_on": { "templates": ["cart"] },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Shows each cart item's Complementary products (set in the Search & Discovery app). Items already in the cart are hidden."
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Heading",
+      "default": "<h3>You may also like</h3>"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Heading alignment",
+      "options": [
+        { "value": "start", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "start"
+    },
+    {
+      "type": "range",
+      "id": "limit",
+      "label": "Maximum products",
+      "min": 1,
+      "max": 8,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "spacing_desktop",
+      "label": "Bottom spacing (desktop)",
+      "min": 0,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "spacing_mobile",
+      "label": "Bottom spacing (mobile)",
+      "min": 0,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "default": 30
+    }
+  ],
+  "presets": [
+    { "name": "Cart suggestions" }
+  ]
+}
+{% endschema %}

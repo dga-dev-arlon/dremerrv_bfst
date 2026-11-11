@@ -1,0 +1,275 @@
+/* Dreamer RV - Image/text split with icon features and two buttons */
+
+.drv-impact {
+  /* Full-bleed breakout: the theme wraps every section in its own
+     page-width container, which was capping this well short of the
+     theme's real full width. #root itself keeps a permanent 20px gutter
+     on each side (the site's outer frame) - this breaks out to THAT
+     edge, not all the way to the literal browser edge, so it lines up
+     with how native full-width sections actually behave. */
+  position: relative;
+  width: calc(100vw - 40px);
+  margin-left: calc(50% - 50vw + 20px);
+  margin-right: calc(50% - 50vw + 20px);
+  /* 14 Oct 2026: the image fills its column edge-to-edge with no padding
+     of its own (see .drv-impact__media img below), so the only thing
+     that can create space between this section and whatever comes
+     next is this section's own bottom margin. Without it, the cream
+     gap visible ABOVE the image (coming from the theme's generic
+     "space between sections" setting, which only adds space above a
+     section, not below it) had nothing to match it on the way out -
+     the image ran straight into the next section. This mirrors that
+     same spacing below, so the gap under the image matches the gap
+     above it. If they still don't look identical once compared live,
+     let me know the theme's actual section-spacing value and I'll
+     match this number to it exactly. */
+  margin-top: 24px;
+  margin-bottom: 56px;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  align-items: stretch;
+  background-color: var(--drv-imp-bg, #FBF6EC);
+  color: var(--drv-imp-text, #2B2621);
+}
+
+/* Image on the right instead of left */
+.drv-impact--image-right {
+  flex-direction: row-reverse !important;
+}
+
+.drv-impact__media {
+  flex: 1 1 50% !important;
+  min-width: 320px;
+  align-self: stretch;
+  min-height: var(--drv-imp-min-height, 622px) !important;
+  /* Belt-and-braces: if the image's height is ever forced away from
+     100% again (see the specificity note below), this stops it
+     spilling out of the box and overlapping whatever sits below the
+     section, instead of just papering over the symptom. */
+  overflow: hidden !important;
+}
+
+.drv-impact__image,
+.drv-impact__media img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: none !important;
+  margin: 0 !important;
+  object-fit: cover !important;
+  object-position: center;
+}
+
+/* The theme's own sitewide async.css ships a very broad rule -
+   "body>div:first-child img, body>div[id] img, body>p:first-child+div
+   img, body>div+div img { height: var(--height, auto) !important; }" -
+   that happens to match this image too, and its selector (multiple
+   type selectors chained together) actually out-specifies our plain
+   ".drv-impact__media img" even though both sides use !important.
+   Result: the image's height falls back to "auto", which sizes it off
+   its own width/height HTML attributes (there to satisfy the theme's
+   own default aspect-ratio, and often nowhere near this photo's real
+   shape) instead of filling this container - which is what pushed the
+   image tall enough to spill into the "Come say g'day" section below.
+   Specificity is compared class-count before type-count, so repeating
+   the class it already carries is enough to out-rank that rule without
+   having to match its exact selector list. */
+.drv-impact__media.drv-impact__media img {
+  height: 100% !important;
+}
+
+.drv-impact__content {
+  flex: 1 1 50%;
+  min-width: 320px;
+  min-height: var(--drv-imp-min-height, 622px) !important;
+  display: flex;
+  align-items: center;
+  padding-top: var(--drv-imp-pt, 80px);
+  padding-bottom: var(--drv-imp-pb, 80px);
+}
+
+.drv-impact__content-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+  max-width: none;
+  padding: 0 42px;
+}
+
+.drv-impact--image-right .drv-impact__content-inner {
+  margin-left: auto;
+}
+
+.drv-impact__heading {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.drv-impact__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.drv-impact__text p {
+  margin: 0 0 12px;
+}
+
+.drv-impact__text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Icon + text feature row */
+.drv-impact__features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  width: 100%;
+}
+
+.drv-impact__feature {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.drv-impact__feature-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.drv-impact__feature-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #424345;
+}
+
+/* Buttons */
+.drv-impact__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.drv-impact__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 15px;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+}
+
+.drv-impact__button:hover {
+  opacity: 0.85;
+}
+
+.drv-impact__button--primary {
+  background: var(--drv-imp-primary-bg, #2F8F86) !important;
+  color: var(--drv-imp-primary-text, #FFFFFF) !important;
+}
+
+.drv-impact__button--secondary {
+  background: var(--drv-imp-secondary-bg, #BFE3DB) !important;
+  color: var(--drv-imp-secondary-text, #2B2621) !important;
+}
+
+@media only screen and (max-width: 989px) {
+  .drv-impact__features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 749px) {
+  /* !important on flex-direction because .drv-impact--image-right already
+     forces row-reverse !important for desktop - without matching that
+     here, an "image on the right" instance would ignore this column
+     layout entirely on mobile. */
+  .drv-impact,
+  .drv-impact--image-right {
+    flex-direction: column !important;
+  }
+
+  /* 14 Oct 2026: smaller matching bottom margin on mobile, same reasoning
+     as desktop above, using the mobile padding figure (48px) already
+     used elsewhere in this file as the reference spacing value. */
+  .drv-impact {
+    margin-bottom: 48px;
+  }
+
+  /* Content first, image last - regardless of the desktop image_position
+     setting (left/right), matching Figma's mobile order: heading, text,
+     features, buttons, THEN the image. */
+  .drv-impact__content {
+    order: 1;
+  }
+
+  .drv-impact__media {
+    order: 2;
+    min-width: 0;
+    min-height: 0 !important;
+    /* Twice the height of the previous 4/3 for the same width - halving
+       the ratio doubles how tall the box renders at any given width. */
+    aspect-ratio: 4 / 6;
+  }
+
+  .drv-impact__content {
+    min-height: 0 !important;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .drv-impact__content-inner {
+    max-width: none;
+    padding: 0 24px;
+  }
+
+  .drv-impact--image-right .drv-impact__content-inner {
+    margin-left: 0;
+  }
+
+  .drv-impact__heading {
+    font-size: 28px;
+  }
+
+  /* All three features on one row, not a 2-up grid that wraps the third
+     one onto its own row. */
+  .drv-impact__features {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .drv-impact__feature-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .drv-impact__feature-text {
+    font-size: 12px;
+  }
+
+  /* Side by side, not stacked - each button shrinks to fit its label
+     instead of stretching full width. */
+  .drv-impact__buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .drv-impact__button {
+    width: auto;
+  }
+}

@@ -1,0 +1,754 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section_spacer_DQCx8N": {
+      "type": "section-spacer",
+      "name": "t:sections.spacer.presets.name",
+      "settings": {
+        "height": 20,
+        "height_mobile": 20
+      }
+    },
+    "section_two_images_text_M34g7x": {
+      "type": "section-two-images-text",
+      "blocks": {
+        "image_fzFBDc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Card.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_fzFBDc"
+      ],
+      "custom_css": [
+        "h2 {font-size: 32px;}",
+        "p {color: #ffffff !important;}",
+        "a.button,.button,button,input[type=\"submit\"] {font-family: \"Luxora Grotesk\", sans-serif !important;}"
+      ],
+      "name": "Banner",
+      "settings": {
+        "width": "boxed",
+        "first_image_width": 80,
+        "height": "16/9",
+        "enable_custom_height": false,
+        "custom_height": 300,
+        "image_zoom": true,
+        "overlay_opacity": 0,
+        "color_palette": "scheme-40ff60df-beb2-4fa6-92e1-3e5ac56d9f19",
+        "text_position": "align-center text-center",
+        "title": "<h1>We know Aussies love their sleep</h1>",
+        "title_underline_style": "none",
+        "text": "<p>We knew caravan beds deserved more than a ‘one size fits most’ approach.So we designed a topper with caravan beds in mind — made to fit better, feel incredible and make nights on the road a whole lot comfier.Ready to find your fit? Use our Sizing Calculator below to match your mattress dimensions with the most suitable option.</p>",
+        "show_first_link": true,
+        "first_link_text": "Shop The Range",
+        "first_link_url": "shopify://collections/all",
+        "first_button_style": "primary plain",
+        "show_second_link": true,
+        "second_link_text": "Find Your Size",
+        "second_link_url": "shopify://pages/find-your-fit",
+        "second_button_style": "secondary plain",
+        "show_look": false,
+        "product_list": [],
+        "look_btn_style": "buy_button plain",
+        "look_position": "end",
+        "height_mobile": "16/9",
+        "spacing_desktop": 50,
+        "spacing_mobile": 30,
+        "fix_zindex": 0
+      }
+    },
+    "section_image_with_text_ApiBdn": {
+      "type": "section-image-with-text",
+      "blocks": {
+        "text_6BrHqx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>MEET OUR FOUNDERS, TARA AND JIM.</p>",
+            "font": "primary",
+            "font_weight": "100",
+            "enable_custom_font_size": true,
+            "font_size": "16px"
+          }
+        },
+        "title_fHFPxc": {
+          "type": "title",
+          "settings": {
+            "title": "<h2>Did you know there’s no standard sizing for caravan beds?</h2>",
+            "title_underline_style": "none"
+          }
+        },
+        "text_RMQMib": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We didn't know that either, not until other campers kept saying the same thing about their caravan mattress. We tried everything ourselves too, cutting toppers down, sewing and tucking them, before finally building our own.It worked so well we started making them for other Aussies too, and we've now helped thousands sleep better on the road.</p>",
+            "font": "secondary",
+            "font_weight": "400",
+            "enable_custom_font_size": true,
+            "font_size": "16px"
+          }
+        },
+        "buttons_HfbRYU": {
+          "type": "buttons",
+          "settings": {
+            "show_first_link": true,
+            "first_link_text": "Shop Mattress Toppers",
+            "first_link_url": "shopify://collections/caravan-mattress-protectors",
+            "first_button_style": "primary plain",
+            "show_second_link": true,
+            "second_link_text": "Discover Your Size",
+            "second_link_url": "shopify://pages/find-your-fit",
+            "second_button_style": "secondary plain"
+          }
+        }
+      },
+      "block_order": [
+        "text_6BrHqx",
+        "title_fHFPxc",
+        "text_RMQMib",
+        "buttons_HfbRYU"
+      ],
+      "name": "t:sections.image_with_text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/DreamerRV-102-compressed.jpg",
+        "overlay_opacity_img": 0,
+        "color_palette": "scheme-9",
+        "overlay_opacity": 100,
+        "eyebrow": "",
+        "layout": "image-right",
+        "width": "boxed",
+        "height": "1/1",
+        "enable_custom_height": false,
+        "custom_height": 300,
+        "text_position": "text-start",
+        "height_mobile": "1/1",
+        "spacing_desktop": 50,
+        "spacing_mobile": 30,
+        "fix_zindex": 0
+      }
+    },
+    "dreamer_rv_logo_wall_tbLjri": {
+      "type": "dreamer-rv-logo-wall",
+      "blocks": {
+        "logo_AzLywL": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/2b7ccf1bb373f70a33cb24e05276ce8067ff5ee5.png",
+            "name": "",
+            "url": ""
+          }
+        },
+        "logo_AQXaBq": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/e577be2d322df3a10fe685311403478756599bd1.png",
+            "name": "",
+            "url": ""
+          }
+        },
+        "logo_Y3mV7p": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/7bab693820db163bea02469b2d353e1034fe1fa1.png",
+            "name": "",
+            "url": ""
+          }
+        },
+        "logo_cnLHgR": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/4a2ce9f1b823af76039d23d140413b6943fb16c5.png",
+            "name": "",
+            "url": ""
+          }
+        },
+        "logo_PFr6k7": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/dd106f5f7bf40750956d9965eda2b2c95f715395.png",
+            "name": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_AzLywL",
+        "logo_AQXaBq",
+        "logo_Y3mV7p",
+        "logo_cnLHgR",
+        "logo_PFr6k7"
+      ],
+      "name": "Dreamer RV Logo Wall",
+      "settings": {
+        "heading": "As seen in",
+        "background_color": "#f9f2e8",
+        "text_color": "#424345",
+        "logo_height": 28
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "disabled": true,
+      "settings": {
+        "hide_desktop": false,
+        "hide_mobile": false,
+        "enable_share_button": false
+      }
+    },
+    "1239da24-1a4a-4bc5-bfea-66926adf5e9a": {
+      "type": "section-icon-text-blocks",
+      "blocks": {
+        "template--20328356512061__1239da24-1a4a-4bc5-bfea-66926adf5e9a-text-1": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "image_height": 55,
+            "title": "Sustainability matters",
+            "text": "<p>As stewards of the environment, we are mindful of our ecological footprint. Many of our products are crafted from sustainable materials, and we continually seek eco-friendly options to minimize our impact on the planet. We believe in harmonizing outdoor living with nature's well-being.</p>",
+            "show_link": false,
+            "link_text": "Button",
+            "link_url": "",
+            "button_style": "primary plain"
+          }
+        },
+        "template--20328356512061__1239da24-1a4a-4bc5-bfea-66926adf5e9a-text-2": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "image_height": 55,
+            "title": "Personalized service",
+            "text": "<p>At Xclusive, we understand that choosing the right garden furniture is a personal journey. Our dedicated team is here to assist you every step of the way, offering expert guidance and insights to help you make informed choices. Whether you're revamping a small balcony or creating an expansive garden oasis, we're here to make your vision a reality.</p>",
+            "show_link": false,
+            "link_text": "Button",
+            "link_url": "",
+            "button_style": "primary plain"
+          }
+        },
+        "template--20328356512061__1239da24-1a4a-4bc5-bfea-66926adf5e9a-text-4": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "image_height": 55,
+            "title": "Join us on the journey",
+            "text": "<p>We invite you to embark on an enchanting journey with Xclusive. Explore our garden furniture collections, and let us help you create outdoor spaces that inspire, rejuvenate, and bring your vision of outdoor living to life. <a href=\"/pages/contact\" title=\"Contact\">Our showroom</a></p>",
+            "show_link": false,
+            "link_text": "Button",
+            "link_url": "",
+            "button_style": "primary plain"
+          }
+        }
+      },
+      "block_order": [
+        "template--20328356512061__1239da24-1a4a-4bc5-bfea-66926adf5e9a-text-1",
+        "template--20328356512061__1239da24-1a4a-4bc5-bfea-66926adf5e9a-text-2",
+        "template--20328356512061__1239da24-1a4a-4bc5-bfea-66926adf5e9a-text-4"
+      ],
+      "disabled": true,
+      "settings": {
+        "items_width": 4,
+        "text_alignment": "center",
+        "title": "",
+        "title_underline_style": "none",
+        "text": "",
+        "font_size": "16px",
+        "show_link": false,
+        "link_text": "",
+        "link_url": "",
+        "button_style": "primary plain",
+        "blocks_text_alignment": "center",
+        "blocks_title_font": "primary",
+        "blocks_title_size": "h3",
+        "blocks_title_weight": "700",
+        "blocks_font_size": "16px",
+        "layout_mobile": "slider",
+        "mobile_blocks_text_alignment": "center",
+        "spacing_desktop": 80,
+        "spacing_mobile": 30,
+        "fix_zindex": 0
+      }
+    },
+    "main-page": {
+      "type": "main-page",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "h3"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "content"
+      ],
+      "disabled": true,
+      "settings": {
+        "max_width": 980,
+        "content_alignment": "start",
+        "text_alignment": "start",
+        "spacing_desktop": 50,
+        "spacing_mobile": 30
+      }
+    },
+    "dreamer_rv_split_compare_DwyktW": {
+      "type": "dreamer-rv-split-compare",
+      "blocks": {
+        "feature_xwFh4P": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Vector.svg",
+            "heading": "Materials",
+            "text": "CertiPUR-US® certified foam, independently tested to meet rigorous standards for quality, content, emissions and durability."
+          }
+        },
+        "feature_93cazU": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Dreamer_RV_Icons_Screen_Shipping_Services_Night_Sky_RGB_2.svg",
+            "heading": "Fit",
+            "text": "Thoughtfully designed to suit the unique shapes and sizes of caravan beds."
+          }
+        },
+        "feature_8ieRwE": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Fast_Delivery.svg",
+            "heading": "Durability",
+            "text": "Elastic straps and an anti-slip base help keep your topper snug, secure and comfortably in place."
+          }
+        }
+      },
+      "block_order": [
+        "feature_xwFh4P",
+        "feature_93cazU",
+        "feature_8ieRwE"
+      ],
+      "name": "Split section - compare",
+      "settings": {
+        "image": "shopify://shop_images/DBL-2_40b4f445-c299-41a4-b847-f24ee9c9e69b.jpg",
+        "image_position": "left",
+        "heading": "What sets our toppers apart",
+        "text": "<p>Our Wanderluxe™ range is made for life on the road, combining quality materials, thoughtful design and incredible comfort to help you sleep better wherever your adventures take you.</p>",
+        "show_primary_button": true,
+        "primary_button_label": "Find Your Size",
+        "primary_button_link": "shopify://pages/find-your-fit",
+        "primary_button_bg": "#44c5c3",
+        "primary_button_text": "#424345",
+        "show_secondary_button": false,
+        "secondary_button_label": "Learn more",
+        "secondary_button_link": "",
+        "secondary_button_bg": "#bfe3db",
+        "secondary_button_text": "#424345",
+        "background_color": "#fffbf5",
+        "text_color": "#424345",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "frame_padding_top": 80,
+        "frame_padding_bottom": 80,
+        "frame_padding_sides": 42
+      }
+    },
+    "dreamer_rv_trust_cards_N7Fcrg": {
+      "type": "dreamer-rv-trust-cards",
+      "blocks": {
+        "card_kkqxAt": {
+          "type": "card",
+          "settings": {
+            "card_style": "image",
+            "image": "shopify://shop_images/DreamerRv-84.jpg",
+            "solid_color": "#fffbf5",
+            "solid_text_color": "#424345",
+            "heading": "We get it, because we live it",
+            "text": "We know caravan beds can be a little different. We’ll help you find the right fit for your setup."
+          }
+        },
+        "card_DdhhFn": {
+          "type": "card",
+          "settings": {
+            "card_style": "image",
+            "image": "shopify://shop_images/ExpoImage.jpg",
+            "solid_color": "#fffbf5",
+            "solid_text_color": "#424345",
+            "heading": "You can count on us",
+            "text": "Our Australian-based Customer Care team is here to help with sizing, product questions and anything else you need. We’ll get back to you as quickly as we can."
+          }
+        },
+        "card_idBEbf": {
+          "type": "card",
+          "settings": {
+            "card_style": "image",
+            "image": "shopify://shop_images/DreamerRv-33.jpg",
+            "solid_color": "#fffbf5",
+            "solid_text_color": "#424345",
+            "heading": "Still not sure which size is right?",
+            "text": "If our Sizing Guide doesn’t show a clear match, send us your mattress dimensions through our Contact Us form and we’ll help you find the best fit."
+          }
+        }
+      },
+      "block_order": [
+        "card_kkqxAt",
+        "card_DdhhFn",
+        "card_idBEbf"
+      ],
+      "name": "Trust cards",
+      "settings": {
+        "eyebrow_text": "PROUDLY OWNED AND RUN ON AUSTRALIAN SOIL",
+        "heading": "From one happy camper to another",
+        "subheading": "<p>Every email lands with someone who understands caravan life and knows our products inside out. Send us your mattress dimensions and you’ll hear back personally, usually within 24 hours on working days.</p>",
+        "show_button": true,
+        "button_label": "Still Not Sure Which Size?",
+        "button_link": "/pages/contact",
+        "button_bg": "#44C5C3",
+        "button_text": "#424345",
+        "card_text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 20,
+        "card_border_radius": 8,
+        "card_padding": 32,
+        "card_gap": 0,
+        "background_color": "#f9f2e8",
+        "text_color": "#424345",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "frame_padding_sides": 40
+      }
+    },
+    "dreamer_rv_feature_cards_kE79cG": {
+      "type": "dreamer-rv-feature-cards",
+      "blocks": {
+        "card_jXxRyR": {
+          "type": "card",
+          "settings": {
+            "style": "image",
+            "image": "shopify://shop_images/Stillwater01_5fae4c05-a7a7-4f28-9a3d-f3ba61b92d30.webp",
+            "background_color": "#cfe8de",
+            "text_color": "#ffffff",
+            "heading": "Light enough to handle solo",
+            "text": "<p>At 7.5kg, the Wanderluxe™ adds luxurious comfort without weighing down your caravan. Easy to unpack, position and move whenever needed.</p>"
+          }
+        },
+        "card_afXKPN": {
+          "type": "card",
+          "settings": {
+            "style": "image",
+            "background_color": "#bde9d8",
+            "text_color": "#424345",
+            "heading": "Say goodbye to sore hips",
+            "text": "<p>Memory foam moulds to your pressure points, keeping you well rested through longer drives, and springs back the moment you're up.</p>"
+          }
+        },
+        "card_rVnfkd": {
+          "type": "card",
+          "settings": {
+            "style": "image",
+            "image": "shopify://shop_images/DreamerRv-21_8ec7822f-e04f-4b1b-804c-721ba4c9d5c4.jpg",
+            "background_color": "#cfe8de",
+            "text_color": "",
+            "heading": "Easy to keep clean",
+            "text": "<p>Cover comes off and goes straight in the wash, so a spilled coffee, a muddy dog or sandy feet doesn't mean a new topper.</p>"
+          }
+        },
+        "card_Pj7zMM": {
+          "type": "card",
+          "settings": {
+            "style": "image",
+            "background_color": "#bde9d8",
+            "text_color": "#424345",
+            "heading": "Corners cut for the perfect fit",
+            "text": "<p>Rounded corners cut to the exact profile of your caravan mattress, sitting into the edges, no pesky overhang.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "card_jXxRyR",
+        "card_afXKPN",
+        "card_rVnfkd",
+        "card_Pj7zMM"
+      ],
+      "name": "Dreamer RV Feature Cards",
+      "settings": {
+        "heading": "Sized for your setup",
+        "subheading": "",
+        "background_color": "#fbf6ec",
+        "text_color": "#424345",
+        "arrow_color": "#f4a48b",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "dreamer_rv_impact_split_Ed94Yh": {
+      "type": "dreamer-rv-impact-split",
+      "blocks": {
+        "feature_cUdY6L": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Vector.svg",
+            "text": "$5 donated from every Wanderluxe Caravan Queen sold"
+          }
+        },
+        "feature_wh6kNU": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Group_2.svg",
+            "text": "Supporting world-leading marine science and resilience work"
+          }
+        },
+        "feature_t6AnJi": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Dreamer_RV_Icons_Screen_Australian_Family_Owned_Sand_RGB_4.svg",
+            "text": "Australian-owned brand giving back to Australian waters"
+          }
+        }
+      },
+      "block_order": [
+        "feature_cUdY6L",
+        "feature_wh6kNU",
+        "feature_t6AnJi"
+      ],
+      "disabled": true,
+      "name": "Split section home page",
+      "settings": {
+        "image": "shopify://shop_images/Placeholder_Image.png",
+        "image_position": "left",
+        "heading": "For deeper sleep, and a healthier reef",
+        "text": "<p>Since launching, $5 from every Wanderluxe Caravan Queen bed topper goes straight to the Great Barrier Reef Foundation, a place plenty of our customers have already pulled up the van to see for themselves.</p>",
+        "show_primary_button": true,
+        "primary_button_label": "Donate",
+        "primary_button_link": "",
+        "primary_button_bg": "#2f8f86",
+        "primary_button_text": "#ffffff",
+        "show_secondary_button": true,
+        "secondary_button_label": "Learn More",
+        "secondary_button_link": "",
+        "secondary_button_bg": "#bfe3db",
+        "secondary_button_text": "#2b2621",
+        "background_color": "#f9f2e8",
+        "text_color": "#424345",
+        "min_height": 620,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "section_spacer_j4JE3g": {
+      "type": "section-spacer",
+      "name": "t:sections.spacer.presets.name",
+      "settings": {
+        "height": 20,
+        "height_mobile": 20
+      }
+    },
+    "dreamer_rv_full_bleed_banner_nL4pzM": {
+      "type": "dreamer-rv-full-bleed-banner",
+      "name": "Full bleed banner",
+      "settings": {
+        "image": "shopify://shop_images/DreamerRv-71.jpg",
+        "icon": "shopify://shop_images/Dreamer_RV_icon_7b82a39d-af29-47e5-b764-c631dbb4f554.svg",
+        "heading": "Join thousands of Aussies adding a Wanderluxe™ Topper to their setup.",
+        "subheading": "From weekend escapes to life on the road, Wanderluxe™ transforms your caravan bed into a place you genuinely look forward to at the end of the day.\n\nMore comfort, better sleep and a brighter start to your next adventure.",
+        "height": 680,
+        "height_mobile": 560,
+        "overlay_opacity": 20,
+        "overlay_opacity_top": 15,
+        "text_color": "#ffffff",
+        "primary_button_label": "Shop The Range",
+        "primary_button_url": "shopify://collections/all",
+        "primary_button_color": "#36b2af",
+        "primary_button_text_color": "#ffffff",
+        "secondary_button_label": "",
+        "secondary_button_url": "",
+        "secondary_button_color": "#f1ead9",
+        "secondary_button_text_color": "#2b2621",
+        "badge_bg_color": "#ffffff",
+        "badge_text_color": "#2b2621"
+      }
+    },
+    "section_spacer_ncYY96": {
+      "type": "section-spacer",
+      "name": "t:sections.spacer.presets.name",
+      "settings": {
+        "height": 20,
+        "height_mobile": 20
+      }
+    },
+    "dreamer_rv_footer_links_txR4Vw": {
+      "type": "dreamer-rv-footer-links",
+      "blocks": {
+        "column_rb7VDb": {
+          "type": "column",
+          "settings": {
+            "heading": "Shop",
+            "link_1_label": "Mattress Toppers",
+            "link_1_url": "shopify://collections/wanderluxe-caravan-mattress-toppers",
+            "link_2_label": "Mattress Protectors",
+            "link_2_url": "shopify://collections/caravan-mattress-protectors",
+            "link_3_label": "Sheets",
+            "link_3_url": "shopify://collections/sheets",
+            "link_4_label": "Home Comfort Range",
+            "link_4_url": "shopify://collections/home-comfort-range",
+            "link_5_label": "Accessories",
+            "link_5_url": "shopify://collections/accessories",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        },
+        "column_3dAh8D": {
+          "type": "column",
+          "settings": {
+            "heading": "Explore",
+            "link_1_label": "Our Story",
+            "link_1_url": "shopify://pages/our-story",
+            "link_2_label": "Blog",
+            "link_2_url": "shopify://blogs/news",
+            "link_3_label": "Exhibitions & Shows",
+            "link_3_url": "shopify://pages/exhibitions-shows",
+            "link_4_label": "Wholesale",
+            "link_4_url": "shopify://pages/wholesale",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        },
+        "column_pmA4b7": {
+          "type": "column",
+          "settings": {
+            "heading": "Help & Info",
+            "link_1_label": "Find Your Size",
+            "link_1_url": "shopify://pages/find-your-fit",
+            "link_2_label": "FAQs",
+            "link_2_url": "shopify://pages/frequently-asked-questions",
+            "link_3_label": "Shipping Information",
+            "link_3_url": "shopify://policies/shipping-policy",
+            "link_4_label": "Refund Policy",
+            "link_4_url": "shopify://policies/refund-policy",
+            "link_5_label": "Warranty",
+            "link_5_url": "shopify://pages/warranty",
+            "link_6_label": "Wash & Care Guide",
+            "link_6_url": "shopify://pages/wash-care-guide"
+          }
+        },
+        "column_3D7eC6": {
+          "type": "column",
+          "settings": {
+            "heading": "Wholesale",
+            "link_1_label": "About Wholesale",
+            "link_1_url": "shopify://pages/wholesale",
+            "link_2_label": "",
+            "link_2_url": "",
+            "link_3_label": "",
+            "link_3_url": "",
+            "link_4_label": "",
+            "link_4_url": "",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        },
+        "column_LNyLLG": {
+          "type": "column",
+          "settings": {
+            "heading": "Legal",
+            "link_1_label": "Privacy Policy",
+            "link_1_url": "shopify://policies/privacy-policy",
+            "link_2_label": "Terms of Use",
+            "link_2_url": "#",
+            "link_3_label": "",
+            "link_3_url": "",
+            "link_4_label": "",
+            "link_4_url": "",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_rb7VDb",
+        "column_3dAh8D",
+        "column_pmA4b7",
+        "column_3D7eC6",
+        "column_LNyLLG"
+      ],
+      "name": "Footer links",
+      "settings": {
+        "background_color": "#f9f2e8",
+        "text_color": "#424345",
+        "padding_top": 60,
+        "padding_bottom": 40
+      }
+    },
+    "dreamer_rv_footer_panel_AJEqXq": {
+      "type": "dreamer-rv-footer-panel",
+      "name": "Footer panel",
+      "settings": {
+        "icon": "shopify://shop_images/CROPPED_Dreamer_RV_Logo_Screen_Horizontal_Tagline_Night_Sky_RGB.svg",
+        "acknowledgement": "<p>In the spirit of reconciliation, Dreamer RV acknowledges the Traditional Custodians of Country throughout Australia and their connections to land, sea and community. We pay our respects to Elders past, present and emerging and extend that respect to all Aboriginal and Torres Strait Islander people today.</p>",
+        "show_newsletter": true,
+        "newsletter_heading": "Subscribe",
+        "newsletter_text": "Join our newsletter for new product drops and travel inspiration from the road.",
+        "newsletter_button_label": "Subscribe",
+        "newsletter_consent": "By subscribing you agree to our privacy policy and consent to receive updates from Dreamer RV.",
+        "background_color": "#f9f2e8",
+        "text_color": "#2b2621",
+        "panel_background_color": "#fffbf5",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "dreamer_rv_footer_bar_rYpKV8": {
+      "type": "dreamer-rv-footer-bar",
+      "name": "Footer bar",
+      "settings": {
+        "copyright_text": "© 2026 Dreamer RV. All rights reserved.",
+        "credit_text": "Website by Sparo Studios",
+        "credit_link": "",
+        "background_color": "#bde9d8",
+        "text_color": "#2b2621"
+      }
+    },
+    "section_spacer_YNAkfK": {
+      "type": "section-spacer",
+      "name": "t:sections.spacer.presets.name",
+      "settings": {
+        "height": 20,
+        "height_mobile": 20
+      }
+    }
+  },
+  "order": [
+    "section_spacer_DQCx8N",
+    "section_two_images_text_M34g7x",
+    "section_image_with_text_ApiBdn",
+    "dreamer_rv_logo_wall_tbLjri",
+    "breadcrumbs",
+    "1239da24-1a4a-4bc5-bfea-66926adf5e9a",
+    "main-page",
+    "dreamer_rv_split_compare_DwyktW",
+    "dreamer_rv_trust_cards_N7Fcrg",
+    "dreamer_rv_feature_cards_kE79cG",
+    "dreamer_rv_impact_split_Ed94Yh",
+    "section_spacer_j4JE3g",
+    "dreamer_rv_full_bleed_banner_nL4pzM",
+    "section_spacer_ncYY96",
+    "dreamer_rv_footer_links_txR4Vw",
+    "dreamer_rv_footer_panel_AJEqXq",
+    "dreamer_rv_footer_bar_rYpKV8",
+    "section_spacer_YNAkfK"
+  ]
+}

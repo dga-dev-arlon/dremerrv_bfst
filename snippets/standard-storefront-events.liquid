@@ -1,0 +1,85 @@
+<script>
+  (function () {
+    var xclusiveTheme = window.XclusiveTheme = window.XclusiveTheme || {};
+
+    xclusiveTheme.standardEventsTemplate = {{ template.name | json }};
+
+    if (!xclusiveTheme.standardEventsDomReady) {
+      xclusiveTheme.standardEventsDomReady = new Promise(function (resolve) {
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', resolve, { once: true });
+        } else {
+          resolve();
+        }
+      });
+    }
+
+    if (!xclusiveTheme.standardEventsReady) {
+      xclusiveTheme.standardEventsReady = new Promise(function (resolve, reject) {
+        xclusiveTheme.resolveStandardEvents = resolve;
+        xclusiveTheme.rejectStandardEvents = reject;
+      });
+
+      // Standard events are progressive enhancement. Keep a rejected CDN import
+      // from becoming an unhandled rejection when no caller is awaiting it yet.
+      xclusiveTheme.standardEventsReady.catch(function () {});
+    }
+
+    xclusiveTheme.dispatchStandardViewEvent = function (target, eventType) {
+      return xclusiveTheme.standardEventsReady
+        .then(function () {
+          var resolvedTarget = target && target.isConnected ? target : null;
+
+          if (!resolvedTarget && eventType === 'cart') {
+            resolvedTarget = document.getElementById('cart');
+          }
+
+          if (
+            !resolvedTarget ||
+            !xclusiveTheme.standardViewEvents ||
+            typeof xclusiveTheme.standardViewEvents.dispatch !== 'function'
+          ) {
+            return false;
+          }
+
+          return xclusiveTheme.standardViewEvents.dispatch(resolvedTarget, eventType);
+        })
+        .catch(function (error) {
+          console.warn('Standard storefront view event dispatch failed', error);
+          return false;
+        });
+    };
+
+    xclusiveTheme.activateStandardViewEvents = function (container) {
+      return xclusiveTheme.standardEventsReady
+        .then(function () {
+          var resolvedContainer = container && container.isConnected ? container : null;
+
+          if (
+            !resolvedContainer ||
+            !xclusiveTheme.standardViewEvents ||
+            typeof xclusiveTheme.standardViewEvents.activate !== 'function'
+          ) {
+            return false;
+          }
+
+          return xclusiveTheme.standardViewEvents.activate(resolvedContainer);
+        })
+        .catch(function (error) {
+          console.warn('Standard storefront view event activation failed', error);
+          return false;
+        });
+    };
+  })();
+</script>
+<script type="module">
+  import({{ 'standard-storefront-events.js' | asset_url | json }}).catch(function (error) {
+    var xclusiveTheme = window.XclusiveTheme || {};
+
+    if (typeof xclusiveTheme.rejectStandardEvents === 'function') {
+      xclusiveTheme.rejectStandardEvents(error);
+    }
+
+    console.warn('Standard storefront events asset failed to load', error);
+  });
+</script>

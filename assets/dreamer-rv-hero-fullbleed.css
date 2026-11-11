@@ -1,0 +1,372 @@
+/* Full-bleed hero - edge-to-edge, no rounded corners. Duplicate of
+   dreamer-rv-hero.css with the width/border-radius treatment swapped out
+   and every class renamed from .drv-hero__* to .drv-hero-fb__* so this
+   section's styles can never collide with the inset hero's styles. */
+section.drv-hero-fb[data-section-id],
+.drv-hero-fb.drv-hero-fb[data-section-id] {
+  position: relative !important;
+  width: 100vw !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  left: 50% !important;
+  right: 50% !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  height: var(--drv-hero-height, 680px) !important;
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+@media screen and (max-width: 749px) {
+  /* The badge now stacks below the buttons on mobile (see
+     .drv-hero-fb__badge below), so the section can no longer be a fixed
+     height - it needs to grow to fit heading + icon + subheading +
+     buttons + badge, all stacked in a column, with the image (absolutely
+     positioned, so it isn't part of this flow) stretching to match
+     whatever height that content ends up needing. */
+  section.drv-hero-fb[data-section-id],
+  .drv-hero-fb.drv-hero-fb[data-section-id] {
+    height: auto !important;
+    min-height: var(--drv-hero-height-mobile, 560px) !important;
+    flex-direction: column !important;
+  }
+}
+
+.drv-hero-fb {
+  color: var(--drv-hero-text-color, #fff);
+  z-index: 0;
+}
+
+.drv-hero-fb__media {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: inherit !important;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.drv-hero-fb .drv-hero-fb__media .drv-hero-fb__image,
+.drv-hero-fb__image.drv-hero-fb__image {
+  display: block !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: cover !important;
+  object-position: center;
+  border-radius: inherit !important;
+  margin: 0;
+}
+
+.drv-hero-fb__image--placeholder svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.drv-hero-fb__overlay {
+  position: absolute;
+  inset: 0;
+  /* Darker toward the bottom (where text/badge sit), lighter at the top
+     so the sticky pill header reads against the image rather than a flat tint. */
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, var(--drv-hero-overlay-bottom, 0.35)) 0%,
+    rgba(0, 0, 0, var(--drv-hero-overlay-top, 0.05)) 60%
+  );
+}
+
+.drv-hero-fb__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 989px) {
+  .drv-hero-fb__inner {
+    padding: 0 24px;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .drv-hero-fb__inner {
+    padding: 40px 20px;
+  }
+
+  .drv-hero-fb__content {
+    width: 100%;
+  }
+}
+
+.drv-hero-fb__content {
+  max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+@media screen and (max-width: 749px) {
+  .drv-hero-fb__content {
+    gap: 16px;
+  }
+}
+
+.drv-hero-fb__icon-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 96px;
+}
+
+.drv-hero-fb__icon-slot--empty {
+  /* Keeps a visible, clickable placeholder in the theme editor so there is
+     always a reserved spot to drop the palm tree icon in - collapses to
+     nothing on the live storefront once an icon is set. */
+  width: 96px;
+  border: 1px dashed rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+}
+
+.drv-hero-fb__icon-placeholder {
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  opacity: 0.75;
+  padding: 8px;
+  text-align: center;
+}
+
+.drv-hero-fb__icon {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 749px) {
+  .drv-hero-fb__icon-slot {
+    min-height: 64px !important;
+  }
+
+  .drv-hero-fb__icon-slot--empty {
+    width: 64px !important;
+  }
+
+  .drv-hero-fb__icon {
+    width: 64px !important;
+    height: 64px !important;
+  }
+}
+
+.drv-hero-fb__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drv-hero-fb__heading {
+  /* Hooked into the theme's own Typography settings (Heading 1 size,
+     Primary font, letter-spacing, case) rather than a hardcoded value -
+     adjusting those in the customiser now updates the hero too.
+     Color is forced with !important because the section's colour scheme
+     (set in the theme editor) otherwise overrides our --drv-hero-text-color
+     variable with its own text colour. */
+  font-family: var(--main_ff_h, serif);
+  font-weight: var(--main_fw_h, 400);
+  font-size: var(--main_h1, 56px);
+  line-height: var(--main_lh_h, 1.2);
+  letter-spacing: var(--main_ls_h, normal);
+  color: #ffffff !important;
+  margin: 0;
+  font-style: normal;
+}
+
+@media screen and (max-width: 749px) {
+  .drv-hero-fb__heading {
+    font-size: var(--main_h2, 32px) !important;
+  }
+}
+
+.drv-hero-fb__subheading {
+  font-family: var(--main_ff, inherit);
+  font-size: 18px;
+  font-family: var(--font-body-light);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 480px;
+  color: var(--drv-hero-text-color, #fff) !important;
+}
+
+.drv-hero-fb__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+@media screen and (max-width: 749px) {
+  .drv-hero-fb__actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+}
+
+.drv-hero-fb__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+  white-space: nowrap;
+}
+
+.drv-hero-fb__btn:hover {
+  opacity: 0.85;
+}
+
+.drv-hero-fb__btn--primary {
+  background: var(--drv-hero-btn-primary-bg, #36b2af);
+  color: var(--drv-hero-btn-primary-text, #fff);
+}
+
+.drv-hero-fb__btn--secondary {
+  background: var(--drv-hero-btn-secondary-bg, #f1ead9);
+  color: var(--drv-hero-btn-secondary-text, #2b2621);
+}
+
+.drv-hero-fb__badge {
+  /* Floats independently of the centered text content, in the bottom-right
+     corner of the image, regardless of where the heading/buttons sit.
+     Matches the Figma card: fish icon centred above the copy, everything
+     centre-aligned, body text wrapping over two lines. */
+  position: absolute;
+  z-index: 1;
+  right: 40px;
+  bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  background: var(--drv-hero-badge-bg, #fff);
+  color: var(--drv-hero-badge-text, #2b2621);
+  border-radius: 12px;
+  padding: 22px 24px;
+  width: 280px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (max-width: 989px) {
+  .drv-hero-fb__badge {
+    right: 24px;
+    bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .drv-hero-fb__badge {
+    /* Was an absolutely-positioned card floating over the image - on
+       mobile it instead drops into normal flow, below the buttons
+       (it's already the next flex item after .drv-hero-fb__inner, and
+       .drv-hero-fb switches to a column on mobile), and shrinks down. */
+    position: relative !important;
+    z-index: 1 !important;
+    right: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 24px auto 32px !important;
+    width: calc(100% - 40px) !important;
+    max-width: 260px !important;
+    padding: 16px 18px !important;
+    gap: 8px !important;
+    border-radius: 10px !important;
+  }
+}
+
+.drv-hero-fb__badge-icon {
+  width: 167px;
+  height: 46px;
+  aspect-ratio: 167 / 46;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.drv-hero-fb__badge-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.drv-hero-fb__badge-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.drv-hero-fb__badge-text {
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.4;
+  color: rgba(43, 38, 33, 0.75);
+}
+
+@media screen and (max-width: 749px) {
+  .drv-hero-fb__badge-icon {
+    width: 120px !important;
+    height: 33px !important;
+  }
+
+  .drv-hero-fb__badge-title {
+    font-size: 0.85rem !important;
+  }
+
+  .drv-hero-fb__badge-text {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* Mobile tweaks: centre content, smaller button */
+@media screen and (max-width: 749px) {
+  .drv-hero-fb__inner {
+    flex: 1 1 auto;
+    align-items: center;
+  }
+
+  .drv-hero-fb__actions {
+    align-items: center;
+    width: auto;
+  }
+
+  .drv-hero-fb__btn {
+    padding: 11px 24px;
+    font-size: 14px;
+  }
+}

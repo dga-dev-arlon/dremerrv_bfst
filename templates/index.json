@@ -1,0 +1,1446 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "dreamer_rv_hero_TM7rCe": {
+      "type": "dreamer-rv-hero",
+      "blocks": {
+        "badge_KQTLCE": {
+          "type": "badge",
+          "settings": {
+            "icon": "shopify://shop_images/98977f357408c15bc91dc8645bbaeb41e68ff9e7_8d4183ca-22d5-4eeb-932d-38a21e55d098.png",
+            "title": "",
+            "text": "$5 donated from every Wanderluxe Caravan Queen bed topper."
+          }
+        }
+      },
+      "block_order": [
+        "badge_KQTLCE"
+      ],
+      "custom_css": [
+        ".drv-hero__heading {font-family: \"Bethany Elingston\", cursive !important; font-style: normal; font-weight: 400; font-size: 56px !important; line-height: 67%; white-space: pre-line;}",
+        "@media screen and (max-width: 749px) {.drv-hero__heading {font-size: 32px !important; }}",
+        "body,p {font-family: var(--font-body-light); font-size: var(--text-regular-size); font-weight: var(--text-body-light-weight, 300); line-height: var(--text-regular-line-height); color: #424345;}",
+        ".drv-hero__badge-text {font-size: 12px !important;}"
+      ],
+      "name": "Dreamer RV Hero",
+      "settings": {
+        "media_type": "video",
+        "image": "shopify://shop_images/dc66f446d63bb7fe50f8d63778359e6a928616d0.jpg",
+        "video": "shopify://files/videos/DreamerRV_OptionB_16x9_WithoutMusic_V3.mp4",
+        "icon": "shopify://shop_images/Dreamer_RV_icon_7b82a39d-af29-47e5-b764-c631dbb4f554.svg",
+        "heading": "Black Friday Sale",
+        "subheading": "Mattress toppers, protectors and sheets, made to fit your bed, ready for any Aussie adventure.",
+        "height": 900,
+        "height_mobile": 560,
+        "overlay_opacity": 15,
+        "overlay_opacity_top": 15,
+        "text_color": "#ffffff",
+        "primary_button_label": "Shop the sale",
+        "primary_button_url": "shopify://collections/all",
+        "primary_button_color": "#F4A48B",
+        "primary_button_text_color": "#1c1c1c",
+        "secondary_button_label": "Find your size",
+        "secondary_button_url": "shopify://pages/find-your-fit",
+        "secondary_button_color": "#bde9d8",
+        "secondary_button_text_color": "#2b2621",
+        "badge_bg_color": "#ffffff",
+        "badge_text_color": "#2b2621"
+      }
+    },
+    "ac7ecfc3-e994-445b-9837-e919f914b79d": {
+      "type": "section-press-coverage",
+      "blocks": {
+        "template--20328356446525__ac7ecfc3-e994-445b-9837-e919f914b79d-logo-6": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/2b7ccf1bb373f70a33cb24e05276ce8067ff5ee5.png",
+            "link": ""
+          }
+        },
+        "template--20328356446525__ac7ecfc3-e994-445b-9837-e919f914b79d-logo-1": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/e577be2d322df3a10fe685311403478756599bd1.png",
+            "link": ""
+          }
+        },
+        "template--20328356446525__ac7ecfc3-e994-445b-9837-e919f914b79d-logo-2": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/7bab693820db163bea02469b2d353e1034fe1fa1.png",
+            "link": ""
+          }
+        },
+        "template--20328356446525__ac7ecfc3-e994-445b-9837-e919f914b79d-logo-3": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/4a2ce9f1b823af76039d23d140413b6943fb16c5.png",
+            "link": ""
+          }
+        },
+        "template--20328356446525__ac7ecfc3-e994-445b-9837-e919f914b79d-logo-4": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/dd106f5f7bf40750956d9965eda2b2c95f715395.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20328356446525__ac7ecfc3-e994-445b-9837-e919f914b79d-logo-6",
+        "template--20328356446525__ac7ecfc3-e994-445b-9837-e919f914b79d-logo-1",
+        "template--20328356446525__ac7ecfc3-e994-445b-9837-e919f914b79d-logo-2",
+        "template--20328356446525__ac7ecfc3-e994-445b-9837-e919f914b79d-logo-3",
+        "template--20328356446525__ac7ecfc3-e994-445b-9837-e919f914b79d-logo-4"
+      ],
+      "custom_css": [
+        "{padding-top: 64px; padding-bottom: 4px;}"
+      ],
+      "name": "As seen in",
+      "settings": {
+        "number_of_items": 6,
+        "text_alignment": "center",
+        "title": "<p>AS SEEN IN</p>",
+        "title_underline_style": "none",
+        "show_link": true,
+        "link_text": "Button",
+        "link_url": "",
+        "button_style": "primary plain",
+        "spacing_desktop": 100,
+        "spacing_mobile": 30,
+        "fix_zindex": 0
+      }
+    },
+    "dreamer_rv_size_chart_rTYgka": {
+      "type": "dreamer-rv-size-chart",
+      "blocks": {
+        "size_ifdeap": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: SUPER King / Protector: SUPER King",
+            "width_min_cm": 185,
+            "width_max_cm": 192,
+            "length_min_cm": 198,
+            "length_max_cm": 205,
+            "corner_type": "square"
+          }
+        },
+        "size_f8WWMP": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: KING 2 / Protector: KING 2",
+            "width_min_cm": 173,
+            "width_max_cm": 180,
+            "length_min_cm": 198,
+            "length_max_cm": 205,
+            "corner_type": "square"
+          }
+        },
+        "size_dnfNzx": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: King LEFT-CUT",
+            "width_min_cm": 185,
+            "width_max_cm": 195,
+            "length_min_cm": 188,
+            "length_max_cm": 195,
+            "corner_type": "left-cut"
+          }
+        },
+        "size_nyhQ8F": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: King ROUNDED",
+            "width_min_cm": 183,
+            "width_max_cm": 190,
+            "length_min_cm": 198,
+            "length_max_cm": 205,
+            "corner_type": "rounded"
+          }
+        },
+        "size_ThHeWp": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: King ROUNDED / Protector: King ROUNDED",
+            "width_min_cm": 183,
+            "width_max_cm": 190,
+            "length_min_cm": 198,
+            "length_max_cm": 205,
+            "corner_type": "rounded"
+          }
+        },
+        "size_bWtTjq": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: King LEFT-CUT / Protector: King LEFT-CUT",
+            "width_min_cm": 185,
+            "width_max_cm": 195,
+            "length_min_cm": 188,
+            "length_max_cm": 195,
+            "corner_type": "left-cut"
+          }
+        },
+        "size_CiJKNN": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: King LEFT-CUT / Protector: King LEFT-CUT",
+            "width_min_cm": 185,
+            "width_max_cm": 195,
+            "length_min_cm": 188,
+            "length_max_cm": 195,
+            "corner_type": "left-cut"
+          }
+        },
+        "size_jppayH": {
+          "type": "size",
+          "settings": {
+            "label": "Sheets: MW CARAVAN Queen",
+            "width_min_cm": 146,
+            "width_max_cm": 146,
+            "length_min_cm": 187,
+            "length_max_cm": 195,
+            "corner_type": "rounded"
+          }
+        },
+        "size_F3T4Q8": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: CARAVAN Queen / Protector: CARAVAN Queen / Sheets: MW CARAVAN Queen",
+            "width_min_cm": 147,
+            "width_max_cm": 155,
+            "length_min_cm": 187,
+            "length_max_cm": 193,
+            "corner_type": "rounded"
+          }
+        },
+        "size_XAt9HA": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: CARAVAN Queen / Protector: CARAVAN Queen / Sheets: MW CARAVAN Queen",
+            "width_min_cm": 147,
+            "width_max_cm": 154,
+            "length_min_cm": 194,
+            "length_max_cm": 194,
+            "corner_type": "rounded"
+          }
+        },
+        "size_gCATNj": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: CARAVAN Queen / Protector: CARAVAN Queen / Sheets: MW CARAVAN Queen",
+            "width_min_cm": 147,
+            "width_max_cm": 153,
+            "length_min_cm": 195,
+            "length_max_cm": 195,
+            "corner_type": "rounded"
+          }
+        },
+        "size_A8FykL": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: CARAVAN Queen / Protector: CARAVAN Queen",
+            "width_min_cm": 155,
+            "width_max_cm": 155,
+            "length_min_cm": 194,
+            "length_max_cm": 194,
+            "corner_type": "rounded"
+          }
+        },
+        "size_ctfxNi": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: CARAVAN Queen / Protector: CARAVAN Queen / Sheets: MW QUEEN",
+            "width_min_cm": 154,
+            "width_max_cm": 155,
+            "length_min_cm": 195,
+            "length_max_cm": 195,
+            "corner_type": "rounded"
+          }
+        },
+        "size_8AJqme": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: CARAVAN Queen / Protector: CARAVAN Queen / Sheets: MW QUEEN",
+            "width_min_cm": 147,
+            "width_max_cm": 158,
+            "length_min_cm": 196,
+            "length_max_cm": 198,
+            "corner_type": "rounded"
+          }
+        },
+        "size_y34AG6": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: DOUBLE V2 / Protector: Queen LONG",
+            "width_min_cm": 147,
+            "width_max_cm": 148,
+            "length_min_cm": 199,
+            "length_max_cm": 207,
+            "corner_type": "rounded"
+          }
+        },
+        "size_TMYWBX": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: DOUBLE V2 / Protector: Queen LONG",
+            "width_min_cm": 147,
+            "width_max_cm": 158,
+            "length_min_cm": 208,
+            "length_max_cm": 208,
+            "corner_type": "rounded"
+          }
+        },
+        "size_Gz8ELL": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: Queen LONG / Protector: Queen LONG",
+            "width_min_cm": 149,
+            "width_max_cm": 160,
+            "length_min_cm": 199,
+            "length_max_cm": 207,
+            "corner_type": "rounded"
+          }
+        },
+        "size_yMTn4w": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: Queen LONG / Protector: Queen LONG",
+            "width_min_cm": 149,
+            "width_max_cm": 149,
+            "length_min_cm": 208,
+            "length_max_cm": 208,
+            "corner_type": "rounded"
+          }
+        },
+        "size_pU7x7U": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: Queen LONG / Protector: Queen LONG / Sheets: MW QUEEN",
+            "width_min_cm": 147,
+            "width_max_cm": 158,
+            "length_min_cm": 199,
+            "length_max_cm": 200,
+            "corner_type": "rounded"
+          }
+        },
+        "size_Eh8pUC": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: Queen LONG / Protector: Queen LONG / Sheets: MW QUEEN",
+            "width_min_cm": 150,
+            "width_max_cm": 157,
+            "length_min_cm": 199,
+            "length_max_cm": 206,
+            "corner_type": "rounded"
+          }
+        },
+        "size_Hni6pj": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: Queen LONG / Protector: Queen LONG / Sheets: MW QUEEN",
+            "width_min_cm": 150,
+            "width_max_cm": 156,
+            "length_min_cm": 208,
+            "length_max_cm": 208,
+            "corner_type": "rounded"
+          }
+        },
+        "size_Q6i9zW": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: Queen LONG",
+            "width_min_cm": 157,
+            "width_max_cm": 160,
+            "length_min_cm": 208,
+            "length_max_cm": 208,
+            "corner_type": "rounded"
+          }
+        },
+        "size_KBWVnT": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: Queen SHORT / Protector: Queen SHORT",
+            "width_min_cm": 147,
+            "width_max_cm": 155,
+            "length_min_cm": 178,
+            "length_max_cm": 186,
+            "corner_type": "rounded"
+          }
+        },
+        "size_VzGkXG": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: CARAVAN Queen / Protector: CARAVAN Queen",
+            "width_min_cm": 147,
+            "width_max_cm": 147,
+            "length_min_cm": 187,
+            "length_max_cm": 220,
+            "corner_type": "rounded"
+          }
+        },
+        "size_kxGdG9": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: Caravan Queen SQUARE / Protector: EAST-WEST 2",
+            "width_min_cm": 147,
+            "width_max_cm": 147,
+            "length_min_cm": 196,
+            "length_max_cm": 197,
+            "corner_type": "square"
+          }
+        },
+        "size_VrnDpw": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: Caravan Queen SQUARE / Protector: Caravan Queen SQUARE",
+            "width_min_cm": 148,
+            "width_max_cm": 155,
+            "length_min_cm": 188,
+            "length_max_cm": 195,
+            "corner_type": "square"
+          }
+        },
+        "size_HJifxD": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: Caravan Queen SQUARE / Protector: Caravan Queen SQUARE",
+            "width_min_cm": 147,
+            "width_max_cm": 147,
+            "length_min_cm": 188,
+            "length_max_cm": 195,
+            "corner_type": "square"
+          }
+        },
+        "size_jxWtKz": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: EAST-WEST 2 / Protector: EAST-WEST 2",
+            "width_min_cm": 148,
+            "width_max_cm": 155,
+            "length_min_cm": 198,
+            "length_max_cm": 205,
+            "corner_type": "square"
+          }
+        },
+        "size_P83yqB": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: EAST-WEST 2",
+            "width_min_cm": 148,
+            "width_max_cm": 155,
+            "length_min_cm": 206,
+            "length_max_cm": 208,
+            "corner_type": "square"
+          }
+        },
+        "size_hb46Bp": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: DOUBLE V2 / Protector: DOUBLE V2",
+            "width_min_cm": 144,
+            "width_max_cm": 148,
+            "length_min_cm": 193,
+            "length_max_cm": 203,
+            "corner_type": "rounded"
+          }
+        },
+        "size_zPTDHn": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: DOUBLE V2 / Protector: DOUBLE V2",
+            "width_min_cm": 144,
+            "width_max_cm": 148,
+            "length_min_cm": 193,
+            "length_max_cm": 203,
+            "corner_type": "square"
+          }
+        },
+        "size_Ycyj73": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: DOUBLE V2",
+            "width_min_cm": 144,
+            "width_max_cm": 148,
+            "length_min_cm": 204,
+            "length_max_cm": 220,
+            "corner_type": "rounded"
+          }
+        },
+        "size_yckDtr": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: Double / Protector: Double / Sheets: MW CARAVAN Double",
+            "width_min_cm": 133,
+            "width_max_cm": 145,
+            "length_min_cm": 180,
+            "length_max_cm": 187,
+            "corner_type": "rounded"
+          }
+        },
+        "size_k4NMci": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: Double / Protector: CARAVAN Queen / Sheets: MW CARAVAN Double",
+            "width_min_cm": 133,
+            "width_max_cm": 145,
+            "length_min_cm": 188,
+            "length_max_cm": 188,
+            "corner_type": "rounded"
+          }
+        },
+        "size_FFMiby": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: Double / Protector: CARAVAN Queen / Sheets: MW CARAVAN Double",
+            "width_min_cm": 133,
+            "width_max_cm": 144,
+            "length_min_cm": 189,
+            "length_max_cm": 189,
+            "corner_type": "rounded"
+          }
+        },
+        "size_TWWRri": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: Double / Protector: CARAVAN Queen / Sheets: MW CARAVAN Double",
+            "width_min_cm": 133,
+            "width_max_cm": 143,
+            "length_min_cm": 190,
+            "length_max_cm": 190,
+            "corner_type": "rounded"
+          }
+        },
+        "size_wDyWjp": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: CAMPER Double / Protector: CAMPER Double",
+            "width_min_cm": 133,
+            "width_max_cm": 143,
+            "length_min_cm": 186,
+            "length_max_cm": 193,
+            "corner_type": "square"
+          }
+        },
+        "size_VkB4VT": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: CAMPER Double",
+            "width_min_cm": 144,
+            "width_max_cm": 144,
+            "length_min_cm": 186,
+            "length_max_cm": 193,
+            "corner_type": "square"
+          }
+        },
+        "size_TiTNqU": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: East-West 1 / Protector: East-West 1",
+            "width_min_cm": 130,
+            "width_max_cm": 147,
+            "length_min_cm": 198,
+            "length_max_cm": 205,
+            "corner_type": "square"
+          }
+        },
+        "size_4mw9Pm": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: East-West 1",
+            "width_min_cm": 130,
+            "width_max_cm": 147,
+            "length_min_cm": 206,
+            "length_max_cm": 208,
+            "corner_type": "square"
+          }
+        },
+        "size_PPY3fn": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: CAMPER SINGLE 1 / Protector: CAMPER SINGLE 1",
+            "width_min_cm": 117,
+            "width_max_cm": 125,
+            "length_min_cm": 198,
+            "length_max_cm": 204,
+            "corner_type": "square"
+          }
+        },
+        "size_eNNaDL": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: CAMPER SINGLE 1",
+            "width_min_cm": 117,
+            "width_max_cm": 125,
+            "length_min_cm": 205,
+            "length_max_cm": 206,
+            "corner_type": "square"
+          }
+        },
+        "size_Ub8mhh": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: CAMPER SINGLE 2 / Protector: CAMPER SINGLE 2",
+            "width_min_cm": 77,
+            "width_max_cm": 85,
+            "length_min_cm": 188,
+            "length_max_cm": 194,
+            "corner_type": "square"
+          }
+        },
+        "size_UhJf3z": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: CAMPER SINGLE 2 / Protector: CAMPER SINGLE 2",
+            "width_min_cm": 77,
+            "width_max_cm": 85,
+            "length_min_cm": 195,
+            "length_max_cm": 196,
+            "corner_type": "square"
+          }
+        },
+        "size_MUr7cT": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: BUNK 1 / Protector: BUNK 1 / Sheets: MW Bunk COMBO",
+            "width_min_cm": 65,
+            "width_max_cm": 71,
+            "length_min_cm": 175,
+            "length_max_cm": 181,
+            "corner_type": "square"
+          }
+        },
+        "size_YhkyW4": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: BUNK 1 / Protector: BUNK 2 / Sheets: MW Bunk COMBO",
+            "width_min_cm": 65,
+            "width_max_cm": 71,
+            "length_min_cm": 182,
+            "length_max_cm": 192,
+            "corner_type": "square"
+          }
+        },
+        "size_KM78Vf": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: BUNK 2 / Protector: BUNK 2 / Sheets: MW Bunk COMBO",
+            "width_min_cm": 72,
+            "width_max_cm": 72,
+            "length_min_cm": 189,
+            "length_max_cm": 194,
+            "corner_type": "square"
+          }
+        },
+        "size_4aqGdX": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: BUNK 2 / Sheets: MW Bunk COMBO",
+            "width_min_cm": 72,
+            "width_max_cm": 72,
+            "length_min_cm": 195,
+            "length_max_cm": 210,
+            "corner_type": "square"
+          }
+        },
+        "size_kthfwj": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: BUNK 3 / Protector: BUNK 3 / Sheets: MW Bunk COMBO",
+            "width_min_cm": 68,
+            "width_max_cm": 71,
+            "length_min_cm": 213,
+            "length_max_cm": 219,
+            "corner_type": "square"
+          }
+        },
+        "size_6xRjci": {
+          "type": "size",
+          "settings": {
+            "label": "Topper: BUNK 3 / Sheets: MW Bunk COMBO",
+            "width_min_cm": 68,
+            "width_max_cm": 71,
+            "length_min_cm": 220,
+            "length_max_cm": 220,
+            "corner_type": "square"
+          }
+        }
+      },
+      "block_order": [
+        "size_ifdeap",
+        "size_f8WWMP",
+        "size_dnfNzx",
+        "size_nyhQ8F",
+        "size_ThHeWp",
+        "size_bWtTjq",
+        "size_CiJKNN",
+        "size_jppayH",
+        "size_F3T4Q8",
+        "size_XAt9HA",
+        "size_gCATNj",
+        "size_A8FykL",
+        "size_ctfxNi",
+        "size_8AJqme",
+        "size_y34AG6",
+        "size_TMYWBX",
+        "size_Gz8ELL",
+        "size_yMTn4w",
+        "size_pU7x7U",
+        "size_Eh8pUC",
+        "size_Hni6pj",
+        "size_Q6i9zW",
+        "size_KBWVnT",
+        "size_VzGkXG",
+        "size_kxGdG9",
+        "size_VrnDpw",
+        "size_HJifxD",
+        "size_jxWtKz",
+        "size_P83yqB",
+        "size_hb46Bp",
+        "size_zPTDHn",
+        "size_Ycyj73",
+        "size_yckDtr",
+        "size_k4NMci",
+        "size_FFMiby",
+        "size_TWWRri",
+        "size_wDyWjp",
+        "size_VkB4VT",
+        "size_TiTNqU",
+        "size_4mw9Pm",
+        "size_PPY3fn",
+        "size_eNNaDL",
+        "size_Ub8mhh",
+        "size_UhJf3z",
+        "size_MUr7cT",
+        "size_YhkyW4",
+        "size_KM78Vf",
+        "size_4aqGdX",
+        "size_kthfwj",
+        "size_6xRjci"
+      ],
+      "name": "Size calculator",
+      "settings": {
+        "eyebrow": "Find your size",
+        "heading": "Oh yes, size matters",
+        "subheading": "Measure the width across the centre of your mattress and the length down the centre, in centimetres, then enter your measurements below.\n\nDoes your mattress have a bolster? If yes, please include the bolster when measuring the total mattress length.",
+        "lifestyle_image": "shopify://shop_images/DreamerRv-33_dd9c8021-9146-43e3-aa8e-b69855f359c4.jpg",
+        "find_button_label": "Find my size",
+        "help_button_label": "Need help? Contact us",
+        "no_match_link": "/pages/contact",
+        "bg_color": "#f9f2e8",
+        "panel_color": "#f1ead9",
+        "text_color": "#424345",
+        "muted_color": "#8a7f6e",
+        "border_color": "#dcd0bc",
+        "shape_color": "#44c5c3",
+        "find_button_color": "#44c5c3",
+        "find_button_text_color": "#424345",
+        "shop_button_color": "#bde9d8",
+        "shop_button_text_color": "#424345",
+        "find_btn_shop_mode_text_color": "#ffffff"
+      }
+    },
+    "1660291177d9f45101": {
+      "type": "section-collection-list",
+      "custom_css": [
+        "{padding-top: 60px;}"
+      ],
+      "name": "Shop caravan bedding",
+      "settings": {
+        "collections": [
+          "wanderluxe-caravan-mattress-toppers",
+          "caravan-mattress-protectors",
+          "sheets"
+        ],
+        "custom_image_ratio": 100,
+        "show_in_circle": false,
+        "fill_images": true,
+        "layout": "grid",
+        "number_of_items": 3,
+        "text_alignment": "center",
+        "title": "<h2>Shop Caravan Bedding</h2>",
+        "description": "<p>Everything you need for better rest on the go.</p>",
+        "title_underline_style": "none",
+        "show_link": false,
+        "link_text": "",
+        "link_url": "",
+        "button_style": "primary plain",
+        "show_collection_titles": true,
+        "collection_title_position": "start",
+        "collection_title_size": "p",
+        "mobile_layout": "slider",
+        "spacing_desktop": 10,
+        "spacing_mobile": 30,
+        "fix_zindex": 0
+      }
+    },
+    "dreamer_rv_promo_bar_3MpMNQ": {
+      "type": "dreamer-rv-promo-bar",
+      "blocks": {
+        "feature_aPPWgC": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Daily_Dispatch.svg",
+            "label": "Daily dispatch"
+          }
+        },
+        "feature_iz9nJp": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Fast_Delivery.svg",
+            "label": "Fast delivery"
+          }
+        },
+        "feature_VqqgWT": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Aussie_Owned.svg",
+            "label": "Aussie owned"
+          }
+        },
+        "feature_wLwkzi": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/2_year_warranty.svg",
+            "label": "2 year warranty"
+          }
+        }
+      },
+      "block_order": [
+        "feature_aPPWgC",
+        "feature_iz9nJp",
+        "feature_VqqgWT",
+        "feature_wLwkzi"
+      ],
+      "custom_css": [
+        "{padding-top: 40px;}"
+      ],
+      "name": "Rewriting the rules for caravan bedding",
+      "settings": {
+        "heading": "Rewriting the rules for caravan bedding",
+        "background_color": "#fffbf5",
+        "text_color": "#2b2621",
+        "padding_top": 80,
+        "padding_bottom": 70
+      }
+    },
+    "section_spacer_MibJrr": {
+      "type": "section-spacer",
+      "name": "t:sections.spacer.presets.name",
+      "settings": {
+        "height": 30,
+        "height_mobile": 20
+      }
+    },
+    "dreamer_rv_video_banner_mbUWzB": {
+      "type": "dreamer-rv-video-banner",
+      "name": "Dreamer RV Video Banner",
+      "settings": {
+        "video": "shopify://files/videos/stop motion landscape dreamer.mp4",
+        "video_url": "",
+        "video_mobile": "shopify://files/videos/stop motion portrait dreamer.mp4",
+        "video_url_mobile": "",
+        "video_shape": "banner",
+        "focal_y_desktop": 70,
+        "focal_y_mobile": 20,
+        "show_sound_toggle": true,
+        "sound_on_label": "Tap for sound",
+        "sound_off_label": "Mute",
+        "restart_on_sound": true,
+        "text_alignment": "center",
+        "title": "<h2>Shop Our Most Popular Bundles</h2>",
+        "title_underline_style": "none",
+        "text": "<p>We’ve put together some of our most popular bundles, featuring mattress toppers, protectors and sheets, to make choosing easy!</p>",
+        "show_link": true,
+        "link_text": "Shop bundles",
+        "link_url": "shopify://collections/bundles-1",
+        "button_style": "primary plain",
+        "spacing_desktop": 50,
+        "spacing_mobile": 30,
+        "fix_zindex": 0
+      }
+    },
+    "section_spacer_wygRTm": {
+      "type": "section-spacer",
+      "name": "t:sections.spacer.presets.name",
+      "settings": {
+        "height": 30,
+        "height_mobile": 20
+      }
+    },
+    "dreamer_rv_best_sellers_LtBmkk": {
+      "type": "dreamer-rv-best-sellers",
+      "disabled": true,
+      "name": "Dreamer RV Best Sellers",
+      "settings": {
+        "heading": "Best sellers",
+        "subheading": "Top customer picks to take with you on the open road.",
+        "collection": "home-page-collection",
+        "row_count": "2",
+        "show_ratings": true,
+        "background_color": "#fffbf5",
+        "text_color": "#424345",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "dreamer_rv_feature_cards_CEbg8d": {
+      "type": "dreamer-rv-feature-cards",
+      "blocks": {
+        "card_3iHaFy": {
+          "type": "card",
+          "settings": {
+            "style": "image",
+            "image": "shopify://shop_images/DreamerRv-51.jpg",
+            "background_color": "#cfe8de",
+            "text_color": "#f9f2e8",
+            "heading": "Light enough to handle solo",
+            "text": "<p>At 7.5kg, the Wanderluxe™ Caravan Queen adds luxurious comfort without weighing down your caravan. Easy to unpack, position and move whenever needed.</p>"
+          }
+        },
+        "card_gRCjM8": {
+          "type": "card",
+          "settings": {
+            "style": "image",
+            "background_color": "#cfe8de",
+            "text_color": "",
+            "heading": "Say goodbye to sore hips",
+            "text": "<p>Memory foam moulds to your pressure points, keeping you well rested through longer drives, and springs back the moment you're up.</p>"
+          }
+        },
+        "card_KNeBp6": {
+          "type": "card",
+          "settings": {
+            "style": "image",
+            "image": "shopify://shop_images/DreamerRv-6.jpg",
+            "background_color": "#cfe8de",
+            "text_color": "#f9f2e8",
+            "heading": "Easy to keep clean",
+            "text": "<p>Cover comes off and goes straight in the wash; a muddy dog or sandy feet doesn't mean a new topper.</p>"
+          }
+        },
+        "card_iAqra8": {
+          "type": "card",
+          "settings": {
+            "style": "image",
+            "background_color": "#cfe8de",
+            "text_color": "",
+            "heading": "Corners cut for the perfect fit",
+            "text": "<p>Rounded corners cut to the exact profile of your caravan mattress, sitting into the edges, no pesky overhang.</p>"
+          }
+        },
+        "card_xhD9Hz": {
+          "type": "card",
+          "disabled": true,
+          "settings": {
+            "style": "image",
+            "background_color": "#cfe8de",
+            "text_color": "",
+            "heading": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_3iHaFy",
+        "card_gRCjM8",
+        "card_KNeBp6",
+        "card_iAqra8",
+        "card_xhD9Hz"
+      ],
+      "custom_css": [
+        ".drv-feature-cards {padding-top: 40px;}"
+      ],
+      "name": "Sized for your set up",
+      "settings": {
+        "heading": "Caravan bedding sized for your setup",
+        "subheading": "",
+        "background_color": "#fffbf5",
+        "text_color": "#424345",
+        "arrow_color": "#f4a48b",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "dreamer_rv_impact_split_X8fM6a": {
+      "type": "dreamer-rv-impact-split",
+      "blocks": {
+        "feature_ATTWwA": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Vector.svg",
+            "text": "$5 donated from every Wanderluxe Caravan Queen sold"
+          }
+        },
+        "feature_qHEbRM": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Group_2.svg",
+            "text": "Supporting world-leading marine science and resilience work"
+          }
+        },
+        "feature_xG37bD": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Dreamer_RV_Icons_Screen_Australian_Family_Owned_Sand_RGB_4.svg",
+            "text": "Australian-owned brand giving back to Australian waters"
+          }
+        }
+      },
+      "block_order": [
+        "feature_ATTWwA",
+        "feature_qHEbRM",
+        "feature_xG37bD"
+      ],
+      "custom_css": [
+        "{padding-top: 40px;}"
+      ],
+      "name": "For deeper sleep, and a healthier reef",
+      "settings": {
+        "image": "shopify://shop_images/Placeholder_Image.png",
+        "image_position": "left",
+        "heading": "For deeper sleep, and a healthier reef",
+        "text": "",
+        "show_primary_button": true,
+        "primary_button_label": "Donate",
+        "primary_button_link": "https://give.barrierreef.org/repair-a-reef?utm_source=organic&utm_medium=896&utm_campaign=redirect?utm_source=organic&utm_medium=879&utm_campaign=youcanhelp",
+        "primary_button_bg": "#44c5c3",
+        "primary_button_text": "#424345",
+        "show_secondary_button": true,
+        "secondary_button_label": "Learn more",
+        "secondary_button_link": "shopify://pages/our-story",
+        "secondary_button_bg": "#bde9d8",
+        "secondary_button_text": "#424345",
+        "background_color": "#f9f2e8",
+        "text_color": "#424345",
+        "min_height": 612,
+        "padding_top": 80,
+        "padding_bottom": 158
+      }
+    },
+    "section_spacer_aBXCdk": {
+      "type": "section-spacer",
+      "name": "t:sections.spacer.presets.name",
+      "settings": {
+        "height": 20,
+        "height_mobile": 20
+      }
+    },
+    "dreamer_rv_hero_fullbleed_JaHf79": {
+      "type": "dreamer-rv-hero-fullbleed",
+      "name": "DRV Hero (Full Bleed)",
+      "settings": {
+        "image": "shopify://shop_images/jess-geary-CurBi2Ap_C8-unsplash-scaled.jpg",
+        "icon": "shopify://shop_images/Dreamer_RV_icon_7b82a39d-af29-47e5-b764-c631dbb4f554.svg",
+        "heading": "Come say g'day",
+        "subheading": "Find our team at upcoming caravan shows and expos.",
+        "height": 680,
+        "height_mobile": 560,
+        "overlay_opacity": 35,
+        "overlay_opacity_top": 5,
+        "heading_size_mobile": 32,
+        "text_color": "#ffffff",
+        "primary_button_label": "See where we'll be",
+        "primary_button_url": "shopify://pages/exhibitions-shows",
+        "primary_button_color": "#36b2af",
+        "primary_button_text_color": "#424345",
+        "secondary_button_label": "",
+        "secondary_button_url": "",
+        "secondary_button_color": "#f1ead9",
+        "secondary_button_text_color": "#2b2621",
+        "badge_bg_color": "#ffffff",
+        "badge_text_color": "#2b2621"
+      }
+    },
+    "section_spacer_yxdL8c": {
+      "type": "section-spacer",
+      "name": "t:sections.spacer.presets.name",
+      "settings": {
+        "height": 30,
+        "height_mobile": 20
+      }
+    },
+    "section_faq_wxrwia": {
+      "type": "section-faq",
+      "blocks": {
+        "text_kRW3px": {
+          "type": "text",
+          "settings": {
+            "faq_question": "How do I work out the right size for my setup?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Caravan beds can be a little tricky — unlike domestic beds, there’s no standard sizing across caravan makes and models. That’s why we always recommend measuring your mattress rather than relying on whether it’s called a Queen, Double or Single.</p><p>Measure the <strong>width and length of your mattress in millimetres</strong>, including any head-end bolster in the total length, and take note of the corner profile at the foot end of your mattress.</p><p>You can then enter your measurements into our <a href=\"/pages/find-your-fit\" title=\"/pages/find-your-fit\"><span style=\"text-decoration:underline\"><strong>Sizing</strong></span><span style=\"text-decoration:underline\"> </span><span style=\"text-decoration:underline\"><strong>Calculator</strong></span></a> to find your best Wanderluxe™ fit.</p><p>Still unsure? Send your measurements through to our Australian Customer Care team via our <a href=\"/pages/contact\" title=\"/pages/contact\"><strong>Contact Us</strong></a> form and we’ll be happy to help.micals linked to cancer or reproductive harm.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_EPVDAc": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Do you offer custom sizing?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>At this stage, we don’t manufacture one-off custom sizes. Instead, we’ve developed the Wanderluxe™ range in a wide variety of shapes, sizes and corner profiles to suit many of the caravan bed configurations found across Australia.</p><p>Your topper also doesn’t need to be an exact millimetre-for-millimetre match to your mattress. In many cases, a slightly smaller topper is preferable to one that overhangs your mattress or interferes with surrounding cabinetry.</p><p>Rounded-corner toppers can also work well on square and many cut-corner mattresses.</p><p>If your mattress is angled, varies in width or has an unusual shape, enter your measurements into our <a href=\"/pages/find-your-fit\" title=\"/pages/find-your-fit\"><span style=\"text-decoration:underline\"><strong>Sizing Calculator</strong></span></a> or contact our Customer Care team and we’ll help you find the best fit.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_4xEzb8": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What does it feel like, and where can I try one?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>The Wanderluxe™ Mattress Topper has a <strong>medium-soft feel</strong>, adding a plush layer of cushioning while still gently supporting and conforming to your body.</p><p>Made from <strong>50mm gel-infused memory foam</strong>, it is designed to soften the feel of a firm caravan mattress, help relieve pressure and create a more comfortable sleeping surface without feeling overly soft or unstable.</p><p>If you’d like to see and feel one in person before buying, you can visit us at selected caravan and camping shows throughout Australia or check our Stockists page to find a participating retailer near you.</p><p>For upcoming events, head on over to our <a href=\"/pages/exhibitions-shows\" title=\"Exhibitions & Shows\"><strong>Exhibitions</strong></a> page.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_BCc6AN": {
+          "type": "text",
+          "settings": {
+            "faq_question": "Can I have my order delivered while I’m on the road?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Absolutely! We know many of our customers are travelling, so we use Australia Post for all Dreamer RV deliveries, giving you plenty of flexibility while you’re on the road.</p><p>If you don’t have a fixed delivery address, <a href=\"https://auspost.com.au/personal/receiving/parcel-deliveries/parcel-collect\"><span style=\"text-decoration:underline\"><strong>Australia Post Parcel Collect</strong></span></a> is a great option. Simply choose a participating Post Office through your MyPost account and have your order sent there ready for collection.</p><p>We recommend choosing a location far enough ahead in your itinerary to allow time for dispatch and delivery. Just make sure you’ll be in the area long enough to collect your parcel once it arrives.</p><p>In-stock orders are generally dispatched from our Sydney warehouse within <strong>1–2 business days</strong>, with dispatch extending to <strong>3–4 business days during peak periods</strong>. You can also enter your postcode at checkout to view an estimated delivery timeframe before placing your order.</p><p>For full details, head on over to our <a href=\"/policies/shipping-policy\" title=\"Shipping Policy\"><span style=\"text-decoration:underline\"><strong>Shipping Information</strong></span></a> page.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_FCtakw": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "faq_question": "Can I have one delivered while I’m on the road?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>Absolutely! We know many of our customers are travelling, so we use Australia Post for all Dreamer RV deliveries, giving you plenty of options while you’re on the road. If you don’t have a fixed delivery address, Australia Post Parcel Collect can be a great option. Simply choose a participating Post Office or Parcel Locker through your MyPost account and have your order delivered there ready for collection. Just make sure you’ll be in the area long enough for your parcel to arrive before choosing your collection location.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        },
+        "text_DVfYxd": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "faq_question": "Do you offer custom sizing?",
+            "icon": "none",
+            "header_image_width": 25,
+            "faq_answer": "<p>At this stage, we don’t manufacture one-off custom sizes. Instead, we’ve developed our Wanderluxe™ range in a wide variety of shapes and sizes to suit many of the caravan bed configurations found across Australia. Your topper also doesn’t need to be an exact millimetre-for-millimetre match to your mattress to provide a great fit. In many cases, a slightly smaller topper is preferable to one that overhangs your mattress or interferes with surrounding cabinetry. Pop your measurements into our Sizing Calculator, or send them to our Customer Care team if you’d like a hand finding the closest fit.</p>",
+            "page": "",
+            "image_width": 465,
+            "liquid": "",
+            "html": "",
+            "show_contact_form": false
+          }
+        }
+      },
+      "block_order": [
+        "text_kRW3px",
+        "text_EPVDAc",
+        "text_4xEzb8",
+        "text_BCc6AN",
+        "text_FCtakw",
+        "text_DVfYxd"
+      ],
+      "custom_css": [
+        "{padding-top: 40px;}",
+        "@media (max-width: 760px) {.accordion-a details::before {left: var(--rpp); right: var(--rpp); }}"
+      ],
+      "name": "Frequently Asked Questions",
+      "settings": {
+        "alignment": "center",
+        "compact": true,
+        "eyebrow": "",
+        "title": "<h2>Frequently asked questions</h2>",
+        "body_text": "",
+        "title_underline_style": "none",
+        "show_button": true,
+        "button_label": "Read more",
+        "button_link": "shopify://pages/frequently-asked-questions",
+        "button_bg": "#44c5c3",
+        "button_text_color": "#424345",
+        "spacing_desktop": 50,
+        "spacing_mobile": 10,
+        "fix_zindex": 0
+      }
+    },
+    "section_spacer_CQ6BJA": {
+      "type": "section-spacer",
+      "name": "t:sections.spacer.presets.name",
+      "settings": {
+        "height": 20,
+        "height_mobile": 20
+      }
+    },
+    "dreamer_rv_image_frame_i4TbTg": {
+      "type": "dreamer-rv-image-frame",
+      "custom_css": [
+        "{padding-top: 40px;}"
+      ],
+      "name": "Image with colour frame",
+      "settings": {
+        "image": "shopify://shop_images/DreamerRv-74.jpg",
+        "image_position": "right",
+        "heading": "Sleeping on the go, but make it comfy",
+        "text": "<p>Thousands of Aussies have found the perfect size for their van (and their home too). Now it's your turn.</p>",
+        "show_button": true,
+        "button_label": "Shop all",
+        "button_link": "",
+        "button_bg": "#44c5c3",
+        "button_text_color": "#424345",
+        "show_button_2": true,
+        "button_2_label": "Find Your Size",
+        "button_2_link": "shopify://pages/find-your-fit",
+        "button_2_bg": "#bde9d8",
+        "button_2_text_color": "#424345",
+        "background_color": "#fffbf5",
+        "text_color": "#424345",
+        "frame_color": "#bde9d8",
+        "min_height": 756,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "179211379488c24417": {
+      "type": "_blocks",
+      "blocks": {
+        "instafeed_app_block_rRAjMf": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "Give us a follow, would you?",
+            "title_color": "#424345",
+            "title_size_v2": 0,
+            "alignment": "left",
+            "instafeed_margin_top": 25,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": true,
+            "link_alignment": "left",
+            "link_color": "#424345",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_rRAjMf"
+      ],
+      "settings": {
+        "color_palette": "",
+        "overlay_opacity": 100,
+        "width": "wide",
+        "padding_top": 70,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "padding_left_mobile": 0,
+        "padding_right_mobile": 0,
+        "spacing_desktop": 50,
+        "spacing_mobile": 30,
+        "fix_zindex": 0
+      }
+    },
+    "dreamer_rv_footer_links_THaHRF": {
+      "type": "dreamer-rv-footer-links",
+      "blocks": {
+        "column_KEcLaM": {
+          "type": "column",
+          "settings": {
+            "heading": "Shop",
+            "link_1_label": "Mattress Toppers",
+            "link_1_url": "shopify://collections/wanderluxe-caravan-mattress-toppers",
+            "link_2_label": "Mattress Protectors",
+            "link_2_url": "shopify://collections/caravan-mattress-protectors",
+            "link_3_label": "Sheets",
+            "link_3_url": "shopify://collections/sheets",
+            "link_4_label": "Home Comfort Range",
+            "link_4_url": "shopify://collections/home-comfort-range",
+            "link_5_label": "Accessories",
+            "link_5_url": "shopify://collections/accessories",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        },
+        "column_eaAw6z": {
+          "type": "column",
+          "settings": {
+            "heading": "Explore",
+            "link_1_label": "Our Story",
+            "link_1_url": "shopify://pages/our-story",
+            "link_2_label": "Blog",
+            "link_2_url": "shopify://blogs/news/dummy-blog-post",
+            "link_3_label": "Exhibitions & Shows",
+            "link_3_url": "shopify://pages/exhibitions-shows",
+            "link_4_label": "Wholesale",
+            "link_4_url": "shopify://pages/wholesale",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        },
+        "column_JJg9JX": {
+          "type": "column",
+          "settings": {
+            "heading": "Help and info",
+            "link_1_label": "Find Your Fit",
+            "link_1_url": "/pages/find-your-fit",
+            "link_2_label": "FAQS",
+            "link_2_url": "shopify://pages/frequently-asked-questions",
+            "link_3_label": "Shipping Info",
+            "link_3_url": "shopify://policies/shipping-policy",
+            "link_4_label": "Refund Policy",
+            "link_4_url": "shopify://policies/refund-policy",
+            "link_5_label": "Warranty",
+            "link_5_url": "shopify://pages/warranty",
+            "link_6_label": "Wash & Care Guide",
+            "link_6_url": "shopify://pages/wash-care-guide"
+          }
+        },
+        "column_mXiRx7": {
+          "type": "column",
+          "settings": {
+            "heading": "Wholesale",
+            "link_1_label": "About Wholesale",
+            "link_1_url": "shopify://pages/wholesale",
+            "link_2_label": "",
+            "link_2_url": "",
+            "link_3_label": "",
+            "link_3_url": "",
+            "link_4_label": "",
+            "link_4_url": "",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        },
+        "column_KiGxga": {
+          "type": "column",
+          "settings": {
+            "heading": "Legal",
+            "link_1_label": "Privacy Policy",
+            "link_1_url": "shopify://policies/privacy-policy",
+            "link_2_label": "Terms of Use",
+            "link_2_url": "#",
+            "link_3_label": "",
+            "link_3_url": "",
+            "link_4_label": "",
+            "link_4_url": "",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_KEcLaM",
+        "column_eaAw6z",
+        "column_JJg9JX",
+        "column_mXiRx7",
+        "column_KiGxga"
+      ],
+      "custom_css": [
+        "@media (max-width: 749px) {.drv-footer-links__inner {padding: 0; }}"
+      ],
+      "name": "Footer links",
+      "settings": {
+        "background_color": "#f9f2e8",
+        "text_color": "#424345",
+        "padding_top": 60,
+        "padding_bottom": 40
+      }
+    },
+    "dreamer_rv_footer_panel_nTkTyK": {
+      "type": "dreamer-rv-footer-panel",
+      "name": "Footer panel",
+      "settings": {
+        "icon": "shopify://shop_images/CROPPED_Dreamer_RV_Logo_Screen_Horizontal_Tagline_Night_Sky_RGB.svg",
+        "acknowledgement": "<p>In the spirit of reconciliation, Dreamer RV acknowledges the Traditional Custodians of Country throughout Australia and their connections to land, sea and community. We pay our respects to Elders past, present and emerging and extend that respect to all Aboriginal and Torres Strait Islander people today.</p>",
+        "show_newsletter": true,
+        "newsletter_heading": "Subscribe",
+        "newsletter_text": "Join our newsletter for new product drops and travel inspiration from the road.",
+        "newsletter_button_label": "Subscribe",
+        "newsletter_consent": "By subscribing you agree to our privacy policy and consent to receive updates from Dreamer RV.",
+        "background_color": "#f9f2e8",
+        "text_color": "#2b2621",
+        "panel_background_color": "#fffbf5",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "dreamer_rv_footer_bar_RT7hwr": {
+      "type": "dreamer-rv-footer-bar",
+      "custom_css": [
+        "@media (max-width: 749px) {.drv-footer-bar {display: none; }}"
+      ],
+      "name": "Footer bar",
+      "settings": {
+        "copyright_text": "© 2026 Dreamer RV. All rights reserved.",
+        "credit_text": "Website by Sparo Studios",
+        "credit_link": "",
+        "background_color": "#bde9d8",
+        "text_color": "#2b2621"
+      }
+    },
+    "section_spacer_fPxW6V": {
+      "type": "section-spacer",
+      "name": "t:sections.spacer.presets.name",
+      "settings": {
+        "height": 40,
+        "height_mobile": 20
+      }
+    }
+  },
+  "order": [
+    "dreamer_rv_hero_TM7rCe",
+    "ac7ecfc3-e994-445b-9837-e919f914b79d",
+    "dreamer_rv_size_chart_rTYgka",
+    "1660291177d9f45101",
+    "dreamer_rv_promo_bar_3MpMNQ",
+    "section_spacer_MibJrr",
+    "dreamer_rv_video_banner_mbUWzB",
+    "section_spacer_wygRTm",
+    "dreamer_rv_best_sellers_LtBmkk",
+    "dreamer_rv_feature_cards_CEbg8d",
+    "dreamer_rv_impact_split_X8fM6a",
+    "section_spacer_aBXCdk",
+    "dreamer_rv_hero_fullbleed_JaHf79",
+    "section_spacer_yxdL8c",
+    "section_faq_wxrwia",
+    "section_spacer_CQ6BJA",
+    "dreamer_rv_image_frame_i4TbTg",
+    "179211379488c24417",
+    "dreamer_rv_footer_links_THaHRF",
+    "dreamer_rv_footer_panel_nTkTyK",
+    "dreamer_rv_footer_bar_RT7hwr",
+    "section_spacer_fPxW6V"
+  ]
+}

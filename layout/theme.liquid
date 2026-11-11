@@ -1,0 +1,259 @@
+<!doctype html>
+{%- assign rtl_languages = 'ae,ar,arc,bcc,bqi,ckb,dv,fa,glk,ha,he,kwh,ks,ku,mzn,nqo,pnb,ps,sd,ug,ur,yi' | split: ',' %}
+<html
+  lang="{{ request.locale.iso_code }}"
+  data-theme="xclusive"
+  dir="{% if rtl_languages contains localization.language.iso_code %}rtl{% else %}ltr{% endif %}"
+  class="
+    no-js
+    {% if request.design_mode %} theme-editor{% endif %}
+    {% if settings.button_style == 'inv' %} hover-inv{% endif %}
+    {% if settings.button_wide_mobile %} btn-mobile-wide{% endif %}
+    {% if settings.enable_shop_the_look_mode %} shop-the-look{% endif %}
+  "
+>
+  <head>
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-N98HGJ4L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>
+      {{ page_title }}
+      {% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+    </title>
+    {%- if page_description -%}<meta name="description" content="{{ page_description | escape }}">{%- endif -%}
+    <meta name="theme-color" content="{{ settings.default_color_scheme.settings.accent }}">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="true">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover, shrink-to-fit=no"
+    >
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-config" content="{{ 'browserconfig.xml' | asset_url }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+    {% unless settings.primary_font.system? and settings.secondary_font.system? -%}
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    {%- endunless -%}
+    {{ 'xclusive.woff2' | asset_url | preload_tag: as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }}
+    {%- if settings.custom_primary_font_snippet -%}{{ settings.custom_primary_font_snippet }}{%- endif -%}
+    {%- if settings.custom_secondary_font_snippet -%}{{ settings.custom_secondary_font_snippet }}{%- endif -%}
+
+    {%- comment -%} Dreamer RV - brand fonts + sitewide typography {%- endcomment -%}
+    {% render 'dreamer-rv-fonts' %}
+    <link media="screen" rel="stylesheet" href="{{ 'dreamer-rv-typography.css' | asset_url }}" id="dreamer-rv-typography-css">
+
+    <link media="screen" rel="stylesheet" href="{{ 'screen.css' | asset_url }}" id="core-css">
+    <link media="screen" rel="stylesheet" href="{{ 'theme-xclusive.css' | asset_url }}" id="xclusive-css">
+    {{ 'dreamer-rv-header-pill.css' | asset_url | stylesheet_tag }}
+
+    <script src="{{ 'dreamer-rv-header-pill.js' | asset_url }}" defer="defer"></script>
+    <noscript><link rel="stylesheet" href="{{ 'async-menu.css' | asset_url }}"></noscript>
+    
+    {%- if template.name == 'blog' or template.name == 'article' -%}
+      <link media="screen" rel="stylesheet" href="{{ 'page-blog.css' | asset_url }}" id="blog-css">
+    {%- endif -%}
+    {%- if template.name == 'cart' -%}
+      <link media="screen" rel="stylesheet" href="{{ 'page-cart.css' | asset_url }}" id="cart-css">
+    {%- endif -%}
+    {%- if template.name == 'collection' or template.name == 'search' -%}
+      <link media="screen" rel="stylesheet" href="{{ 'page-collection.css' | asset_url }}" id="collection-css">
+    {%- endif -%}
+    {%- if template.name == '404' -%}
+      <link media="screen" rel="stylesheet" href="{{ 'page-misc.css' | asset_url }}" id="misc-css">
+    {%- endif -%}
+    {%- if template.name == 'product' -%}
+      <link media="screen" rel="stylesheet" href="{{ 'page-product.css' | asset_url }}" id="product-css">
+    {%- endif -%}
+    {%- if request.design_mode -%}
+      <link media="screen" rel="stylesheet" href="{{ 'async-menu.css' | asset_url }}" id="css-menu">
+    {%- endif -%}
+    <link media="screen" rel="stylesheet" href="{{ 'screen-settings.css' | asset_url }}" id="settings-css">
+    {%- if settings.favicon -%}
+      {%- assign favicon_url = settings.favicon | image_url: width: 96, height: 96 -%}
+      {%- assign favicon_no_query = favicon_url | split: '?' | first -%}
+      {%- assign favicon_ext = favicon_no_query | split: '.' | last | downcase -%}
+
+      {%- if favicon_ext == 'svg' -%}
+        <link rel="icon" href="{{ favicon_url }}" type="image/svg+xml" sizes="any">
+      {%- elsif favicon_ext == 'png' -%}
+        {%- if settings.favicon.width >= 96 and settings.favicon.height >= 96 -%}
+          <link rel="icon" href="{{ favicon_url }}" type="image/png" sizes="96x96">
+        {%- else -%}
+          <link rel="icon" href="{{ favicon_url }}" type="image/png">
+        {%- endif -%}
+      {%- else -%}
+        <link rel="icon" href="{{ favicon_url }}">
+      {%- endif -%}
+
+      {%- if favicon_ext == 'svg' -%}
+        <link rel="mask-icon" href="{{ favicon_url }}" color="#333333">
+      {%- endif -%}
+      <link rel="apple-touch-icon" href="{{ settings.favicon | image_url: width: 180, height: 180 }}">
+    {%- endif -%}
+    <script>
+      document.documentElement.classList.remove('no-js');
+      document.documentElement.classList.add('js');
+    </script>
+    {% render 'social-meta-tags' %}
+    {% render 'standard-storefront-actions' %}
+    {% render 'standard-storefront-events' %}
+    {{ content_for_header }}
+    {{ settings.custom_script_for_head }}
+    {% render 'color-schemes-style' %}
+    {% render 'theme-settings-style' %}
+  </head>
+  <body class="template-{{ template.name | handle }}">
+    <div id="root">
+      {%- render 'accessible-nav' -%}
+      {%- sections 'header-group' -%}
+      <main
+        id="content"
+        {% if template.name == '404' %}
+          class="fullheight"
+        {% endif %}
+      >
+        {{ content_for_layout }}
+        {%- sections 'footer-group' -%}
+      </main>
+      {%- liquid
+        if template.name == 'product'
+          section 'sticky-add-to-cart'
+        endif
+        render 'side-cart-container'
+        render 'quickshop-container'
+        render 'shop-the-look-container'
+        render 'pickup-availability-container'
+        if settings.show_newsletterpopup
+          render 'newsletter-popup'
+        endif
+        if settings.show_age_verify_popup
+          render 'age-verify-popup'
+        endif
+        if settings.back_to_top_button
+          render 'back-to-top-button'
+        endif
+        render 'upsell-popup'
+      -%}
+      <div class="panel-1"></div>
+      <div class="panel-2"></div>
+    </div>
+    {% render 'global-variables' %}
+    {%- if rtl_languages contains localization.language.iso_code -%}
+      <link media="screen" rel="stylesheet" href="{{ 'rtl.css' | asset_url }}">
+    {%- endif -%}
+    {% render 'color-swatches' %}
+    <script defer src="{{ 'scripts.js' | asset_url }}"></script>
+    <script defer src="{{ 'custom.js' | asset_url }}"></script>
+    {%- if template.name == 'collection' or template.name == 'search' -%}
+      <script defer src="{{ 'page-collection.js' | asset_url }}"></script>
+    {%- endif -%}
+    {%- if request.design_mode -%}<script defer src="{{ 'backend-listeners.js' | asset_url }}"></script>{%- endif -%}
+    {{ settings.custom_script_for_body }}
+    {% render 'theme-beacon' %}
+
+<style>
+#insta-feed h2 {
+  font-size: 24px !important;
+}
+</style>
+
+<style>
+  #cart header h2 {
+    font-size: 28px;
+  }
+  #cart .cart-upsell-heading h4 {
+    font-size: 18px;
+  }
+</style>
+
+{%- if collection and collection.title contains 'Topper:' or collection.title contains 'Sheets:' -%}
+<style>
+  article[id*="section_collection_button_list"] h2 {
+    display: none;
+  }
+</style>
+{%- endif -%}
+
+<script>
+  document.addEventListener('click', function (e) {
+    var toggle = e.target.closest('li.sub.currency.has-form a.toggle');
+    if (!toggle) return;
+    var li = toggle.closest('li.sub.currency.has-form');
+    var form = li.querySelector('.localization-form');
+    if (!form) return;
+    requestAnimationFrame(function () {
+      var rect = li.getBoundingClientRect();
+      form.style.position = 'fixed';
+      form.style.top = rect.bottom + 'px';
+      form.style.left = 'auto';
+      form.style.right = (window.innerWidth - rect.right) + 'px';
+    });
+  });
+</script>
+
+<style>
+  #nav-user > ul > li > .localization-form {
+    border-radius: 12px !important;
+    background-color: #FFFBF5 !important;
+  }
+</style>
+
+<style>
+  @media screen and (min-width: 1001px) {
+    #header-outer,
+    #header,
+    #root > .shopify-section-header {
+      overflow: visible !important;
+    }
+  }
+</style>
+
+{%- if collection and collection.handle == 'home-comfort-range' -%}
+<style>
+  [data-panel="filters-aside"],
+  #filters-aside {
+    display: none !important;
+  }
+</style>
+{%- endif -%}
+
+<style>
+  @media screen and (min-width: 1001px) {
+    #root > .shopify-section-header::before {
+      display: none;
+    }
+    #header-outer {
+      margin: 16px 20px 0 20px;
+      border-radius: 16px;
+      background-color: var(--custom_top_main_bg, #FFFBF5);
+      box-shadow: var(--custom_top_main_sh);
+    }
+  }
+</style>
+
+<style>
+  @media screen and (min-width: 1001px) {
+    .overlay-close,
+    .overlay-close-clipping {
+      background: none !important;
+    }
+  }
+</style>
+
+<style>
+  @media screen and (min-width: 1001px) {
+    #nav-bar .sub-static > ul.ff-primary,
+    #nav-bar .sub-static > a.toggle,
+    #nav-bar .sub-static > ul.ff-primary::before {
+      background-color: #FFFBF5 !important;
+    }
+  }
+</style>
+
+  </body>
+</html>

@@ -1,0 +1,212 @@
+{%- comment -%}
+  Dreamer RV - Hero, full-bleed variant
+{%- endcomment -%}
+
+<section
+  class="drv-hero drv-hero--fullbleed"
+  data-section-id="{{ section.id }}"
+  style="
+    position: relative !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    --drv-hero-height: {{ section.settings.height }}px;
+    --drv-hero-height-mobile: {{ section.settings.height_mobile }}px;
+    --drv-hero-overlay-bottom: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    --drv-hero-overlay-top: {{ section.settings.overlay_opacity_top | divided_by: 100.0 }};
+    --drv-hero-text-color: {{ section.settings.text_color }};
+    --drv-hero-btn-primary-bg: {{ section.settings.primary_button_color }};
+    --drv-hero-btn-primary-text: {{ section.settings.primary_button_text_color }};
+    --drv-hero-btn-secondary-bg: {{ section.settings.secondary_button_color }};
+    --drv-hero-btn-secondary-text: {{ section.settings.secondary_button_text_color }};
+    --drv-hero-badge-bg: {{ section.settings.badge_bg_color }};
+    --drv-hero-badge-text: {{ section.settings.badge_text_color }};
+  "
+>
+  <div class="drv-hero__media">
+    {%- if section.settings.image != blank -%}
+      <img
+        class="drv-hero__image drv-hero__image--desktop"
+        srcset="
+          {{ section.settings.image | image_url: width: 800 }} 800w,
+          {{ section.settings.image | image_url: width: 1200 }} 1200w,
+          {{ section.settings.image | image_url: width: 1600 }} 1600w,
+          {{ section.settings.image | image_url: width: 2000 }} 2000w
+        "
+        sizes="100vw"
+        src="{{ section.settings.image | image_url: width: 1600 }}"
+        alt="{{ section.settings.image.alt | default: section.settings.heading | escape }}"
+        loading="eager"
+        fetchpriority="high"
+        width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}"
+      >
+    {%- else -%}
+      <div class="drv-hero__image drv-hero__image--placeholder">
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      </div>
+    {%- endif -%}
+    <div class="drv-hero__overlay"></div>
+  </div>
+
+  <div class="drv-hero__inner">
+    <div class="drv-hero__content">
+      {%- if section.settings.heading != blank -%}
+        <h1 class="drv-hero__heading">{{ section.settings.heading | newline_to_br }}</h1>
+      {%- endif -%}
+      <div class="drv-hero__icon-slot{% if section.settings.icon == blank %} drv-hero__icon-slot--empty{% endif %}">
+        {%- if section.settings.icon != blank -%}
+          <img
+            class="drv-hero__icon"
+            src="{{ section.settings.icon | image_url: width: 240 }}"
+            width="96"
+            height="96"
+            alt=""
+            loading="eager"
+          >
+        {%- elsif request.design_mode -%}
+          <span class="drv-hero__icon-placeholder">Palm tree icon</span>
+        {%- endif -%}
+      </div>
+      {%- if section.settings.subheading != blank -%}
+        <p class="drv-hero__subheading">{{ section.settings.subheading }}</p>
+      {%- endif -%}
+      <div class="drv-hero__actions">
+        {%- if section.settings.primary_button_label != blank -%}
+          <a
+            href="{{ section.settings.primary_button_url | default: '#' }}"
+            class="drv-hero__btn drv-hero__btn--primary"
+          >
+            {{ section.settings.primary_button_label }}
+          </a>
+        {%- endif -%}
+        {%- if section.settings.secondary_button_label != blank -%}
+          <a
+            href="{{ section.settings.secondary_button_url | default: '#' }}"
+            class="drv-hero__btn drv-hero__btn--secondary"
+          >
+            {{ section.settings.secondary_button_label }}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'badge' -%}
+      <div class="drv-hero__badge" {{ block.shopify_attributes }}>
+        {%- if block.settings.icon != blank -%}
+          <img
+            class="drv-hero__badge-icon"
+            src="{{ block.settings.icon | image_url: width: 334 }}"
+            width="167"
+            height="46"
+            alt=""
+            loading="lazy"
+          >
+        {%- endif -%}
+        <div class="drv-hero__badge-copy">
+          {%- if block.settings.title != blank -%}
+            <p class="drv-hero__badge-title">{{ block.settings.title }}</p>
+          {%- endif -%}
+          {%- if block.settings.text != blank -%}
+            <p class="drv-hero__badge-text">{{ block.settings.text }}</p>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+</section>
+
+{{ 'dreamer-rv-full-bleed-banner.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "Full bleed banner",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Background image", "info": "Recommended: 2400 x 1300px or larger, landscape" },
+    { "type": "image_picker", "id": "icon", "label": "Decorative icon", "info": "e.g. the palm tree mark, shown above the heading" },
+    { "type": "textarea", "id": "heading", "label": "Heading", "info": "Press enter for a manual line break", "default": "Dream(ier) sleep,\nwherever you are" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Mattress toppers, protectors and sheets, made to fit your bed, ready for any Aussie adventure." },
+    {
+      "type": "range",
+      "id": "height",
+      "min": 400,
+      "max": 900,
+      "step": 20,
+      "unit": "px",
+      "label": "Section height (desktop)",
+      "default": 680
+    },
+    {
+      "type": "range",
+      "id": "height_mobile",
+      "min": 300,
+      "max": 700,
+      "step": 20,
+      "unit": "px",
+      "label": "Section height (mobile)",
+      "default": 560
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "label": "Image overlay darkness (bottom)",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity_top",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "label": "Image overlay darkness (top)",
+      "default": 5
+    },
+    { "type": "color", "id": "text_color", "label": "Text colour", "default": "#FFFFFF" },
+    { "type": "header", "content": "Primary button" },
+    { "type": "text", "id": "primary_button_label", "label": "Label", "default": "Shop the range" },
+    { "type": "url", "id": "primary_button_url", "label": "Link" },
+    { "type": "color", "id": "primary_button_color", "label": "Background", "default": "#36B2AF" },
+    { "type": "color", "id": "primary_button_text_color", "label": "Text", "default": "#FFFFFF" },
+    { "type": "header", "content": "Secondary button" },
+    { "type": "text", "id": "secondary_button_label", "label": "Label", "default": "Find your size" },
+    { "type": "url", "id": "secondary_button_url", "label": "Link" },
+    { "type": "color", "id": "secondary_button_color", "label": "Background", "default": "#F1EAD9" },
+    { "type": "color", "id": "secondary_button_text_color", "label": "Text", "default": "#2B2621" },
+    { "type": "header", "content": "Impact badge card" },
+    { "type": "color", "id": "badge_bg_color", "label": "Card background", "default": "#FFFFFF" },
+    { "type": "color", "id": "badge_text_color", "label": "Card text", "default": "#2B2621" }
+  ],
+  "blocks": [
+    {
+      "type": "badge",
+      "name": "Impact badge",
+      "limit": 1,
+      "settings": [
+        { "type": "image_picker", "id": "icon", "label": "Icon" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Great Barrier Reef Foundation" },
+        { "type": "textarea", "id": "text", "label": "Text", "default": "$5 donated from every Wanderluxe Caravan Queen bed topper." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Full bleed banner",
+      "blocks": [
+        { "type": "badge" }
+      ]
+    }
+  ]
+}
+{% endschema %}

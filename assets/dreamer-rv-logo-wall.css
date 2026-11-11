@@ -1,0 +1,101 @@
+.drv-logo-wall {
+  background: var(--drv-logowall-bg, #f9f2e8);
+  color: var(--drv-logowall-text, #424345);
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.drv-logo-wall__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.drv-logo-wall__heading {
+  /* Uses the theme's Secondary font slot, kept separate from the hero
+     heading's Primary font slot - the two designs use different custom
+     typefaces, to be uploaded via Theme Settings > Typography. */
+  margin: 0;
+  text-align: center;
+  font-family: var(--main_ff);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.drv-logo-wall__track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 48px;
+  width: 100%;
+}
+
+.drv-logo-wall__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drv-logo-wall__link {
+  display: flex;
+}
+
+.drv-logo-wall .drv-logo-wall__item img.drv-logo-wall__logo {
+  /* !important + a more specific selector - this theme has a global
+     img rule elsewhere (width: 100%; height: auto) that otherwise wins
+     and forces every logo up to its native, oversized dimensions. */
+  height: var(--drv-logowall-logo-height, 24px) !important;
+  width: auto !important;
+  max-width: none !important;
+  border-radius: 0 !important;
+  object-fit: contain;
+  display: block;
+}
+
+/* Mobile: swipeable scroll-snap carousel instead of a wrapping grid -
+   no JS needed, native touch/trackpad swipe. */
+@media screen and (max-width: 749px) {
+  .drv-logo-wall {
+    padding: 40px 0;
+  }
+
+  .drv-logo-wall__inner {
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .drv-logo-wall__track {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 40px;
+    padding: 4px 32px 12px;
+    margin: 0 -20px;
+    width: calc(100% + 40px);
+    scrollbar-width: none;
+  }
+
+  .drv-logo-wall__track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .drv-logo-wall__item {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+
+  .drv-logo-wall__logo {
+    height: calc(var(--drv-logowall-logo-height, 40px) * 0.85);
+  }
+}
