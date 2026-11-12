@@ -37,7 +37,7 @@
     {%- capture black_friday_sale -%}{%- render 'black-friday-sale', product: product, variant: current_variant -%}{%- endcapture -%}
     {%- capture sale_badge_text -%}{%- render 'product-sale-badge-text', product: product, variant: current_variant, black_friday_sale: black_friday_sale -%}{%- endcapture -%}
     {%- if sale_badge_text != blank or product.variants.size > 1 -%}
-      <span class="overlay-sale{% if sale_badge_text == blank %} hidden{% endif %}" data-product-sale-badge>{{ sale_badge_text }}</span>
+      <span class="overlay-sale{% if black_friday_sale == 'true' %} drv-black-friday-badge{% endif %}{% if sale_badge_text == blank %} hidden{% endif %}" data-product-sale-badge>{{ sale_badge_text }}</span>
     {%- endif -%}
   {%- endif -%}
   {%- if settings.show_stock_label and total_stock > 0 and total_stock <= settings.stock_label_qty -%}

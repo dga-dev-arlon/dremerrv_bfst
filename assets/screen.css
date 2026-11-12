@@ -1776,6 +1776,7 @@ p.text-overflow, .text-overflow.l4cl h1, .text-overflow.l4cl h2, .text-overflow.
 .overlay-quinary { --product_label_bg: var(--quinary_bg); }
 .overlay-rose { --product_label_bg: var(--alert_error); }
 .overlay-sale, .m6tx .overlay-sale { color: var(--product_label_bg); --product_label_bg: var(--sale_label_bg); --product_label_text: var(--sale_label_text); }
+#root .s1lb > .drv-black-friday-badge { --product_label_bg: #F4A48B; --product_label_text: #fff; }
 	i.overlay-sale:after { color: var(--product_label_text); }
 .overlay-dark { --product_label_bg: var(--primary_text); }
 .overlay-content { --product_label_bg: var(--sand); --product_label_text: var(--primary_text); }
@@ -1885,7 +1886,11 @@ p.text-overflow, .text-overflow.l4cl h1, .text-overflow.l4cl h2, .text-overflow.
 #root .price-varies { color: var(--price_color); text-decoration: none; }
 #root .old-price { font-weight: var(--main_fw); text-decoration: line-through; }
 	#root .old-price:not([class*="overlay-"]) { color: var(--price_color_old); }
-#root .drv-black-friday-price { color: #a83d57; }
+#root .drv-black-friday-price { color: #F4A48B; }
+#root .drv-black-friday-price .drv-black-friday-sale-amount { color: #F4A48B; margin-inline-start: .2em; }
+#root .drv-bundle-pricing-disclaimer { margin: 8px 0 16px; font-size: 14px; line-height: 1.4; }
+#root .gbbPbBundleTotal:has(> .drv-bundle-pricing-disclaimer) { flex-wrap: wrap; }
+#root .gbbPbBundleTotal > .drv-bundle-pricing-disclaimer { flex-basis: 100%; margin-bottom: 0; }
 #root .drv-black-friday-price .old-price:not([class*="overlay-"]) { color: #666; }
 
 .s1tt:not(.ready), .s1tt > * { display: none; }

@@ -970,7 +970,7 @@
     {%- capture black_friday_sale -%}{%- render 'black-friday-sale', product: product, variant: current_variant -%}{%- endcapture -%}
     <p class="price s1pr{% if black_friday_sale == 'true' %} drv-black-friday-price{% endif %}">
       {%- if black_friday_sale == 'true' -%}
-        <span class="old-price">{{ current_variant.compare_at_price | money }}</span>&nbsp;{{ current_variant.price | money }}
+        <span class="old-price">{{ current_variant.compare_at_price | money }}</span>&nbsp;<span class="drv-black-friday-sale-amount">{{ current_variant.price | money }}</span>
       {%- elsif product.price_varies and settings.show_price_varies and layout != 'list-compact' -%}
         {%- liquid
           assign price_min = product.price_min | money

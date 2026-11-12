@@ -6772,14 +6772,19 @@ window.addEventListener("productcardVariants", function (evt) {
 							productImage.removeAttribute('srcset');
 							productImage.removeAttribute('sizes');
 						}
+						const isBlackFridaySale = selected_option.dataset.blackFridaySale === 'true';
 						const cardPrice = productFormSection.querySelector('.price');
 						if (variant_data.price && cardPrice) {
-							cardPrice.innerHTML = '<span class="old-price"></span>' + (variant_data.price_old ? '&nbsp;' : '') + variant_data.price;
-							cardPrice.classList.toggle('drv-black-friday-price', selected_option.dataset.blackFridaySale === 'true');
+							const currentPrice = isBlackFridaySale
+								? '<span class="drv-black-friday-sale-amount">' + variant_data.price + '</span>'
+								: variant_data.price;
+							cardPrice.innerHTML = '<span class="old-price"></span>' + (variant_data.price_old ? '&nbsp;' : '') + currentPrice;
+							cardPrice.classList.toggle('drv-black-friday-price', isBlackFridaySale);
 						}
 						const saleBadge = productFormSection.querySelector('[data-product-sale-badge]');
 						if (saleBadge && selected_option.hasAttribute('data-sale-badge')) {
 							saleBadge.textContent = selected_option.dataset.saleBadge;
+							saleBadge.classList.toggle('drv-black-friday-badge', isBlackFridaySale);
 							saleBadge.classList.toggle('hidden', !selected_option.dataset.saleBadge);
 						}
 						const oldPrice = productFormSection.querySelector('.old-price');

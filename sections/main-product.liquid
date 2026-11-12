@@ -12,6 +12,11 @@
     assign featured_media_position = 0
   endunless
   assign title_block = section.blocks | where: 'type', 'title' | first
+  assign price_block = section.blocks | where: 'type', 'price' | first
+  assign show_bundle_pricing_disclaimer = false
+  if product.type == 'Mattress Topper Bundles' or product.tags contains 'easy-bundle'
+    assign show_bundle_pricing_disclaimer = true
+  endif
   assign first_block = section.blocks | first
   assign share_whatsapp = title_block.settings.share_whatsapp
   assign share_facebook = title_block.settings.share_facebook
@@ -473,6 +478,28 @@
     -%}
     <div class="f8pr base-font{% if current_variant == null %} unavailable{% endif %}">
       <legend>{{ 'product.form.title' | t }}</legend>
+      {%- if show_bundle_pricing_disclaimer -%}
+        {%- capture bundle_pricing_disclaimer -%}
+          <p class="drv-bundle-pricing-disclaimer">The 20% sale discount is applied to the regular price of each individual item in the bundle.</p>
+        {%- endcapture -%}
+        {%- if price_block == blank -%}
+          <template data-bundle-pricing-disclaimer>{{ bundle_pricing_disclaimer }}</template>
+          <script>
+            (() => {
+              const productForm = document.currentScript.parentElement;
+              const disclaimer = productForm.querySelector('[data-bundle-pricing-disclaimer]');
+              const placeDisclaimer = () => {
+                const total = productForm.querySelector('.gbbPbBundleTotal');
+                if (total && !total.querySelector('.drv-bundle-pricing-disclaimer')) {
+                  total.append(disclaimer.content.cloneNode(true));
+                }
+              };
+              new MutationObserver(placeDisclaimer).observe(productForm, { childList: true, subtree: true });
+              placeDisclaimer();
+            })();
+          </script>
+        {%- endif -%}
+      {%- endif -%}
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when '@app' -%}
@@ -1455,6 +1482,9 @@
     </span>
   {%- endif -%}
 </p>
+            {%- if show_bundle_pricing_disclaimer -%}
+              {{ bundle_pricing_disclaimer }}
+            {%- endif -%}
             {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
             {%- form 'product', product, id: product_form_installment_id, class: 'f8pr-product-form-installment' -%}
               <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
