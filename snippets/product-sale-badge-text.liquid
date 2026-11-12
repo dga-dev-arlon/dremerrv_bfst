@@ -1,6 +1,14 @@
-{%- if black_friday_sale == 'true' -%}
+{%- liquid
+  assign sale_badge_in_stock = false
+  if variant.available
+    if variant.inventory_management == blank or variant.inventory_quantity > 0
+      assign sale_badge_in_stock = true
+    endif
+  endif
+-%}
+{%- if sale_badge_in_stock and black_friday_sale == 'true' -%}
   20% OFF
-{%- elsif variant.compare_at_price > variant.price -%}
+{%- elsif sale_badge_in_stock and variant.compare_at_price > variant.price -%}
   {{- 'product.sale_tag' | t -}}
   {%- if settings.sale_label_price == 'percentage' -%}
     {%- liquid

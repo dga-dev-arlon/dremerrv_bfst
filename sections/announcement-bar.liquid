@@ -2,9 +2,18 @@
   <div class="shopify-section-announcement-bar{% if section.blocks.size > 1 and section.settings.enable_slider_arrows == false %} no-nav{% endif %}"{% if section.blocks.size > 1 and section.settings.enable_slider_autoplay %} data-autoplay={{ section.settings.slider_autoplay_seconds | times: 1000 }}{% endif %} style="font-size:{{ section.settings.font_size }}">
   {%- for block in section.blocks -%}
     {%- if block.settings.text != empty -%}
-      <p class="text-center size-{{ section.settings.height }}">
-        {{ block.settings.text }}
-      </p>
+      <p
+  id="announcement-{{ section.id }}-{{ block.id }}"
+  class="announcement-message text-center size-{{ section.settings.height }}"
+  data-announcement-id="{{ block.id }}"
+>
+  {%- assign campaign_message = shop.metafields.custom.drv_campaign_message.value -%}
+  {%- if block.id == 'text_kbgiYD' and campaign_message != blank -%}
+    {{- campaign_message | escape -}}
+  {%- else -%}
+    {{- block.settings.text -}}
+  {%- endif -%}
+</p>
     {%- endif -%}
   {%- endfor -%}
   </div>
@@ -15,7 +24,10 @@
     }
   </style>
 {%- endif -%}
-
+<script
+  src="{{ 'drv-announcement-poll.js' | asset_url }}"
+  defer
+></script>
 {% schema %}
 {
   "name": "t:static_sections.announcement_bar.name",

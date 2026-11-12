@@ -5786,6 +5786,12 @@ article:not(.aside) .content-box {
   }
 }
 /*! Heading/H5 - Secondary font override (Luxora Grotesk) --------- */
+/* Keep empty variant-sale placeholders hidden despite label display rules. */
+[data-product-sale-badge].hidden,
+[data-product-sale-badge]:empty {
+  display: none !important;
+}
+
 /* Per Figma spec, the H5 heading style uses the Secondary font (Luxora
    Grotesk) rather than the Primary font (Bethany Elingston) that the
    theme's sitewide h1-h6 rule applies by default. */
